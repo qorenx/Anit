@@ -14,7 +14,7 @@ It hasn't started yet.
 
 Future Features;
 -Member login.
-- Watching JP-CN anime.
+-Watching JP-CN anime.
 -Anime Status
 -Member upload.
 -Anime genre selection
