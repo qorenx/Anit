@@ -13,15 +13,27 @@ It hasn't started yet.
 
 
 Future Features;
+
 -Member login.
+
 -Watching JP-CN anime.
+
 -Anime Status
+
 -Member upload.
+
 -Anime genre selection
+
 -Social chat.
+
 -News section.
+
 -Small Forum.
+
 -Multiple fansub support
+
 -Fansub page and panel
+
 -Admin Panel and Login
+
 
