@@ -8,6 +8,6 @@ class FrontController extends BaseController
 {
     public function index()
     {
-        die('İndex page');
+        return view('İndex');
     }
 }

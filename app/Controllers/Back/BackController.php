@@ -8,6 +8,6 @@ class BackController extends BaseController
 {
     public function index()
     {
-        die('Back page');
+        return view('/admin/admin.php');
     }
 }
