@@ -8,25 +8,58 @@
           <div class="card-body p-5 text-center">
 
             <div class="mb-md-1 mt-md-1 pb-1">
-
-            <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-                <br></br/>
-              <div class="form-outline form-white mb-4">
-                <input type="email" id="typeEmailX" placeholder="Email" class="form-control form-control-lg" />
-
-              </div>
-
-              <div class="form-outline form-white mb-4">
-                <input type="password" id="typePasswordX" placeholder="Password" class="form-control form-control-lg" />
-
-              </div>
-
-              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
-
-              <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
-            </div>
+            <?php $validation = \Config\Services::validation(); ?>
+                <?php if (session()->get('success')) : ?>
+                    <div class="alert alert-success" role="alert">
+                        <?= session()->get('success'); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if (session()->get('danger')) : ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?= session()->get('danger'); ?>
+                        <?php if (session()->get('resetlink')) {
+                            echo session()->get('resetlink');
+                        } ?>
+                    </div>
+                <?php endif; ?>
+                <h3>LOGİN</h3>
+                <form class="" action="/login" method="post">
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input placeholder="Email Address" "type="email" class="form-control" name="email" id="email" value="<?= set_value('email') ?>">
+                        <?php if ($validation->getError('email')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('email'); ?>
+                            </div>
+                        <?php } ?>
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Password" type="password" class="form-control" name="password" id="password" value="">
+                        <?php if ($validation->getError('password')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('password'); ?>
+                            </div>
+                        <?php } ?>
+                    </div>
+                    <?php if ($config->rememberMe) : ?>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="rememberme" name="rememberme" value="1">
+                            <label class="form-check-label" for="rememberme">Remember Me</label>
+                        </div>
+                    <?php endif; ?>
+                    <div class="row">
+                        <div class="col-12 col-sm-4">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                        <div class="col-12 col-sm-8 text-right">
+                            <ul>
+                                <li><a href="/register">Sign Up</a></li>
+                                <li><a href="/forgotpassword">Forgot Password?</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
           </div>
-
       </div>
     </div>
   </div>
