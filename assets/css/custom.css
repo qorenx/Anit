@@ -1,5 +1,6 @@
 body {
     background-color: #e1e1e1;
+	padding-top: 70px;
 }
 li{
     list-style: none;
@@ -32,3 +33,4 @@ li{
         text-align: center !important;
     }
 }
+
