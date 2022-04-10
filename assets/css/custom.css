@@ -1,6 +1,5 @@
 body {
     background-color: #e1e1e1;
-	padding-top: 70px;
 }
 li{
     list-style: none;
@@ -34,3 +33,12 @@ li{
     }
 }
 
+
+.reglogBackground {
+	background-image: url(http://localhost/assets/img/logreg/logreg.jpg);
+	background-size: cover;
+}
+
+.reglogpanel {
+	background-color: #100c28b3;
+}
