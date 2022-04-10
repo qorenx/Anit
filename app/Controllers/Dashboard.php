@@ -15,16 +15,17 @@
  * 
  */
 
- namespace App\Controllers;
+namespace App\Controllers;
 
-class Home extends BaseController
+class Dashboard extends BaseController
 {
 	public function index()
 	{
-		echo view('templates/header');
-		echo view('home');
+		$data = [];
+
+		echo view('templates/header', $data);
+		echo view('dashboard');
 		echo view('templates/footer');
-		
 	}
 
 	//--------------------------------------------------------------------

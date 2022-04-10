@@ -17,14 +17,15 @@
 
  namespace App\Controllers;
 
-class Home extends BaseController
+class Superadmin extends BaseController
 {
 	public function index()
 	{
-		echo view('templates/header');
-		echo view('home');
+		$data = [];
+
+		echo view('templates/header', $data);
+		echo view('superadmin');
 		echo view('templates/footer');
-		
 	}
 
 	//--------------------------------------------------------------------
