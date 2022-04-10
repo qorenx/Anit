@@ -11,31 +11,38 @@
 </head>
 
 <body>
-<?php $uri = service('uri') ?>
-<?php $this->config = config('Auth');
-$redirect = $this->config->assignRedirect; ?>
+    <?php $uri = service('uri') ?>
+    <?php $this->config = config('Auth');
+    $redirect = $this->config->assignRedirect; ?>
 <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:70px">
-  <a href="<?= base_url()?>" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
-<?php if (session()->get('isLoggedIn')) : ?>
+            <a href="<?= base_url()?>" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
+    <?php if (session()->get('isLoggedIn')) : ?>
+        <li class="nav-item <?= ($uri->getSegment(1) == 'dashboard' ? 'active' : null) ?>">
+            <a   a href="<?php echo $redirect[session()->get('role')] ?>" class="w3-bar-item w3-button"><i class="fa fa-user-circle-o"></i></a> 
+        </li>
 
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user-circle-o"></i></a> 
+
+        <li class="nav-item <?= ($uri->getSegment(1) == 'profile' ? 'active' : null) ?>">           
+            <a href="<?php echo $redirect[session()->get('role')] ?>/profile" class="w3-bar-item w3-button"><i class="fa fa-expeditedssl"></i></a> 
+        </li>
+
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash"></i></a> 
 
-<?php if ($this->config->lockScreen) : ?>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-wrench"></i></a>
-<?php endif; ?>
+    <?php if ($this->config->lockScreen) : ?>
+            <a href="/lockscreen" class="w3-bar-item w3-button"><i class="fa fa-wrench"></i></a>
+    <?php endif; ?>
 
     <a href="/logout" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i></a> 
 
 
-<?php else : ?> 
-    <li class="nav-item <?= ($uri->getSegment(1) == '' ? 'active' : null) ?>">
-    <a href="/login" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i></a> 
-    </li>
-    <li class="nav-item <?= ($uri->getSegment(1) == 'register' ? 'active' : null) ?>">
-    <a href="/register" class="w3-bar-item w3-button"><i class="fa fa-registered"></i></a> 
-    </li>
-<?php endif; ?>
+    <?php else : ?> 
+        <li class="nav-item <?= ($uri->getSegment(1) == '' ? 'active' : null) ?>">
+            <a href="/login" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i></a> 
+        </li>
+        <li class="nav-item <?= ($uri->getSegment(1) == 'register' ? 'active' : null) ?>">
+            <a href="/register" class="w3-bar-item w3-button"><i class="fa fa-registered"></i></a> 
+        </li>
+    <?php endif; ?>
 </div>
 
       
