@@ -1,10 +1,16 @@
 
 <?php $this->config = config('Auth'); $redirect = $this->config->assignRedirect;?>
-<div style="margin-left:70px" class="w3-container">
-    <div class="row">
-        <div class="col-12 col-sm-8 offset-sm-2 col-md-4 offset-md-4 mt-5 pt-3 pb-3 bg-white form-wrapper">
-            <div class="container">
-                <h3><?php echo session()->get('firstname') . ' ' . session()->get('lastname') ?></h3>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<div class="reglogBackground">
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-44 col-xl-5 reglogpanel">
+
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-1 mt-md-1 pb-1">
+                <h3>Welcome to <?php echo session()->get('firstname') . ' ' . session()->get('lastname') ?></h3>
                 <hr>
                 <?php $validation = \Config\Services::validation(); ?>
                 <?php if (session()->get('success')) : ?>
@@ -14,8 +20,7 @@
                 <?php endif; ?>                
                 <form class="" action="<?php echo $redirect[session()->get('role')] ?>/profile" method="post">
                     <div class="form-group">
-                        <label for="firstname">First Name</label>
-                        <input type="text" class="form-control" name="firstname" id="firstname" value="<?= set_value('firstname', session()->get('firstname')) ?>">
+                        <input placeholder="First Name" type="text" class="form-control" name="firstname" id="firstname" value="<?= set_value('firstname', session()->get('firstname')) ?>">
                         <?php if ($validation->getError('firstname')) { ?>
                             <div class='alert alert-danger mt-2'>
                                 <?= $error = $validation->getError('firstname'); ?>
@@ -23,8 +28,7 @@
                         <?php } ?>
                     </div>
                     <div class="form-group">
-                        <label for="lastname">Last Name</label>
-                        <input type="text" class="form-control" name="lastname" id="lastname" value="<?= set_value('lastname', session()->get('lastname')) ?>">
+                        <input placeholder="Last Name" type="text" class="form-control" name="lastname" id="lastname" value="<?= set_value('lastname', session()->get('lastname')) ?>">
                         <?php if ($validation->getError('lastname')) { ?>
                             <div class='alert alert-danger mt-2'>
                                 <?= $error = $validation->getError('lastname'); ?>
@@ -32,8 +36,7 @@
                         <?php } ?>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="text" class="form-control" name="email" id="email" value="<?= set_value('email', session()->get('email')) ?>">
+                        <input placeholder="Email Address" type="text" class="form-control" name="email" id="email" value="<?= set_value('email', session()->get('email')) ?>">
                         <?php if ($validation->getError('email')) { ?>
                             <div class='alert alert-danger mt-2'>
                                 <?= $error = $validation->getError('email'); ?>
@@ -41,8 +44,7 @@
                         <?php } ?>
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password" id="password" value="">
+                        <input placeholder="Password" type="password" class="form-control" name="password" id="password" value="">
                         <?php if ($validation->getError('password')) { ?>
                             <div class='alert alert-danger mt-2'>
                                 <?= $error = $validation->getError('password'); ?>
@@ -50,8 +52,7 @@
                         <?php } ?>
                     </div>
                     <div class="form-group">
-                        <label for="password_confirm">Confirm Password</label>
-                        <input type="password" class="form-control" name="password_confirm" id="password_confirm" value="">
+                        <input placeholder="Confirm Password" type="password" class="form-control" name="password_confirm" id="password_confirm" value="">
                         <?php if ($validation->getError('password_confirm')) { ?>
                             <div class='alert alert-danger mt-2'>
                                 <?= $error = $validation->getError('password_confirm'); ?>
@@ -70,4 +71,5 @@
 
         </div>
     </div>
+    </section>
 </div>

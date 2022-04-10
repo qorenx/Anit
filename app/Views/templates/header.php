@@ -21,12 +21,12 @@
             <a   a href="<?php echo $redirect[session()->get('role')] ?>" class="w3-bar-item w3-button"><i class="fa fa-user-circle-o"></i></a> 
         </li>
 
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash"></i></a> 
+
 
         <li class="nav-item <?= ($uri->getSegment(1) == 'profile' ? 'active' : null) ?>">           
             <a href="<?php echo $redirect[session()->get('role')] ?>/profile" class="w3-bar-item w3-button"><i class="fa fa-expeditedssl"></i></a> 
         </li>
-
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash"></i></a> 
 
     <?php if ($this->config->lockScreen) : ?>
             <a href="/lockscreen" class="w3-bar-item w3-button"><i class="fa fa-wrench"></i></a>
