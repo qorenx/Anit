@@ -2,16 +2,67 @@
 <html lang="en" dir="ltr">
 
 <head>
+<title>Anime Panel</title>
+<link href="https://localhost/assets/usermod/jquery-ui.min.css" rel="stylesheet">
+<link href="https://localhost/assets/usermod/Untitled1.css" rel="stylesheet">
+<link href="https://localhost/assets/usermod/index.css" rel="stylesheet">
+<script src="https://localhost/assets/usermod/jquery-3.6.0.min.js"></script>
+<script src="https://localhost/assets/usermod/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://localhost/assets/css/custom.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+$(document).ready(function()
+{
+   $("#Tabs1").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      collapsible: false
+   });
+   $("#Tabs2").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      collapsible: false
+   });
+   $("#Tabs3").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      collapsible: false
+   });
+   $("#Tabs4").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      collapsible: false
+   });
+   $("#Tabs5").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      collapsible: false
+   });
+   $("#Tabs6").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      collapsible: false
+   });
+});
+</script>
 
-    <title>Anitium</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://localhost/assets/css/custom.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <?php $uri = service('uri') ?> 
+    <?php $uri = service('uri') ?>
     <?php $this->config = config('Auth');
     $redirect = $this->config->assignRedirect; ?>
 <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:70px">

@@ -55,23 +55,39 @@ $routes->get('/', 'Home::index');
 
 $routes->group('', ['filter' => 'auth:Role,1'], function ($routes) {
 
-	$routes->get('superadmin', 'Superadmin::index'); // SUPER ADMIN DASHBOARD
-	$routes->match(['get', 'post'], 'superadmin/profile', 'Auth::profile'); 
-
+	$routes->get('admin', 'admin::index'); // ADMIN DASHBOARD
+	$routes->match(['get', 'post'], 'admin', 'Auth::profile'); 
+	$routes->get('panel', 'panel::index'); // ADMIN DASHBOARD
+	$routes->match(['get', 'post'], 'panel', 'Auth::profile'); 
 });
 
 
 /**
  * --------------------------------------------------------------------
- * ADMIN ROUTES. MUST BE LOGGED IN AND HAVE ROLE OF '2'
+ * USER. MUST BE LOGGED IN AND HAVE ROLE OF '2'
  * --------------------------------------------------------------------
  */
 
 $routes->group('', ['filter' => 'auth:Role,2'], function ($routes){
 
-	$routes->get('dashboard', 'Dashboard::index'); // ADMIN DASHBOARD
+	$routes->get('dashboard', 'Dashboard::index'); // User Dashboard
 	$routes->match(['get', 'post'], 'dashboard/profile', 'Auth::profile');
 });
+
+
+/**
+ * --------------------------------------------------------------------
+ * Panel ROUTES. MUST BE LOGGED IN AND HAVE ROLE OF '3'
+ * --------------------------------------------------------------------
+ */
+
+$routes->group('', ['filter' => 'auth:Role,3'], function ($routes) {
+
+	$routes->get('dashboard', 'dashboard::index'); // Panel DASHBOARD
+	$routes->match(['get', 'post'], 'dashboard/panel', 'Auth::profile'); 
+
+});
+
 
 /**
  * --------------------------------------------------------------------

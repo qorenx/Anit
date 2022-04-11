@@ -22,7 +22,7 @@
                         } ?>
                     </div>
                 <?php endif; ?>
-                <h3>LOGİN</h3>
+                <h3>Login</h3>
                 <form class="" action="/login" method="post">
                     <div class="form-group">
                         <label for="email"></label>

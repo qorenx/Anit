@@ -53,15 +53,15 @@ class Auth extends BaseConfig
      * @var array
      */
     public $assignRoles = [
-        'Super Admin' => '1',
-        'Tenant' => '2',
-        'Customer' => '3',
+        'Admin' => '1',
+        'User' => '2',
+        'Mod' => '3',
     ];
 
     public $assignRedirect = [
-        '1' => '/superadmin',
+        '1' => '/admin',
         '2' => '/dashboard',
-        '3' => '/customerportal',
+        '3' => '/panel',
     ];
 
     /**

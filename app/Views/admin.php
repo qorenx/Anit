@@ -10,3 +10,7 @@
         </div>
     </div>
 </div>
+
+<div>
+    <a class="btn btn-lg btn-default" href="/panel" role="button">Anime Panel</a>
+</div>

@@ -1,0 +1,417 @@
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+#Tabs1.ui-widget
+{
+   font-size: 1em !important;
+}
+#Tabs1
+{
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+}
+#Tabs1 .ui-tabs-nav
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.0;
+   padding: 4px 4px 0px 4px;
+   margin: 0;
+}
+#Tabs1 .ui-tabs-nav li
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   margin: 0px 2px -1px 0px;
+   text-align: left;
+}
+#Tabs1 .ui-tabs-nav li a
+{
+   padding: 8px 10px 8px 10px;
+}
+#Tabs1, #Tabs1 .ui-corner-all, #Tabs1 .ui-corner-top
+{
+   border-top-left-radius: 6px;
+   border-top-right-radius: 6px;
+}
+#Tabs1, #Tabs1 .ui-corner-all, #Tabs1 .ui-corner-bottom
+{
+   border-bottom-right-radius: 6px;
+   border-bottom-left-radius: 6px;
+}
+#Tabs1 .ui-helper-reset
+{
+   line-height: 16px;
+}
+#Tabs1 .ui-tabs-panel
+{
+   position: relative;
+   left: 0;
+   top: 0;
+   padding: 0;
+}
+#Tabs1 .tabs-icon
+{
+   font-size: 16px;
+   width: 16px;
+   margin: 0px 0px 4px 0px;
+}
+#Tabs1 .description
+{
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+}
+#Tabs2.ui-widget
+{
+   font-size: 1em !important;
+}
+#Tabs2
+{
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+}
+#Tabs2 .ui-tabs-nav
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.0;
+   padding: 4px 4px 0px 4px;
+   margin: 0;
+}
+#Tabs2 .ui-tabs-nav li
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   margin: 0px 2px -1px 0px;
+   text-align: left;
+}
+#Tabs2 .ui-tabs-nav li a
+{
+   padding: 8px 10px 8px 10px;
+}
+#Tabs2, #Tabs2 .ui-corner-all, #Tabs2 .ui-corner-top
+{
+   border-top-left-radius: 6px;
+   border-top-right-radius: 6px;
+}
+#Tabs2, #Tabs2 .ui-corner-all, #Tabs2 .ui-corner-bottom
+{
+   border-bottom-right-radius: 6px;
+   border-bottom-left-radius: 6px;
+}
+#Tabs2 .ui-helper-reset
+{
+   line-height: 16px;
+}
+#Tabs2 .ui-tabs-panel
+{
+   position: relative;
+   left: 0;
+   top: 0;
+   padding: 0;
+}
+#Tabs2 .tabs-icon
+{
+   font-size: 16px;
+   width: 16px;
+   margin: 0px 0px 4px 0px;
+}
+#Tabs2 .description
+{
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+}
+#Tabs3.ui-widget
+{
+   font-size: 1em !important;
+}
+#Tabs3
+{
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+}
+#Tabs3 .ui-tabs-nav
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.0;
+   padding: 4px 4px 0px 4px;
+   margin: 0;
+}
+#Tabs3 .ui-tabs-nav li
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   margin: 0px 2px -1px 0px;
+   text-align: left;
+}
+#Tabs3 .ui-tabs-nav li a
+{
+   padding: 8px 10px 8px 10px;
+}
+#Tabs3, #Tabs3 .ui-corner-all, #Tabs3 .ui-corner-top
+{
+   border-top-left-radius: 6px;
+   border-top-right-radius: 6px;
+}
+#Tabs3, #Tabs3 .ui-corner-all, #Tabs3 .ui-corner-bottom
+{
+   border-bottom-right-radius: 6px;
+   border-bottom-left-radius: 6px;
+}
+#Tabs3 .ui-helper-reset
+{
+   line-height: 16px;
+}
+#Tabs3 .ui-tabs-panel
+{
+   position: relative;
+   left: 0;
+   top: 0;
+   padding: 0;
+}
+#Tabs3 .tabs-icon
+{
+   font-size: 16px;
+   width: 16px;
+   margin: 0px 0px 4px 0px;
+}
+#Tabs3 .description
+{
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+}
+#Tabs4.ui-widget
+{
+   font-size: 1em !important;
+}
+#Tabs4
+{
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+}
+#Tabs4 .ui-tabs-nav
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.0;
+   padding: 4px 4px 0px 4px;
+   margin: 0;
+}
+#Tabs4 .ui-tabs-nav li
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   margin: 0px 2px -1px 0px;
+   text-align: left;
+}
+#Tabs4 .ui-tabs-nav li a
+{
+   padding: 8px 10px 8px 10px;
+}
+#Tabs4, #Tabs4 .ui-corner-all, #Tabs4 .ui-corner-top
+{
+   border-top-left-radius: 6px;
+   border-top-right-radius: 6px;
+}
+#Tabs4, #Tabs4 .ui-corner-all, #Tabs4 .ui-corner-bottom
+{
+   border-bottom-right-radius: 6px;
+   border-bottom-left-radius: 6px;
+}
+#Tabs4 .ui-helper-reset
+{
+   line-height: 16px;
+}
+#Tabs4 .ui-tabs-panel
+{
+   position: relative;
+   left: 0;
+   top: 0;
+   padding: 0;
+}
+#Tabs4 .tabs-icon
+{
+   font-size: 16px;
+   width: 16px;
+   margin: 0px 0px 4px 0px;
+}
+#Tabs4 .description
+{
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+}
+#Tabs5.ui-widget
+{
+   font-size: 1em !important;
+}
+#Tabs5
+{
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+}
+#Tabs5 .ui-tabs-nav
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.0;
+   padding: 4px 4px 0px 4px;
+   margin: 0;
+}
+#Tabs5 .ui-tabs-nav li
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   margin: 0px 2px -1px 0px;
+   text-align: left;
+}
+#Tabs5 .ui-tabs-nav li a
+{
+   padding: 8px 10px 8px 10px;
+}
+#Tabs5, #Tabs5 .ui-corner-all, #Tabs5 .ui-corner-top
+{
+   border-top-left-radius: 6px;
+   border-top-right-radius: 6px;
+}
+#Tabs5, #Tabs5 .ui-corner-all, #Tabs5 .ui-corner-bottom
+{
+   border-bottom-right-radius: 6px;
+   border-bottom-left-radius: 6px;
+}
+#Tabs5 .ui-helper-reset
+{
+   line-height: 16px;
+}
+#Tabs5 .ui-tabs-panel
+{
+   position: relative;
+   left: 0;
+   top: 0;
+   padding: 0;
+}
+#Tabs5 .tabs-icon
+{
+   font-size: 16px;
+   width: 16px;
+   margin: 0px 0px 4px 0px;
+}
+#Tabs5 .description
+{
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+}
+#Tabs6.ui-widget
+{
+   font-size: 1em !important;
+}
+#Tabs6
+{
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+}
+#Tabs6 .ui-tabs-nav
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.0;
+   padding: 4px 4px 0px 4px;
+   margin: 0;
+}
+#Tabs6 .ui-tabs-nav li
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   margin: 0px 2px -1px 0px;
+   text-align: left;
+}
+#Tabs6 .ui-tabs-nav li a
+{
+   padding: 8px 10px 8px 10px;
+}
+#Tabs6, #Tabs6 .ui-corner-all, #Tabs6 .ui-corner-top
+{
+   border-top-left-radius: 6px;
+   border-top-right-radius: 6px;
+}
+#Tabs6, #Tabs6 .ui-corner-all, #Tabs6 .ui-corner-bottom
+{
+   border-bottom-right-radius: 6px;
+   border-bottom-left-radius: 6px;
+}
+#Tabs6 .ui-helper-reset
+{
+   line-height: 16px;
+}
+#Tabs6 .ui-tabs-panel
+{
+   position: relative;
+   left: 0;
+   top: 0;
+   padding: 0;
+}
+#Tabs6 .tabs-icon
+{
+   font-size: 16px;
+   width: 16px;
+   margin: 0px 0px 4px 0px;
+}
+#Tabs6 .description
+{
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+}
