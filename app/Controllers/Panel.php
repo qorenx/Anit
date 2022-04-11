@@ -16,7 +16,7 @@ class Panel extends BaseController
 	{
 		$data = [];
 
-		echo view('templates/panelheader', $data);
+		echo view('templates/header', $data);
 		echo view('panel/panel');
 		echo view('templates/footer');
 	}

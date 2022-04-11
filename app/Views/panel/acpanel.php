@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 
 
-<div style="margin-left:70px" class="w3-container">
+<div style="margin-top:70px" class="container">
 <div class="row">
 <div class="col-12 col-sm-8 offset-sm-2 col-md-4 offset-md-4 mt-5 pt-3 pb-3 bg-white form-wrapper">
 

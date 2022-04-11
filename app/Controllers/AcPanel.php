@@ -16,7 +16,7 @@ class AcPanel extends BaseController
 	{
 		$data = [];
 
-		echo view('templates/panelheader', $data);
+		echo view('templates/header', $data);
 		echo view('panel/acpanel');
 		echo view('templates/footer');
 	}

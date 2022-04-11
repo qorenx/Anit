@@ -42,3 +42,27 @@ li{
 .reglogpanel {
 	background-color: #100c28b3;
 }
+
+#PageHeader > .row > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 16.66666667%;
+   text-align: left;
+   height: 0px;
+}
+
+#wb_FontAwesomeIcon1 {
+  background-color: transparent;
+  background-image: none;
+  border: 0px solid #454545;
+  border-radius: 0px;
+  text-align: center;
+  margin: 0;
+  padding: 15px 15px 15px 15px;
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+}
