@@ -56,9 +56,9 @@ $routes->get('/', 'Home::index');
 $routes->group('', ['filter' => 'auth:Role,1'], function ($routes) {
 
 	$routes->get('admin', 'admin::index'); // ADMIN DASHBOARD
-	$routes->match(['get', 'post'], 'admin', 'Auth::profile'); 
+	$routes->match(['get', 'post'], 'admin/profile', 'Auth::profile'); 
 	$routes->get('panel', 'panel::index'); // ADMIN DASHBOARD
-	$routes->match(['get', 'post'], 'panel', 'Auth::profile'); 
+	$routes->match(['get', 'post'], 'panel/profile', 'Auth::profile'); 
 });
 
 
