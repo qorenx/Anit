@@ -60,8 +60,8 @@ class Auth extends BaseConfig
 
     public $assignRedirect = [
         '1' => '/admin',
-        '2' => '/dashboard',
-        '3' => '/panel',
+        '2' => '/user',
+        '3' => '/mod',
     ];
 
     /**
@@ -69,7 +69,7 @@ class Auth extends BaseConfig
      * Default Role
      * --------------------------------------------------------------------
      *
-     * This is the default role that users will be added to when they regsiter
+     * This is the default role that users will be added to when they register
      * 
      * @var int
      */
@@ -82,7 +82,7 @@ class Auth extends BaseConfig
      * --------------------------------------------------------------------
      *
      * Should we send the user an email to activate their account?
-     * default is true to minimise fake email registrations
+     * default is true to mini mise fake email registrations
      * 
      * true / false
      *

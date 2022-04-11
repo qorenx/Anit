@@ -10,14 +10,14 @@
 
  namespace App\Controllers;
 
-class Panel extends BaseController
+class AcPanel extends BaseController
 {
 	public function index()
 	{
 		$data = [];
 
 		echo view('templates/panelheader', $data);
-		echo view('panel/panel');
+		echo view('panel/acpanel');
 		echo view('templates/footer');
 	}
 

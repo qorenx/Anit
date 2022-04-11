@@ -56,9 +56,12 @@ $routes->get('/', 'Home::index');
 $routes->group('', ['filter' => 'auth:Role,1'], function ($routes) {
 
 	$routes->get('admin', 'admin::index'); // ADMIN DASHBOARD
+	$routes->match(['get', 'post'], 'admin/profile', 'Auth::profile')
+	; 
+	$routes->get('acpanel', 'acpanel::index');
 	$routes->match(['get', 'post'], 'admin/profile', 'Auth::profile'); 
-	$routes->get('panel', 'panel::index'); // ADMIN DASHBOARD
-	$routes->match(['get', 'post'], 'panel/profile', 'Auth::profile'); 
+	$routes->match(['get', 'post'], 'admin/acpanel', 'acpanel'); 
+
 });
 
 
@@ -70,21 +73,24 @@ $routes->group('', ['filter' => 'auth:Role,1'], function ($routes) {
 
 $routes->group('', ['filter' => 'auth:Role,2'], function ($routes){
 
-	$routes->get('dashboard', 'Dashboard::index'); // User Dashboard
-	$routes->match(['get', 'post'], 'dashboard/profile', 'Auth::profile');
+	$routes->get('user', 'user::index'); // User Dashboard
+	$routes->match(['get', 'post'], 'user/profile', 'Auth::profile');
 });
 
 
 /**
  * --------------------------------------------------------------------
- * Panel ROUTES. MUST BE LOGGED IN AND HAVE ROLE OF '3'
+ * Panel ROUTES. MUST BE LOGGED IN AND HAVE ROLE OF '3' 
  * --------------------------------------------------------------------
  */
 
 $routes->group('', ['filter' => 'auth:Role,3'], function ($routes) {
 
-	$routes->get('dashboard', 'dashboard::index'); // Panel DASHBOARD
-	$routes->match(['get', 'post'], 'dashboard/panel', 'Auth::profile'); 
+	$routes->get('mod', 'modboard::index'); // ADMIN DASHBOARD
+
+	$routes->get('panel', 'panel::index');
+	$routes->match(['get', 'post'], 'mod/profile', 'Auth::profile'); 
+	$routes->match(['get', 'post'], 'mod/panel', 'panel'); 
 
 });
 
