@@ -63,6 +63,7 @@ class Auth extends BaseCollector
             $id = session()->get('id');
             $firstname = session()->get('firstname');
             $lastname = session()->get('lastname');
+            $rolname = session()->get('rolname');
             $email = session()->get('email');
             $role = session()->get('role');
             $admin =  session()->get('isAdmin');

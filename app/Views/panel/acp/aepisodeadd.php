@@ -5,7 +5,7 @@
 
 
 <div class="vertical-menu">
-  <a href="#" class="active">ACP</a>
+<a href="#" class="active">ACP</a>
   <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/anime/add">Anime Add</a>
   <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/movie/add">Movie Add</a>
   <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/anime/episode/add">Anime Episode Add</a>
@@ -21,42 +21,35 @@
     <div id="Tabs1">
 
     <ul>
-        <li><a href="#tabs1-page-2"><span><i class="fa fa-deviantart tabs-icon"></i><br>Movie</span></a></li>
+        <li><a href="#tabs1-page-3"><span><i class="fa fa-circle-o-notch tabs-icon"></i><br>Anime Episode</span></a></li>
     </ul>
 
-
-<div id="tabs1-page-2">
-    <div id="Tabs6">
+<div id="tabs1-page-3">
+    <div id="Tabs3">
         <ul>
-            <li><a href="#tabs6-page-1"><span><i class="fa fa-gitlab tabs-icon"></i><br>Movie Add</span></a></li>
-            <li><a href="#tabs6-page-2"><span><i class="fa fa-css3 tabs-icon"></i><br>Movie Edit</span></a></li>
-            <li><a href="#tabs6-page-3"><span><i class="fa fa-eject tabs-icon"></i><br>Movie Delete</span></a></li>
-            <li><a href="#tabs6-page-4"><span><i class="fa fa-joomla tabs-icon"></i><br>Movie List</span></a></li>
+            <li><a href="#tabs3-page-1"><span><i class="fa fa-envira tabs-icon"></i><br>Anime Episode Add</span></a></li>
+            <li><a href="#tabs3-page-2"><span><i class="fa fa-crop tabs-icon"></i><br>Anime Episode Edit</span></a></li>
+            <li><a href="#tabs3-page-3"><span><i class="fa fa-eraser tabs-icon"></i><br>Anime Episode Delete</span></a></li>
         </ul>
-        
-    <div id="tabs6-page-1">
+
+    <div id="tabs3-page-1">
         <br>
 Contest
         <br>
     </div>
 
-    <div id="tabs6-page-2">
+    <div id="tabs3-page-2">
         <br>
 Contest 2
         <br>
     </div>
 
-    <div id="tabs6-page-3">
-        <br>
+    <div id="tabs3-page-3">
+        <br> 
 Contest 3
         <br>
     </div>
 
-    <div id="tabs6-page-4">
-        <br>
-Contest 4
-        <br>
-    </div>
 
 
 </div>

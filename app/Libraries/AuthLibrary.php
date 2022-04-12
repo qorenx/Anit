@@ -518,6 +518,7 @@ class AuthLibrary
             'id' => $user['id'],
             'firstname' => $user['firstname'],
             'lastname' => $user['lastname'],
+            'rolname' => $user['rolname'],
             'email' => $user['email'],
             'role' => $user['role'],
             'isLoggedIn' => true,

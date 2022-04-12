@@ -21,40 +21,32 @@
     <div id="Tabs1">
 
     <ul>
-        <li><a href="#tabs1-page-2"><span><i class="fa fa-deviantart tabs-icon"></i><br>Movie</span></a></li>
+        <li><a href="#tabs1-page-4"><span><i class="fa fa-dashcube tabs-icon"></i><br>Movie Episode</span></a></li>
     </ul>
 
-
-<div id="tabs1-page-2">
-    <div id="Tabs6">
+<div id="tabs1-page-4">
+    <div id="Tabs4">
         <ul>
-            <li><a href="#tabs6-page-1"><span><i class="fa fa-gitlab tabs-icon"></i><br>Movie Add</span></a></li>
-            <li><a href="#tabs6-page-2"><span><i class="fa fa-css3 tabs-icon"></i><br>Movie Edit</span></a></li>
-            <li><a href="#tabs6-page-3"><span><i class="fa fa-eject tabs-icon"></i><br>Movie Delete</span></a></li>
-            <li><a href="#tabs6-page-4"><span><i class="fa fa-joomla tabs-icon"></i><br>Movie List</span></a></li>
+            <li><a href="#tabs4-page-1"><span><i class="fa fa-medium tabs-icon"></i><br>Movie Episode Add</span></a></li>
+            <li><a href="#tabs4-page-2"><span><i class="fa fa-external-link-square tabs-icon"></i><br>Movie Episode Edit</span></a></li>
+            <li><a href="#tabs4-page-3"><span><i class="fa fa-fire tabs-icon"></i><br>Movie Episode Delete</span></a></li>
         </ul>
-        
-    <div id="tabs6-page-1">
+
+    <div id="tabs4-page-1">
         <br>
 Contest
         <br>
     </div>
 
-    <div id="tabs6-page-2">
+    <div id="tabs4-page-2">
         <br>
 Contest 2
         <br>
     </div>
-
-    <div id="tabs6-page-3">
+    
+    <div id="tabs4-page-3">
         <br>
 Contest 3
-        <br>
-    </div>
-
-    <div id="tabs6-page-4">
-        <br>
-Contest 4
         <br>
     </div>
 
