@@ -19,7 +19,7 @@ class Admin extends BaseController
 		$data = [];
 
 		echo view('templates/header', $data);
-		echo view('admin');
+		echo view('panel/admin');
 		echo view('templates/footer');
 	}
 

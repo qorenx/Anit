@@ -17,14 +17,14 @@
 
 namespace App\Controllers;
 
-class ModBoard extends BaseController
+class Mod extends BaseController
 {
 	public function index()
 	{
 		$data = [];
 
 		echo view('templates/header', $data);
-		echo view('panel/modboard');
+		echo view('panel/mod');
 		echo view('templates/footer');
 	}
 

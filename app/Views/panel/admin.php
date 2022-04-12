@@ -6,7 +6,7 @@
 
                 <h4><?= session()->get('firstname') ?> <?= session()->get('lastname') ?></h4>
                 <div>
-                     <a class="btn btn-lg btn-default" href="/admin/acpanel" role="button">Anime Panel</a>
+                     <a class="btn btn-lg btn-default" href="/admin/panel" role="button">Anime Panel</a>
                 </div>
             </div>
         </div>

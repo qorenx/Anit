@@ -43,6 +43,7 @@ class Toolbar extends BaseConfig
         Routes::class,
         Events::class,
         \App\Collectors\Auth::class,
+        \App\Collectors\Anime::class,
     ];
 
     /**
