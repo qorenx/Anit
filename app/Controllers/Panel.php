@@ -21,6 +21,15 @@ class Panel extends BaseController
 		echo view('templates/footer');
 	}
 
+	public function animeadd()
+	{
+		$data = [];
+
+		echo view('templates/header', $data);
+		echo view('panel/panel/acp/animeadd');
+		echo view('templates/footer');
+	}
+
 	//--------------------------------------------------------------------
 
 }
