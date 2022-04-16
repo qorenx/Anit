@@ -5,11 +5,11 @@
 
 
 <div class="vertical-menu">
-  <a href="#" class="active">ACP</a>
-  <a href="panel/anime/add">Anime Add</a>
-  <a href="panel/movie/add">Movie Add</a>
-  <a href="panel/anime/episode/add">Anime Episode Add</a>
-  <a href="panel/movie/episode/add">Movie Episode Add</a>
+  <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/" class="active">ACP</a>
+  <a href="panel/anime-list">Anime</a>
+  <a href="panel/movie/add">Movie</a>
+  <a href="panel/anime/episode">Anime Episode</a>
+  <a href="panel/movie/episode">Movie Episode</a>
   <a href="panel/fansub">Fansub</a>
 </div> 
 </div>

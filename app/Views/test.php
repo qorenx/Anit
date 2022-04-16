@@ -1,203 +1,115 @@
-Panel save testing page
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="<?php echo base_url();?>/assets/usermod/jquery-ui.min.css" rel="stylesheet">
+<link href="<?php echo base_url();?>/assets/usermod/font-awesome.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script href="<?php echo base_url();?>/assets/usermod/jquery-3.6.0.min.js"></script>
+<script href="<?php echo base_url();?>/usermod/jquery-ui.min.js"></script>
+<script href="<?php echo base_url();?>/usermod/wb.panel.min.js"></script>
+<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/custom.css">
+<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/panel/animeaddpanel.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+$(document).ready(function()
+{
+   $("#Tabs1").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      collapsible: false
+   });
+   $("#Tabs2").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      collapsible: false
+   });
+   $("#Tabs3").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      collapsible: false
+   });
+   $("#Tabs4").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      collapsible: false
+   });
+   $("#Tabs5").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      collapsible: false
+   });
+   $("#Tabs6").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      collapsible: false
+   });
+   $("#PanelMenu1").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'overlay', position: 'right', toggle: true, overlay: true});
+});
+</script>
 
-<div id="FlexGrid1">
-<div class="basbar">
-</div>
-<div class="soltaraf">
-
-
-<div class="vertical-menu">
-  <a href="#" class="active">ACP</a>
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  <a href="#">Link 4</a>
-</div> 
-</div>
-<div class="ortataraf">
-
-
+    <?php $uri = service('uri') ?>
+    <?php $this->config = config('Auth');
+    $redirect = $this->config->assignRedirect; ?>
+<div id="wb_PageHeader">
+<div id="PageHeader">
 <div class="row">
-
-    <div id="Tabs1">
-
-    <ul>
-        <li><a href="#tabs1-page-1"><span><i class="fa fa-eercast tabs-icon"></i><br>Anime</span></a></li>
-        <li><a href="#tabs1-page-2"><span><i class="fa fa-deviantart tabs-icon"></i><br>Movie</span></a></li>
-        <li><a href="#tabs1-page-3"><span><i class="fa fa-circle-o-notch tabs-icon"></i><br>Anime Episode</span></a></li>
-        <li><a href="#tabs1-page-4"><span><i class="fa fa-dashcube tabs-icon"></i><br>Movie Episode</span></a></li>
-        <li><a href="#tabs1-page-5"><span><i class="fa fa-puzzle-piece tabs-icon"></i><br>Fansub</span></a></li>
-    </ul>
-
-<div id="tabs1-page-1">
-    <div id="Tabs2">
-        <ul>
-            <li><a href="#tabs2-page-1"><span><i class="fa fa-renren tabs-icon"></i><br>Anime Add</span></a></li>
-            <li><a href="#tabs2-page-2"><span><i class="fa fa-cut tabs-icon"></i><br>Anime Edit</span></a></li>
-            <li><a href="#tabs2-page-3"><span><i class="fa fa-trash tabs-icon"></i><br>Anime Delete</span></a></li>
-            <li><a href="#tabs2-page-4"><span><i class="fa fa-th-list tabs-icon"></i><br>Anime List</span></a></li>
-        </ul>
-
-    <div id="tabs2-page-1">
-        <br>
-Contest
-        <br>
-    </div>
-
-    <div id="tabs2-page-2">
-        <br>
-Contest 2
-        <br>
-    </div>
-
-    <div id="tabs2-page-3">
-        <br>
-Contest 3
-        <br>
-    </div>
-
-    <div id="tabs2-page-4">
-        <br>
-Contest 4
-        <br>
-    </div>
-
-    </div>
-</div>
-
-<div id="tabs1-page-2">
-    <div id="Tabs6">
-        <ul>
-            <li><a href="#tabs6-page-1"><span><i class="fa fa-gitlab tabs-icon"></i><br>Movie Add</span></a></li>
-            <li><a href="#tabs6-page-2"><span><i class="fa fa-css3 tabs-icon"></i><br>Movie Edit</span></a></li>
-            <li><a href="#tabs6-page-3"><span><i class="fa fa-eject tabs-icon"></i><br>Movie Delete</span></a></li>
-            <li><a href="#tabs6-page-4"><span><i class="fa fa-joomla tabs-icon"></i><br>Movie List</span></a></li>
-        </ul>
-        
-    <div id="tabs6-page-1">
-        <br>
-Contest
-        <br>
-    </div>
-
-    <div id="tabs6-page-2">
-        <br>
-Contest 2
-        <br>
-    </div>
-
-    <div id="tabs6-page-3">
-        <br>
-Contest 3
-        <br>
-    </div>
-
-    <div id="tabs6-page-4">
-        <br>
-Contest 4
-        <br>
-    </div>
-
-    </div>
+<div class="col-1">
+<div id="wb_FontAwesomeIcon1">
+<a href="#PanelMenu1_markup" id="PanelMenu1" class="fa fa-user-circle-o"></a>
 </div>
 
 
-<div id="tabs1-page-3">
-    <div id="Tabs3">
-        <ul>
-            <li><a href="#tabs3-page-1"><span><i class="fa fa-envira tabs-icon"></i><br>Anime Episode Add</span></a></li>
-            <li><a href="#tabs3-page-2"><span><i class="fa fa-crop tabs-icon"></i><br>Anime Episode Edit</span></a></li>
-            <li><a href="#tabs3-page-3"><span><i class="fa fa-eraser tabs-icon"></i><br>Anime Episode Delete</span></a></li>
-        </ul>
+<div id="PanelMenu1_markup">
+<ul role="menu">
+   <li role="menuitem"><a href="<?= base_url()?>" class="nav-link"><i class="fa fa-home fa-fw"></i><span>Home</span></a></li>
+   <?php if (session()->get('isLoggedIn')) : ?>
 
-    <div id="tabs3-page-1">
-        <br>
-Contest
-        <br>
-    </div>
+    <li class="nav-item <?= ($uri->getSegment(1) == 'dashboard' ? 'active' : null) ?>">
+    <li role="menuitem"><a href="<?php echo $redirect[session()->get('role')] ?>" class="nav-link"><i class="fa fa-user-circle-o"></i><span>Profil</span></a></li>
+    </li>
 
-    <div id="tabs3-page-2">
-        <br>
-Contest 2
-        <br>
-    </div>
+    <li class="nav-item <?= ($uri->getSegment(1) == 'profile' ? 'active' : null) ?>">          
+    <li role="menuitem"><a href="<?php echo $redirect[session()->get('role')] ?>/profile" class="nav-link"><i class="fa fa-expeditedssl"></i><span>Settings</span></a></li>
+    </li>
 
-    <div id="tabs3-page-3">
-        <br> 
-Contest 3
-        <br>
-    </div>
+    <?php if ($this->config->lockScreen) : ?>
+    <li role="menuitem"><a href="/lockscreen" class="nav-link"><i class="fa fa-wrench"></i><span>Locked</span></a></li>
+    <?php endif; ?>
 
-    </div>
-</div>
-
-<div id="tabs1-page-4">
-    <div id="Tabs4">
-        <ul>
-            <li><a href="#tabs4-page-1"><span><i class="fa fa-medium tabs-icon"></i><br>Movie Episode Add</span></a></li>
-            <li><a href="#tabs4-page-2"><span><i class="fa fa-external-link-square tabs-icon"></i><br>Movie Episode Edit</span></a></li>
-            <li><a href="#tabs4-page-3"><span><i class="fa fa-fire tabs-icon"></i><br>Movie Episode Delete</span></a></li>
-        </ul>
-
-    <div id="tabs4-page-1">
-        <br>
-Contest
-        <br>
-    </div>
-
-    <div id="tabs4-page-2">
-        <br>
-Contest 2
-        <br>
-    </div>
+    <li role="menuitem"><a href="/logout" class="nav-link"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
     
-    <div id="tabs4-page-3">
-        <br>
-Contest 3
-        <br>
-    </div>
+    <?php else : ?> 
 
-    </div>
-</div>
+    <li class="nav-item <?= ($uri->getSegment(1) == '' ? 'active' : null) ?>">
+    <li role="menuitem"><a href="/login" class="nav-link"><i class="fa fa-sign-in"></i><span>Sign İn</span></a></li>
+    </li>
 
-<div id="tabs1-page-5">
-    <div id="Tabs5">
-        <ul>
-            <li><a href="#tabs5-page-1"><span><i class="fa fa-crosshairs tabs-icon"></i><br>Fansub Add</span></a></li>
-            <li><a href="#tabs5-page-2"><span><i class="fa fa-first-order tabs-icon"></i><br>Fansub Edit</span></a></li>
-            <li><a href="#tabs5-page-3"><span><i class="fa fa-trash tabs-icon"></i><br>Fansub Delete</span></a></li>
-        </ul>
+    <li class="nav-item <?= ($uri->getSegment(1) == 'register' ? 'active' : null) ?>">
+    <li role="menuitem"><a href="/register" class="nav-link"><i class="fa fa-registered"></i><span>Registered</span></a></li>
+    </li>
 
-    <div id="tabs5-page-1">
-        <br>
-Contest
-        <br>
-    </div>
-
-    <div id="tabs5-page-2">
-        <br>
-Contest 1
-        <br>
-    </div>
-
-    <div id="tabs5-page-3">
-        <br>
-Contest 2
-        <br>
-    </div>
-
-    </div>
-</div>
-    </div>
-
-
-</div>
-
-
-
-
-</div>
-<div class="sagtaraf">
+    <?php endif; ?>
+</ul>
 </div>
 </div>
+</div>
+</div>
+</div>
+</head>
+<body>
+</html>

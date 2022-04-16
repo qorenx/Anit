@@ -13,6 +13,7 @@
 
 namespace App\Controllers;
 
+use App\Models\AnimeAddModel;
 
 class Anime extends BaseController
 {
@@ -27,7 +28,28 @@ class Anime extends BaseController
 	public function animeadd()
 	{
 		echo view('templates/header');
-		echo view('panel/acp/animeadd');
+		echo view('panel/acp/anime/animeadd');
+		echo view('templates/footer');
+	}
+
+	public function animelist()
+	{
+		echo view('templates/header');
+		echo view('panel/acp/anime/animelist');
+		echo view('templates/footer');
+	}
+
+	public function animeedit()
+	{
+		echo view('templates/header');
+		echo view('panel/acp/anime/animeedit');
+		echo view('templates/footer');
+	}
+
+	public function animedelete()
+	{
+		echo view('templates/header');
+		echo view('panel/acp/anime/animedelete');
 		echo view('templates/footer');
 	}
 
@@ -57,6 +79,20 @@ class Anime extends BaseController
 		echo view('templates/header');
 		echo view('panel/acp/fansub');
 		echo view('templates/footer');
+	}
+
+	public function __construct()
+	{
+		helper(['url']);
+	}
+
+	public function add()
+	{
+		$anime = $this->request->getVar();
+		$anime['created'] = date('Y-m-d',  strtotime($anime['created']));
+		$animeaddmodel = new animeaddmodel();
+		$animeaddmodel->insert($anime);
+		return $this->response->redirect(site_url('/panel'));
 	}
 
 }

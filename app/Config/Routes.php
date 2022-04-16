@@ -58,10 +58,13 @@ $routes->group('', ['filter' => 'auth:Role,1'], function ($routes) {
 	$routes->get('admin', 'admin::index'); // ADMIN DASHBOARD
 	$routes->match(['get', 'post'], 'admin/profile', 'Auth::profile'); 
 	$routes->match(['get', 'post'], 'admin/panel', 'Anime::panel');
-	$routes->match(['get', 'post'], 'admin/panel/anime/add', 'Anime::animeadd'); 
-	$routes->match(['get', 'post'], 'admin/panel/movie/add', 'Anime::movieadd');
-	$routes->match(['get', 'post'], 'admin/panel/anime/episode/add', 'Anime::aepisodeadd');
-	$routes->match(['get', 'post'], 'admin/panel/movie/episode/add', 'Anime::mepisodeadd');
+	$routes->match(['get', 'post'], 'admin/panel/anime-list', 'Anime::animelist'); 
+	$routes->match(['get', 'post'], 'admin/panel/anime-add', 'Anime::animeadd');
+	$routes->match(['get', 'post'], 'admin/panel/anime-edit', 'Anime::animeedit');
+	$routes->match(['get', 'post'], 'admin/panel/anime-delete', 'Anime::animedelete');
+	$routes->match(['get', 'post'], 'admin/panel/movie', 'Anime::movieadd');
+	$routes->match(['get', 'post'], 'admin/panel/anime/episode', 'Anime::aepisodeadd');
+	$routes->match(['get', 'post'], 'admin/panel/movie/episode', 'Anime::mepisodeadd');
 	$routes->match(['get', 'post'], 'admin/panel/fansub', 'Anime::fansub');
 
 });
@@ -91,10 +94,13 @@ $routes->group('', ['filter' => 'auth:Role,3'], function ($routes) {
 	$routes->get('mod', 'mod::index'); // ADMIN DASHBOARD
 	$routes->match(['get', 'post'], 'mod/profile', 'Auth::profile'); 
 	$routes->match(['get', 'post'], 'mod/panel', 'Anime::panel'); 
-	$routes->match(['get', 'post'], 'mod/panel/anime/add', 'Anime::animeadd'); 
-	$routes->match(['get', 'post'], 'mod/panel/movie/add', 'Anime::movieadd');
-	$routes->match(['get', 'post'], 'mod/panel/anime/episode/add', 'Anime::aepisodeadd');
-	$routes->match(['get', 'post'], 'mod/panel/movie/episode/add', 'Anime::mepisodeadd');
+	$routes->match(['get', 'post'], 'mod/panel/anime-list', 'Anime::animelist'); 
+	$routes->match(['get', 'post'], 'mod/panel/anime-add', 'Anime::animeadd');
+	$routes->match(['get', 'post'], 'mod/panel/anime-edit', 'Anime::animeedit');
+	$routes->match(['get', 'post'], 'mod/panel/anime-delete', 'Anime::animedelete');
+	$routes->match(['get', 'post'], 'mod/panel/movie', 'Anime::movieadd');
+	$routes->match(['get', 'post'], 'mod/panel/anime/episode', 'Anime::aepisodeadd');
+	$routes->match(['get', 'post'], 'mod/panel/movie/episode', 'Anime::mepisodeadd');
 	$routes->match(['get', 'post'], 'mod/panel/fansub', 'Anime::fansub');
 
 });

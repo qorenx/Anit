@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 <div class="reglogBackground">
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
@@ -33,6 +32,7 @@
                             </div>
                         <?php } ?>
                     </div>
+                    <br>
                     <div class="form-group">
                         <input placeholder="Password" type="password" class="form-control" name="password" id="password" value="">
                         <?php if ($validation->getError('password')) { ?>
@@ -41,6 +41,7 @@
                             </div>
                         <?php } ?>
                     </div>
+                    <br>
                     <?php if ($config->rememberMe) : ?>
                         <div class="form-check mb-3">
                             <input type="checkbox" class="form-check-input" id="rememberme" name="rememberme" value="1">

@@ -5,12 +5,12 @@
 
 
 <div class="vertical-menu">
-  <a href="#" class="active">ACP</a>
-  <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/anime/add">Anime Add</a>
-  <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/movie/add">Movie Add</a>
-  <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/anime/episode/add">Anime Episode Add</a>
-  <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/movie/episode/add">Movie Episode Add</a>
-  <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/fansub">Fansub</a>
+<a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/">ACP</a>
+  <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/anime">Anime</a>
+  <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/movie">Movie</a>
+  <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/anime/episode">Anime Episode</a>
+  <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/movie/episode">Movie Episode</a>
+  <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/fansub" class="active">Fansub</a>
 </div> 
 </div>
 <div class="ortataraf">

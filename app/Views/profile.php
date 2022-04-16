@@ -1,6 +1,5 @@
 
 <?php $this->config = config('Auth'); $redirect = $this->config->assignRedirect;?>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 <div class="reglogBackground">
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
@@ -17,6 +16,7 @@
                     <div class="alert alert-success alert-dismissible" role="alert">
                         <?= session()->get('success'); ?>
                     </div>
+                    <br>
                 <?php endif; ?>                
                 <form class="" action="<?php echo $redirect[session()->get('role')] ?>/profile" method="post">
                     <div class="form-group">
@@ -27,6 +27,7 @@
                             </div>
                         <?php } ?>
                     </div>
+                    <br>
                     <div class="form-group">
                         <input placeholder="Last Name" type="text" class="form-control" name="lastname" id="lastname" value="<?= set_value('lastname', session()->get('lastname')) ?>">
                         <?php if ($validation->getError('lastname')) { ?>
@@ -35,6 +36,7 @@
                             </div>
                         <?php } ?>
                     </div>
+                    <br>
                     <div class="form-group">
                         <input placeholder="Email Address" type="text" class="form-control" name="email" id="email" value="<?= set_value('email', session()->get('email')) ?>">
                         <?php if ($validation->getError('email')) { ?>
@@ -43,6 +45,7 @@
                             </div>
                         <?php } ?>
                     </div>
+                    <br>
                     <div class="form-group">
                         <input placeholder="Password" type="password" class="form-control" name="password" id="password" value="">
                         <?php if ($validation->getError('password')) { ?>
@@ -51,6 +54,7 @@
                             </div>
                         <?php } ?>
                     </div>
+                    <br>
                     <div class="form-group">
                         <input placeholder="Confirm Password" type="password" class="form-control" name="password_confirm" id="password_confirm" value="">
                         <?php if ($validation->getError('password_confirm')) { ?>
@@ -59,7 +63,7 @@
                             </div>
                         <?php } ?>
                     </div>
-
+                    <br>
                     <div class=" row">
                         <div class="col-12 col-sm-4">
                             <button type="submit" class="btn btn-primary">Update</button>
