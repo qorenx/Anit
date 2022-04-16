@@ -7,6 +7,9 @@
 <div class="vertical-menu">
 <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/">ACP</a>
   <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/anime">Anime</a>
+
+
+  ----------------
   <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/movie">Movie</a>
   <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/anime/episode">Anime Episode</a>
   <a href="<?php echo base_url();?>/<?= session()->get('rolname') ?>/panel/movie/episode">Movie Episode</a>

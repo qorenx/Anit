@@ -88,11 +88,9 @@ class Anime extends BaseController
 
 	public function add()
 	{
-		$anime = $this->request->getVar();
-		$anime['created'] = date('Y-m-d',  strtotime($anime['created']));
+		$anime = $this->request->getVar();	
 		$animeaddmodel = new animeaddmodel();
 		$animeaddmodel->insert($anime);
 		return $this->response->redirect(site_url('/panel'));
 	}
-
 }

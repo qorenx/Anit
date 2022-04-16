@@ -11,7 +11,6 @@
 <script href="<?php echo base_url();?>/usermod/jquery-ui.min.js"></script>
 <script href="<?php echo base_url();?>/usermod/wb.panel.min.js"></script>
 <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/custom.css">
-<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/panel/animeaddpanel.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <?php $uri = service('uri') ?>

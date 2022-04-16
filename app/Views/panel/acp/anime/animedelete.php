@@ -1,6 +1,4 @@
 <div id="FlexGrid1">
-<div class="basbar">
-</div>
 <div class="soltaraf">
 
 <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/panel/animeaddpanel.css">
@@ -20,9 +18,5 @@ delete
     
 </div>
 </div>
-</div>
-</div>
-</div>
 <div class="sagtaraf">
-</div>
 </div>

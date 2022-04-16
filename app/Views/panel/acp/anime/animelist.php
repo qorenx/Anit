@@ -1,6 +1,4 @@
 <div id="FlexGrid1">
-<div class="basbar">
-</div>
 <div class="soltaraf">
 
 
@@ -22,9 +20,5 @@ list
     
 </div>
 </div>
-</div>
-</div>
-</div>
 <div class="sagtaraf">
-</div>
 </div>
