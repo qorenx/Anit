@@ -21,9 +21,9 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		echo view('templates/header');
-		echo view('home');
-		echo view('templates/footer');
+		echo view('frontend/templates/header');
+		echo view('frontend/home');
+		echo view('frontend/templates/footer');
 		
 	}
 

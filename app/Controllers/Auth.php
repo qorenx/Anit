@@ -94,9 +94,9 @@ class Auth extends BaseController
 		}
 
 		// SET UP VIEWS
-		echo view('templates/header');
-		echo view('login',['config' => $this->config]);
-		echo view('templates/footer');
+		echo view('uacp/header');
+		echo view('uacp/login',['config' => $this->config]);
+		echo view('uacp/footer');
 	}
 
 	/*
@@ -158,9 +158,9 @@ class Auth extends BaseController
 			}
 		}
 
-		echo view('templates/header');
-		echo view('register');
-		echo view('templates/footer');
+		echo view('uacp/header');
+		echo view('uacp/register');
+		echo view('uacp/footer');
 	}
 
 	/*
@@ -255,9 +255,9 @@ class Auth extends BaseController
 			}
 		}		
 
-		echo view('templates/header');
+		echo view('uacp/header');
 		echo view('profile');
-		echo view('templates/footer');
+		echo view('uacp/footer');
 	}
 
 
@@ -304,9 +304,9 @@ class Auth extends BaseController
 			}
 		}
 
-		echo view('templates/header');
-		echo view('forgotpassword');
-		echo view('templates/footer');
+		echo view('uacp/header');
+		echo view('uacp/forgotpassword');
+		echo view('uacp/footer');
 	}
 
 	/*
@@ -374,9 +374,9 @@ class Auth extends BaseController
 			'id' => $id,
 		];
 		
-		echo view('templates/header');
-		echo view('resetpassword', $data);
-		echo view('templates/footer');
+		echo view('uacp/header');
+		echo view('uacp/resetpassword', $data);
+		echo view('uacp/footer');
 	}
 
 	public function lockscreen()
@@ -415,9 +415,9 @@ class Auth extends BaseController
                 }
             }
 
-            echo view('templates/header');
+            echo view('uacp/header');
             echo view('lockscreen');
-            echo view('templates/footer');
+            echo view('uacp/footer');
 		}
 		else {
             return redirect()->to('/');

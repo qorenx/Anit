@@ -1,4 +1,6 @@
-<?php namespace Config;
+<?php 
+
+namespace Config;
 
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
@@ -55,57 +57,23 @@ $routes->get('/', 'Home::index');
 
 $routes->group('', ['filter' => 'auth:Role,1'], function ($routes) {
 
-	$routes->get('admin', 'admin::index'); // ADMIN DASHBOARD
-	$routes->match(['get', 'post'], 'admin/profile', 'Auth::profile'); 
-	$routes->match(['get', 'post'], 'admin/panel', 'Anime::panel');
-	$routes->match(['get', 'post'], 'admin/panel/anime-list', 'Anime::animelist'); 
-	$routes->match(['get', 'post'], 'admin/panel/anime-add', 'AnimeCP::animeadd');
-	$routes->post('admin/panel/anime-add/add', 'AnimeCP::add');
-	$routes->match(['get', 'post'], 'admin/panel/anime-edit', 'Anime::animeedit');
-	$routes->match(['get', 'post'], 'admin/panel/anime-delete', 'Anime::animedelete');
-	$routes->match(['get', 'post'], 'admin/panel/movie', 'Anime::movieadd');
-	$routes->match(['get', 'post'], 'admin/panel/anime/episode', 'Anime::aepisodeadd');
-	$routes->match(['get', 'post'], 'admin/panel/movie/episode', 'Anime::mepisodeadd');
-	$routes->match(['get', 'post'], 'admin/panel/fansub', 'Anime::fansub');
+	$routes->get('admin', 'AdminCP::index'); // Admin backend admin_home.php bulunuyor.
+	$routes->match(['get', 'post'], 'admin/profile', 'Auth::profile');   // view içindeki profil çağırıyor.
 
 });
 
 
 /**
  * --------------------------------------------------------------------
- * USER. MUST BE LOGGED IN AND HAVE ROLE OF '2'
+ * ADMIN ROUTES. MUST BE LOGGED IN AND HAVE ROLE OF '2'
  * --------------------------------------------------------------------
  */
 
 $routes->group('', ['filter' => 'auth:Role,2'], function ($routes){
 
-	$routes->get('user', 'user::index'); // User Dashboard
-	$routes->match(['get', 'post'], 'user/profile', 'Auth::profile');
+	$routes->get('user', 'UserCP::index'); // Üye dasboard yapılacaktır.
+	$routes->match(['get', 'post'], 'user/profile', 'Auth::profile'); // view içindeki profil çağırıyor.
 });
-
-
-/**
- * --------------------------------------------------------------------
- * Panel ROUTES. MUST BE LOGGED IN AND HAVE ROLE OF '3' 
- * --------------------------------------------------------------------
- */
-
-$routes->group('', ['filter' => 'auth:Role,3'], function ($routes) {
-
-	$routes->get('mod', 'mod::index'); // ADMIN DASHBOARD
-	$routes->match(['get', 'post'], 'mod/profile', 'Auth::profile'); 
-	$routes->match(['get', 'post'], 'mod/panel', 'Anime::panel'); 
-	$routes->match(['get', 'post'], 'mod/panel/anime-list', 'Anime::animelist'); 
-	$routes->match(['get', 'post'], 'mod/panel/anime-add', 'Anime::animeadd');
-	$routes->match(['get', 'post'], 'mod/panel/anime-edit', 'Anime::animeedit');
-	$routes->match(['get', 'post'], 'mod/panel/anime-delete', 'Anime::animedelete');
-	$routes->match(['get', 'post'], 'mod/panel/movie', 'Anime::movieadd');
-	$routes->match(['get', 'post'], 'mod/panel/anime/episode', 'Anime::aepisodeadd');
-	$routes->match(['get', 'post'], 'mod/panel/movie/episode', 'Anime::mepisodeadd');
-	$routes->match(['get', 'post'], 'mod/panel/fansub', 'Anime::fansub');
-
-});
-
 
 /**
  * --------------------------------------------------------------------

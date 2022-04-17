@@ -1,15 +1,10 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-<div class="reglogBackground">
-<section class="vh-100 gradient-custom">
-  <div class="container py-5 h-100">
-    <div class="d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-44 col-xl-5 reglogpanel">
-
-          <div class="card-body p-5 text-center">
-
-            <div class="mb-md-1 mt-md-1 pb-1">
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-8 offset-sm-2 col-md-4 offset-md-4 mt-5 pt-3 pb-3 bg-white form-wrapper">
+            <div class="container">
                 <h3>Screen Locked</h3>
                 <hr>
+                <h5>Hi <?= session()->get('firstname') ?></h5>
                 <?php $validation = \Config\Services::validation(); ?>
                 <?php if (session()->get('success')) : ?>
                     <div class="alert alert-success" role="alert">
@@ -31,7 +26,8 @@
                     <input type="hidden" class="form-control" name="rememberme" id="rememberme" value="<?= session()->get('rememberme') ?>">
 
                     <div class="form-group">
-                        <input placeholder="Password" type="password" class="form-control" name="password" id="password" value="">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" value="">
                         <?php if ($validation->getError('password')) { ?>
                             <div class='alert alert-danger mt-2'>
                                 <?= $error = $validation->getError('password'); ?>
@@ -50,7 +46,4 @@
 
         </div>
     </div>
-    </section>
-</div>
-</div>
 </div>

@@ -63,10 +63,9 @@ class Auth extends BaseCollector
             $id = session()->get('id');
             $firstname = session()->get('firstname');
             $lastname = session()->get('lastname');
-            $rolname = session()->get('rolname');
             $email = session()->get('email');
             $role = session()->get('role');
-            $admin =  session()->get('isAdmin');
+            $superadmin =  session()->get('isSuperAdmin');
         
             $html = '<h3>Current User</h3>';
             $html .= '<table><tbody>';
@@ -75,7 +74,7 @@ class Auth extends BaseCollector
             $html .= "<tr><td>Last Name</td><td>{$lastname}</td></tr>";
             $html .= "<tr><td>Email</td><td>{$email}</td></tr>";
             $html .= "<tr><td>Role</td><td>{$role}</td></tr>";
-            $html .= "<tr><td>Is Admin</td><td>{$admin}</td></tr>";             
+            $html .= "<tr><td>Is Super Admnin</td><td>{$superadmin}</td></tr>";             
             $html .= '</tbody></table>';
         } else {
             $html = '<p>Not logged in.</p>';

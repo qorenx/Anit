@@ -1,36 +1,33 @@
-I wanted to learn to code. I set myself a goal. I hope I can make a site with the features I want. I will be using the latest version of CodeIgniter 4 while doing this. Because it's simple and fast. Ideal for starting learning.
-Anyone who wants to help with the coding can open a merge request or discussion. I add team.
 
-Completion Status; %1
+
+CodeIgniter 4.1.9 is used. We will try to keep it up to date.
+
+I hope I can bring it to a simple site level. I've opened things like GitHub discussion or issue asking for help. They can help. But let me point this out. I am a student, I am making a website for the first time. I'm not an expert. I move forward by learning and making mistakes.
+
+The current situation; localhost is installed.
+
+Completion Status; It hasn't started yet.
 
 Future Features;
 
--Member login.  -> %100
+-Member login.
 
--Watching JP-CN anime. -> %0
+-Watching JP-CN anime.
 
--Anime Status -> %0
+-Anime Status
 
--User Anime Status  -> %0
+-Member upload.
 
--Manga Read  -> %0
+-Anime genre selection
 
--User Anime Add Panel  -> %0
+-Social chat.
 
--Myanimelist or anilist extention  -> %0
+-News section.
 
--Member upload. -> %0
+-Small Forum.
 
--Anime genre selection -> %0
+-Multiple fansub support
 
--Social chat. -> %0
+-Fansub page and panel
 
--News section. -> %0
-
--Small Forum. -> %0
-
--Multiple fansub support -> %0
-
--Fansub page and panel -> %0
-
--Admin Panel and Login  -> %10
+-Admin Panel and Login
