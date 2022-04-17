@@ -59,8 +59,8 @@ $routes->group('', ['filter' => 'auth:Role,1'], function ($routes) {
 	$routes->match(['get', 'post'], 'admin/profile', 'Auth::profile'); 
 	$routes->match(['get', 'post'], 'admin/panel', 'Anime::panel');
 	$routes->match(['get', 'post'], 'admin/panel/anime-list', 'Anime::animelist'); 
-	$routes->match(['get', 'post'], 'admin/panel/anime-add', 'Anime::animeadd');
-	$routes->post('admin/panel/anime-add/add', 'Anime::add');
+	$routes->match(['get', 'post'], 'admin/panel/anime-add', 'AnimeCP::animeadd');
+	$routes->post('admin/panel/anime-add/add', 'AnimeCP::add');
 	$routes->match(['get', 'post'], 'admin/panel/anime-edit', 'Anime::animeedit');
 	$routes->match(['get', 'post'], 'admin/panel/anime-delete', 'Anime::animedelete');
 	$routes->match(['get', 'post'], 'admin/panel/movie', 'Anime::movieadd');

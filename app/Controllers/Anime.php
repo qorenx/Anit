@@ -13,7 +13,6 @@
 
 namespace App\Controllers;
 
-use App\Models\AnimeAddModel;
 
 class Anime extends BaseController
 {
@@ -22,13 +21,6 @@ class Anime extends BaseController
 	{
 		echo view('templates/header');
 		echo view('panel/panel');
-		echo view('templates/footer');
-	}
-
-	public function animeadd()
-	{
-		echo view('templates/header');
-		echo view('panel/acp/anime/animeadd');
 		echo view('templates/footer');
 	}
 
@@ -81,16 +73,4 @@ class Anime extends BaseController
 		echo view('templates/footer');
 	}
 
-	public function __construct()
-	{
-		helper(['url']);
-	}
-
-	public function add()
-	{
-		$anime = $this->request->getVar();	
-		$animeaddmodel = new animeaddmodel();
-		$animeaddmodel->insert($anime);
-		return $this->response->redirect(site_url('/panel'));
-	}
 }
