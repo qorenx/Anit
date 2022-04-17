@@ -1,7 +1,10 @@
+I plan to rewrite it as Back and Front. I'll take care of it until the exams are over. I'll try to make it a little simpler.
+Up: 17.04.2022 : 16:42
+
 I wanted to learn to code. I set myself a goal. I hope I can make a site with the features I want. I will be using the latest version of CodeIgniter 4 while doing this. Because it's simple and fast. Ideal for starting learning.
 Anyone who wants to help with the coding can open a merge request or discussion. I add team.
 
-Completion Status; %1
+Completion Status; %1 -Stop
 
 Future Features;
 
