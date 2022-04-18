@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/admin/dist/css/adminlte.min.css">
+
 </head>
 <!--
 `body` tag options:
@@ -258,7 +259,7 @@ $redirect = $this->config->assignRedirect; ?>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="<?php echo base_url();?>/admin/anime/anime_listing" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Anime List</p>
                 </a>
@@ -266,7 +267,7 @@ $redirect = $this->config->assignRedirect; ?>
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="<?php echo base_url();?>/admin/anime/anime_add" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Anime Add</p>
                 </a>
@@ -274,7 +275,7 @@ $redirect = $this->config->assignRedirect; ?>
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="<?php echo base_url();?>/admin/anime/anime_update" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Anime Edit</p>
                 </a>
@@ -282,7 +283,7 @@ $redirect = $this->config->assignRedirect; ?>
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="<?php echo base_url();?>/admin/anime/anime_delete" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Anime Delete</p>
                 </a>

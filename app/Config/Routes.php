@@ -38,6 +38,7 @@ $routes->match(['get', 'post'], 'resetpassword/(:num)/(:any)', 'Auth::resetPassw
 $routes->match(['get', 'post'], 'updatepassword/(:num)', 'Auth::updatepassword/$1'); // UPDATE PASSWORD
 $routes->match(['get', 'post'], 'lockscreen', 'Auth::lockscreen'); // LOCK SCREEN
 $routes->get('logout', 'Auth::logout'); // LOGOUT
+$routes->get('test', 'test::index'); //test/test page kısmıdır.
 
 
 /**
@@ -55,10 +56,20 @@ $routes->get('/', 'Home::index');
  * --------------------------------------------------------------------
  */
 
-$routes->group('', ['filter' => 'auth:Role,1'], function ($routes) {
+$routes->group('admin', ['filter' => 'auth:Role,1'], function ($routes) {
 
-	$routes->get('admin', 'AdminCP::index'); // Admin backend admin_home.php bulunuyor.
-	$routes->match(['get', 'post'], 'admin/profile', 'Auth::profile');   // view içindeki profil çağırıyor.
+	$routes->get('', 'AdminCP::index'); // Admin backend admin_home.php bulunuyor.
+	$routes->match(['get', 'post'], 'profile', 'Auth::profile');   // view içindeki profil çağırıyor.
+
+
+	$routes->group('anime', ['filter' => 'auth:Role,1'], function ($routes) {
+	$routes->match(['get', 'post'], 'anime_add', 'AdminCP::anime_add');   // admincp controller ile view/admin/anime/anime_add çağırıyor.
+	$routes->post('anime_add/add', 'AdminCP::anime__add');   // admincp controller ile view/admin/anime/anime_add çağırıyor.
+
+	$routes->match(['get', 'post'], 'anime_delete', 'AdminCP::anime_delete');   // admincp controller ile view/admin/anime/anime_delete çağırıyor.
+	$routes->match(['get', 'post'], 'anime_update', 'AdminCP::anime_update');   // admincp controller ile view/admin/anime/anime_update çağırıyor.
+	$routes->match(['get', 'post'], 'anime_listing', 'AdminCP::anime_listing');   // admincp controller ile view/admin/anime/anime_listing çağırıyor.
+		});
 
 });
 
