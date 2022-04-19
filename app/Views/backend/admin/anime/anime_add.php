@@ -20,13 +20,6 @@
                     <br>
                     <input type="text" id="animeuıd" name="animeuıd" class="form-control" placeholder="Anime UID GET - Click and Paste">
                     <br>
-                    
-
-
-
-
-
-
                     </div>
                     <div class="form-group">
                         <input type="text" name="anime_name" class="form-control" placeholder="Anime Name">
