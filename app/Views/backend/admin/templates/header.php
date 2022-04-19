@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/admin/dist/css/adminlte.min.css">
+  <!-- Custom CS Load -->
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/admin/custom/anime.css">
 
 </head>
 <!--

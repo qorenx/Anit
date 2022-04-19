@@ -31,6 +31,7 @@ class AnimeModel extends Model
         'anime_op',
         'anime_ed',
         'anime_synopsis',
+        'anime_time',
     ]; // Kullanılmasına izin verilen sütunlar
 
 }

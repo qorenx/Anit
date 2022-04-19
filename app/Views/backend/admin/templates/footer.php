@@ -24,5 +24,7 @@
 <script src="<?php echo base_url();?>/assets/admin/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo base_url();?>/assets/admin/dist/js/pages/dashboard3.js"></script>
+                <!-- Custom JS Load -->
+<script src="<?php echo base_url();?>/assets/admin/custom/anime.js"></script>
 </body>
 </html>

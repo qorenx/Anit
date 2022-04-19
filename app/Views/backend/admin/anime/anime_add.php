@@ -1,12 +1,7 @@
-<!-- Main content -->
+
 <div class="content">
       <div class="container-fluid">
         <div class="row">
-
-        
-
-
-
         <div class="col-12">
             <!-- general form elements -->
             <div class="card">
@@ -18,7 +13,20 @@
               <form action="/admin/anime/anime_add/add" method="post">
                 <div class="card-body">
                     <div class="form-group">
-                        <input type="text" name="animeuıd" class="form-control" placeholder="Anime UID">
+                        <div class="col-auto">
+                            <button class="btn btn-primary" id="getit">Get Anime UID!</button>
+                            <text><p onclick="copy(this)" id="randomnumber"></p/</text>
+                        </div>
+                    <br>
+                    <input type="text" id="animeuıd" name="animeuıd" class="form-control" placeholder="Anime UID GET - Click and Paste">
+                    <br>
+                    
+
+
+
+
+
+
                     </div>
                     <div class="form-group">
                         <input type="text" name="anime_name" class="form-control" placeholder="Anime Name">
@@ -26,24 +34,15 @@
                     <div class="form-group">
                         <input type="text" name="anime_country" class="form-control" placeholder="Anime Country">
                     </div>
-                    
-
-
                     <div class="form-group">
                       <label for="anime_type">Anime Type</label>
                       <select multiple class="form-control" name="anime_type[]" id="anime_type">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option>TV</option>
+                        <option>Movie</option>
+                        <option>Ova</option>
+                        <option>Special</option>
                       </select>
                     </div>
-
-
-
-
-
                     <div class="form-group">
                         <input type="text" name="anime_years" class="form-control" placeholder="Anime Years">
                     </div>
@@ -59,49 +58,59 @@
                     <div class="form-group">
                         <input type="text" name="anime_score" class="form-control" placeholder="Anime Score">
                     </div>
-
-
-
-
-
                     <div class="form-group">
                       <label for="anime_genres">Anime Genres</label>
                       <select multiple class="form-control" name="anime_genres[]" id="anime_genres">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
+                        <option>Action</option>
+                        <option>Adventure</option>
+                        <option>Comedy</option>
+                        <option>Demons</option>
+                        <option>Detective</option>
+                        <option>Drama</option>
+                        <option>Ecchi</option>
+                        <option>Fantasy</option>
+                        <option>Game</option>
+                        <option>Harem</option>
+                        <option>Hentai</option>
+                        <option>History</option>
+                        <option>Horror</option>
+                        <option>İsekai</option>
+                        <option>Josei</option>
+                        <option>Magic</option>
+                        <option>Martial Arts</option>
+                        <option>Mecha</option>
+                        <option>Military</option>
+                        <option>Music</option>
+                        <option>Mystery</option>
+                        <option>Mythology</option>
+                        <option>Parody</option>
+                        <option>Police</option>
+                        <option>Psychological</option>
+                        <option>Romance</option>
+                        <option>School</option>
+                        <option>Sci-Fi</option>
+                        <option>Seinen</option>
+                        <option>Shoujo</option>
+                        <option>Shounen</option>
+                        <option>Space</option>
+                        <option>Sports</option>
+                        <option>SuperNatural</option>  
+                        <option>Vampire</option>
+                        <option>Yaoi</option>
+                        <option>Yuri</option>
+                    </select>
                     </div>
-
-
-
-
-
-
-
-
-
-
                     <div class="form-group">
                       <label for="anime_fansub">Anime Fansub</label>
                       <select multiple class="form-control" name="anime_fansub[]" id="anime_fansub">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option>Fansub-1</option>
+                        <option>Fansub-2</option>
+                        <option>Fansub-3</option>
+                        <option>Fansub-4</option>
+                        <option>Fansub-5</option>
+                        <option>Fansub-6</option>
                       </select>
                     </div>
-
-
-
-
-
-
-
-
                     <div class="form-group">
                         <input type="text" name="anime_img" class="form-control" placeholder="Anime İmage">
                     </div>
@@ -124,20 +133,18 @@
                         <input type="text" name="anime_ed" class="form-control" placeholder="Anime Ed">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="anime_synopsis" class="form-control" placeholder="Anime Synopsis">
+                    <textarea id="inputDescription" class="form-control" rows="4" name="anime_synopsis" class="form-control" placeholder="Anime Synopsis"></textarea>
                     </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Anime Add</button>
                 </div>
               </form>
             </div>
             <!-- /.card -->
         </div>
-
-
         </div>
         <!-- /.row -->
       </div>
@@ -146,7 +153,6 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
