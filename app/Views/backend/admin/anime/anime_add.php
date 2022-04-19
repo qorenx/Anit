@@ -59,12 +59,49 @@
                     <div class="form-group">
                         <input type="text" name="anime_score" class="form-control" placeholder="Anime Score">
                     </div>
+
+
+
+
+
                     <div class="form-group">
-                        <input type="text" name="anime_genres" class="form-control" placeholder="Anime Genres">
+                      <label for="anime_genres">Anime Genres</label>
+                      <select multiple class="form-control" name="anime_genres[]" id="anime_genres">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
                     </div>
+
+
+
+
+
+
+
+
+
+
                     <div class="form-group">
-                        <input type="text" name="anime_fansub" class="form-control" placeholder="Anime Fansub">
+                      <label for="anime_fansub">Anime Fansub</label>
+                      <select multiple class="form-control" name="anime_fansub[]" id="anime_fansub">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
                     </div>
+
+
+
+
+
+
+
+
                     <div class="form-group">
                         <input type="text" name="anime_img" class="form-control" placeholder="Anime İmage">
                     </div>

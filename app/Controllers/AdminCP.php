@@ -46,17 +46,17 @@ class AdminCP extends BaseController
 
    public function anime__add() // routers içinde anime_add/add kısmına aittir.
    {
-		$data =[
+		$data = array(
 			'anime_name' =>$this->request->getVar('anime_name'),
 			'animeuıd' =>$this->request->getVar('animeuıd'),
-			'anime_type' =>$this->request->getVar('anime_type'),
-			'anime_genres' =>$this->request->getVar('anime_genres'),
+			'anime_type' =>implode(',',$this->request->getVar('anime_type')),
+			'anime_genres' =>implode(',',$this->request->getVar('anime_genres')),
 			'anime_years' =>$this->request->getVar('anime_years'),
 			'anime_country' =>$this->request->getVar('anime_country'),
 			'anime_img' =>$this->request->getVar('anime_img'),
 			'anime_pv' =>$this->request->getVar('anime_pv'),
 			'anime_episode' =>$this->request->getVar('anime_episode'),
-			'anime_fansub' =>$this->request->getVar('anime_fansub'),
+			'anime_fansub' =>implode(',',$this->request->getVar('anime_fansub')),
 			'anime_website' =>$this->request->getVar('anime_website'),
 			'anime_score' =>$this->request->getVar('anime_score'),
 			'anime_prequel' =>$this->request->getVar('anime_prequel'),
@@ -66,7 +66,9 @@ class AdminCP extends BaseController
 			'anime_op' =>$this->request->getVar('anime_op'),
 			'anime_ed' =>$this->request->getVar('anime_ed'),
 			'anime_synopsis' =>$this->request->getVar('anime_synopsis')
-		];
+	
+		);
+
 		$this->model->insert($data);
 		$hatalar = $this->model->errors();
 
