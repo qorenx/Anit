@@ -78,7 +78,7 @@
                       </td>
                       <td>
                       <?= $value ['anime_genres'] ?>
-                      </td>
+                      </td>  
                       <td>
                       <?= $value ['anime_episode'] ?>
                       </td>
