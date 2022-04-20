@@ -177,13 +177,6 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
           <?php if (session()->get('isLoggedIn')) : ?>
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Profil
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
             <?php else : ?>
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -195,12 +188,6 @@
             <?php endif; ?>
             <ul class="nav nav-treeview">
             <?php if (session()->get('isLoggedIn')) : ?>
-            <li class="nav-item <?= ($uri->getSegment(1) == 'dashboard' ? 'active' : null) ?>">
-                <a href="<?php echo $redirect[session()->get('role')] ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard</p>
-                </a>
-              </li>
               <li class="nav-item <?= ($uri->getSegment(1) == 'profile' ? 'active' : null) ?>">
                 <a href="<?php echo $redirect[session()->get('role')] ?>/profile" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -238,11 +225,19 @@
               </li>
             </ul>
           </li>
+          <?php if (session()->get('isLoggedIn')) : ?>
+            <li class="nav-item <?= ($uri->getSegment(1) == 'dashboard' ? 'active' : null) ?>">
+                <a href="<?php echo $redirect[session()->get('role')] ?>" class="nav-link">
+                  <i class="far fa-home nav-icon"></i>
+                  <p>Profil</p>
+                </a>
+              </li>
+            <?php endif; ?>
           <li class="nav-item">
             <a href="" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Social
+                News
                 <span class="right badge badge-danger">-</span>
               </p>
             </a>
@@ -260,7 +255,7 @@
               <li class="nav-item">
                 <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>All</p>
+                  <p>All Anime</p>
                 </a>
               </li>
             </ul>
@@ -268,7 +263,7 @@
               <li class="nav-item">
                 <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Genres</p>
+                  <p>Advanced Search</p>
                 </a>
               </li>
             </ul>
@@ -281,6 +276,41 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Movie
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">-</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Movie</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Advanced Search</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Random</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <?php if (session()->get('isLoggedIn')) : ?>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
@@ -322,41 +352,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Advanced
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fansub</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Video</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Control</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Control 2</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+          <?php endif; ?>
           <?php if (session()->get('isLoggedIn')) : ?>
           <li class="nav-header">OTHER</li>
           <li class="nav-item">
@@ -402,6 +398,43 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>Read</p>
                 </a>
+              </li>
+            </ul>
+          </li>
+          <?php endif; ?>
+          <?php if (session()->get('isLoggedIn')) : ?>
+          <li class="nav-header">Advanced</li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Settings
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <?php endif; ?>
+            <ul class="nav nav-treeview">
+            <?php if (session()->get('isLoggedIn')) : ?>
+              <li class="nav-item <?= ($uri->getSegment(1) == 'profile' ? 'active' : null) ?>">
+                <a href="<?php echo $redirect[session()->get('role')] ?>/profile" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Settings</p>
+                </a>
+              </li>
+              <?php if ($this->config->lockScreen) : ?>
+              <li class="nav-item">
+                <a href="/lockscreen" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Lock</p>
+                </a>
+              </li>
+              <?php endif; ?>
+              <li class="nav-item">
+                <a href="/logout" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Logout</p>
+                </a>
+              </li>
               </li>
             </ul>
           </li>

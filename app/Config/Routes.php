@@ -62,20 +62,30 @@ $routes->group('admin', ['filter' => 'auth:Role,1'], function ($routes) {
 	$routes->match(['get', 'post'], 'profile', 'Auth::profile');   // view içindeki profil çağırıyor.
 
 
-	$routes->group('anime', ['filter' => 'auth:Role,1'], function ($routes) {
+	$routes->group('anime', ['filter' => 'auth:Role,1'], function ($routes) {  /// admin/anime içeriğidir.
+	///Anime Ekleme Kısmının Başlangıcıdır. Controller olarak AnimeAC kullanıyor.  Model olarak AniACModel kullanmaktadır.
 	$routes->match(['get', 'post'], 'anime_add', 'AnimeAC::anime_add');   // admincp controller ile view/admin/anime/anime_add çağırıyor.
 	$routes->post('anime_add/add', 'AnimeAC::anime__add');   // admincp içindeki anime__add fuction çağırıyor.
-	
 	$routes->get('anime_update/(:num)', 'AnimeAC::anime_update/$1');  ///AnimeAC içindeki anime_update ve page yönetiyor.
 	$routes->post('anime_update', 'AnimeAC::anime__update'); /// AnimeAC içindeki anime__update komutunu çalıştırıyor. SQL günceller.
-
 	$routes->get('anime_delete/(:num)', 'AnimeAC::anime_delete/$1');
-
 	$routes->match(['get', 'post'], 'anime_listing', 'AnimeAC::anime_listing');   // AnimeAC içindeki adnime_listings çağırıyor. Burada listeme fuction ve echo ile birleştirme gösteriyor.
+	/// Anime Ekleme/Düzenleme/Silme kısmının bitişidir.
+	}); /// admin/anime içeriği bitişidir.
 
-	
 
-	});
+
+	/// "admin/fansub" kısmın oluşturan yer
+	$routes->group('fansub', ['filter' => 'auth:Role,1'], function ($routes) {
+	/// Fansub Page Kontrol Etmektedir.  Controllers olarak FansubCP kullanıyor. Model olarak FansubACModel kullanmaktadır.
+	$routes->match(['get', 'post'], 'index', 'FansubCP::fansub_main');
+	$routes->match(['get', 'post'], 'fansub_add', 'FansubCP::fansub_add');   
+	$routes->post('fansub_/add', 'FansubCP::fansub__add'); 
+	$routes->get('update/(:num)', 'FansubCP::fansub_update/$1'); 
+	$routes->post('update', 'FansubCP::fansub__update');
+	$routes->get('delete/(:num)', 'FansubCP::fansub_delete/$1');
+	/// Fansub Ekle/Düzenle/Sil Bitişidir.
+	}); /// "admin/fansub" kısmı bitişidir.
 
 });
 

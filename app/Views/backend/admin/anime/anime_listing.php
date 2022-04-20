@@ -18,8 +18,8 @@
                       <th style="width: 10%">
                           Cover
                       </th>
-                      <th style="width: 10%">
-                          UID-ID
+                      <th style="width: 1%">
+                          UID
                       </th>
                       <th style="width: 25%">
                           Anime 
@@ -62,13 +62,14 @@
                             <?= $value ['animeuıd'] ?>
                           </a>
                           <br>
-                          <small>
+                          <small style="visibility: hidden; height: 0;">
                             <?= $value ['ıd'] ?>
                           </small>
 
                       </td>
                       <td>
-                      <?= $value ['anime_name'] ?>
+                      <a style="display: block;"><?= $value ['anime_name'] ?></a>
+                      <small style="display: block;"><?= $value ['anime_name_atf'] ?></small>
                       </td>
                       <td>
                       <?= $value ['anime_type'] ?>

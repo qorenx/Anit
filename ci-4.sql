@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/lib/codemirror.css?v=5.1.3">
     <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/hint/show-hint.css?v=5.1.3">
     <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/lint/lint.css?v=5.1.3">
-    <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/theme.css?v=5.1.3&nocache=770368071ltr&server=1">
+    <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/theme.css?v=5.1.3&nocache=1432284512ltr&server=1">
     <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/printview.css?v=5.1.3" media="print" id="printcss">
     <title>localhost / 127.0.0.1 | phpMyAdmin 5.1.3</title>
     <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.min.js?v=5.1.3"></script>
@@ -260,7 +260,7 @@ $(function() {
       </div>
       <div id="pma_navigation_tree" class="list_container synced highlight autoexpand">
 
-  <div class="pma_quick_warp"><div class="drop_list"><button title="Son tablolar" class="drop_button btn">Son</button><ul id="pma_recent_list"><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ci-4&table=anime">`ci-4`.`anime`</a></li></ul></div><div class="drop_list"><button title="Sık kullanılan tablolar" class="drop_button btn">Sık kullanılanlar</button><ul id="pma_favorite_list"><li class="warp_link">Sık kullanılan tablolar yok.</li></ul></div><div class="clearfloat"></div></div>
+  <div class="pma_quick_warp"><div class="drop_list"><button title="Son tablolar" class="drop_button btn">Son</button><ul id="pma_recent_list"><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ci-4&table=users">`ci-4`.`users`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ci-4&table=anime">`ci-4`.`anime`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ci-4&table=fansub">`ci-4`.`fansub`</a></li></ul></div><div class="drop_list"><button title="Sık kullanılan tablolar" class="drop_button btn">Sık kullanılanlar</button><ul id="pma_favorite_list"><li class="warp_link">Sık kullanılan tablolar yok.</li></ul></div><div class="clearfloat"></div></div>
 
 <div class="clearfloat"></div>
 

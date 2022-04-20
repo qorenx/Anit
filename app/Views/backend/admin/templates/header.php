@@ -176,79 +176,81 @@ $redirect = $this->config->assignRedirect; ?>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item">
           <?php if (session()->get('isLoggedIn')) : ?>
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Profil
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <?php else : ?>
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Register or Login
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <?php endif; ?>
-            <ul class="nav nav-treeview">
-            <?php if (session()->get('isLoggedIn')) : ?>
             <li class="nav-item <?= ($uri->getSegment(1) == 'dashboard' ? 'active' : null) ?>">
                 <a href="<?php echo $redirect[session()->get('role')] ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-home nav-icon"></i>
                   <p>Dashboard</p>
                 </a>
               </li>
-              <li class="nav-item <?= ($uri->getSegment(1) == 'profile' ? 'active' : null) ?>">
-                <a href="<?php echo $redirect[session()->get('role')] ?>/profile" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Settings</p>
-                </a>
-              </li>
-              <?php if ($this->config->lockScreen) : ?>
+          <?php endif; ?>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Anime
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">-</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/lockscreen" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Lock</p>
+                  <p>All Anime</p>
                 </a>
               </li>
-              <?php endif; ?>
+            </ul>
+            <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/logout" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Logout</p>
+                  <p>Advanced Search</p>
                 </a>
               </li>
-              <?php else : ?>
-              <li class="nav-item <?= ($uri->getSegment(1) == '' ? 'active' : null) ?>">
-                <a href="/login" class="nav-link">
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Login</p>
+                  <p>Random</p>
                 </a>
-              </li>
-              <li class="nav-item <?= ($uri->getSegment(1) == 'register' ? 'active' : null) ?>">
-                <a href="/register" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Register</p>
-                </a>
-              </li>
-              <?php endif; ?>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
               <p>
-                User
-                <span class="right badge badge-danger">-</span>
+                Movie
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">-</span>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Movie</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Advanced Search</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Random</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -280,7 +282,7 @@ $redirect = $this->config->assignRedirect; ?>
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
-                Episode
+                Episode CP
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -311,6 +313,48 @@ $redirect = $this->config->assignRedirect; ?>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-wrench"></i>
+              <p>
+                Fansub
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo base_url();?>/admin/fansub/index" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Fansub List</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo base_url();?>/admin/fansub/fansub_add" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Fabsub Add</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>WWWWWWWWWWWW</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                User
+                <span class="right badge badge-danger">-</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Advanced
@@ -318,12 +362,6 @@ $redirect = $this->config->assignRedirect; ?>
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fansub</p>
-                </a>
-              </li>
               <li class="nav-item">
                 <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -388,6 +426,43 @@ $redirect = $this->config->assignRedirect; ?>
                   <i class="far fa-circle nav-icon"></i>
                   <p>Read</p>
                 </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-header">AdVanced</li>
+          <li class="nav-item">
+          <?php if (session()->get('isLoggedIn')) : ?>
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Profil
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <?php endif; ?>
+            <ul class="nav nav-treeview">
+            <?php if (session()->get('isLoggedIn')) : ?>
+              <li class="nav-item <?= ($uri->getSegment(1) == 'profile' ? 'active' : null) ?>">
+                <a href="<?php echo $redirect[session()->get('role')] ?>/profile" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Settings</p>
+                </a>
+              </li>
+              <?php if ($this->config->lockScreen) : ?>
+              <li class="nav-item">
+                <a href="/lockscreen" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Lock</p>
+                </a>
+              </li>
+              <?php endif; ?>
+              <li class="nav-item">
+                <a href="/logout" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Logout</p>
+                </a>
+              </li>
+              <?php endif; ?>
               </li>
             </ul>
           </li>

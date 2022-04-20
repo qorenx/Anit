@@ -139,11 +139,14 @@ class AnimeAC extends BaseController
         }
    }
 
+
+
        // Anime Listing'ten tuş basınca anime_delete fuction çalıştırıyor. 
 	   public function anime_delete($ıd = null){
         $data['anime'] = $this->model->where('ıd', $ıd)->delete($ıd);
         return $this->response->redirect(site_url('/admin/anime/anime_listing'));
-    }    
+    
+	}    
 
 
 
