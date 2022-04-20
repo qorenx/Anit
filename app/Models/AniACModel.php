@@ -8,9 +8,12 @@ class AniACModel extends Model
     protected $table = 'anime'; // tablo adı
     protected $primaryKey = 'ıd'; // daimi ıd
 
+
+    protected $useSoftDeletes = false; 
     protected $allowedFields = [
         'animeuıd',
         'anime_name',
+        'anime_name_atf',
         'anime_type',
         'anime_genres',
         'anime_years',

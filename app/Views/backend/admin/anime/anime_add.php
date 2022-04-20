@@ -25,22 +25,35 @@
                         <input type="text" name="anime_name" class="form-control" placeholder="Anime Name">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="anime_country" class="form-control" placeholder="Anime Country">
+                        <input type="text" name="anime_name_atf" class="form-control" placeholder="Anime Alternative Name">
                     </div>
                     <div class="form-group">
-                      <label for="anime_type">Anime Type</label>
-                      <select multiple class="form-control" name="anime_type[]" id="anime_type">
-                        <option>TV</option>
-                        <option>Movie</option>
-                        <option>Ova</option>
-                        <option>Special</option>
+                        <label>Country: </label>
+                        <select class="form-control" name="anime_country">
+                                    <option value="Japanese">Japanese</option>
+                                    <option value="Chine">Chine</option>
+                                    <option value="Other">Other</option>
+                        </select>  
+                     </div>
+                    <div class="form-group">
+                      <label for="anime_type">Type:</label>
+                      <select class="form-control" name="anime_type" id="anime_type">
+                        <option value="TV">TV</option>
+                        <option value="Movie">Movie</option>
+                        <option value="Ova">Ova</option>
+                        <option value="Special">Special</option>
                       </select>
                     </div>
                     <div class="form-group">
                         <input type="text" name="anime_years" class="form-control" placeholder="Anime Years">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="anime_status" class="form-control" placeholder="Anime Status">
+                      <select class="form-control" name="anime_status" id="anime_status"  placeholder="Anime Status">
+                        <option value="Air">Air</option>
+                        <option value="Finished">Finished</option>
+                        <option value="Drop">Drop</option>
+                        <option value="Wait">Wait</option>
+                      </select>
                     </div>
                     <div class="form-group">
                         <input type="text" name="anime_episode" class="form-control" placeholder="Anime Episode">
@@ -52,7 +65,7 @@
                         <input type="text" name="anime_score" class="form-control" placeholder="Anime Score">
                     </div>
                     <div class="form-group">
-                      <label for="anime_genres">Anime Genres</label>
+                    <label for="anime_genres">The "Genre" section cannot be left blank. Press CTRL for multiple selection.</label>
                       <select multiple class="form-control" name="anime_genres[]" id="anime_genres">
                         <option>Action</option>
                         <option>Adventure</option>
@@ -94,8 +107,9 @@
                     </select>
                     </div>
                     <div class="form-group">
-                      <label for="anime_fansub">Anime Fansub</label>
+                    <label for="anime_fansub">The "Fansub" section cannot be left blank. Press CTRL for multiple selection.</label>
                       <select multiple class="form-control" name="anime_fansub[]" id="anime_fansub">
+                        <option>No-Fansub</option>
                         <option>Fansub-1</option>
                         <option>Fansub-2</option>
                         <option>Fansub-3</option>

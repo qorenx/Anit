@@ -63,18 +63,18 @@ $routes->group('admin', ['filter' => 'auth:Role,1'], function ($routes) {
 
 
 	$routes->group('anime', ['filter' => 'auth:Role,1'], function ($routes) {
-	$routes->match(['get', 'post'], 'anime_add', 'AdminCP::anime_add');   // admincp controller ile view/admin/anime/anime_add çağırıyor.
-	$routes->post('anime_add/add', 'AdminCP::anime__add');   // admincp içindeki anime__add fuction çağırıyor.
+	$routes->match(['get', 'post'], 'anime_add', 'AnimeAC::anime_add');   // admincp controller ile view/admin/anime/anime_add çağırıyor.
+	$routes->post('anime_add/add', 'AnimeAC::anime__add');   // admincp içindeki anime__add fuction çağırıyor.
 	
-	$routes->match(['get', 'post'], 'anime_update', 'AdminCP::anime_update');   // admincp controller ile view/admin/anime/anime_update çağırıyor.
-	$routes->post('anime_update/update', 'AdminCP::anime__update');   // admincp içindeki anime__update fuction çağırıyor.
+	$routes->get('anime_update/(:num)', 'AnimeAC::anime_update/$1');  ///AnimeAC içindeki anime_update ve page yönetiyor.
+	$routes->post('anime_update', 'AnimeAC::anime__update'); /// AnimeAC içindeki anime__update komutunu çalıştırıyor. SQL günceller.
 
+	$routes->get('anime_delete/(:num)', 'AnimeAC::anime_delete/$1');
 
 	$routes->match(['get', 'post'], 'anime_listing', 'AnimeAC::anime_listing');   // AnimeAC içindeki adnime_listings çağırıyor. Burada listeme fuction ve echo ile birleştirme gösteriyor.
-	$routes->match(['get', 'post'], 'anime__listing', 'AnimeAC::index');   // AnimeAC içindeki adnime_listings çağırıyor. Burada listeme fuction ve echo ile birleştirme gösteriyor.
 
+	
 
-	$routes->match(['get', 'post'], 'anime_delete', 'AdminCP::anime_delete');   // admincp controller ile view/admin/anime/anime_delete çağırıyor.
 	});
 
 });

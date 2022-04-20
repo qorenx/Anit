@@ -275,22 +275,6 @@ $redirect = $this->config->assignRedirect; ?>
                 </a>
               </li>
             </ul>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo base_url();?>/admin/anime/anime_update" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Anime Edit</p>
-                </a>
-              </li>
-            </ul>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo base_url();?>/admin/anime/anime_delete" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Anime Delete</p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
