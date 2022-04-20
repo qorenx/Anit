@@ -48,46 +48,45 @@
                   </tr>
               </thead>
               <tbody>
-                <?php if($anime): ?>
-                <?php foreach($anime as $animes): ?>
+              <?php foreach ($anime as $key => $value) { ?>
                   <tr>
                         <td>
                             <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img style="border-radius: 10%; display: inline; width: 5.5rem;"src="<?php echo $animes['anime_img']; ?>">
+                                  <img style="border-radius: 10%; display: inline; width: 5.5rem;"src="<?= $value ['anime_img'] ?>">
                               </li>
                             </ul>
                         </td>
                       <td>
                           <a>
-                            <?php echo $animes['animeuıd']; ?>
+                            <?= $value ['animeuıd'] ?>
                           </a>
                           <br>
                           <small>
-                            <?php echo $animes['ıd']; ?>
+                            <?= $value ['ıd'] ?>
                           </small>
 
                       </td>
                       <td>
-                      <?php echo $animes['anime_name']; ?>
+                      <?= $value ['anime_name'] ?>
                       </td>
                       <td>
-                      <?php echo $animes['anime_type']; ?>
+                      <?= $value ['anime_type'] ?>
                       </td>
                       <td>
-                      <?php echo $animes['anime_years']; ?>
+                      <?= $value ['anime_years'] ?>
                       </td>
                       <td>
-                      <?php echo $animes['anime_genres']; ?>
+                      <?= $value ['anime_genres'] ?>
                       </td>
                       <td>
-                      <?php echo $animes['anime_episode']; ?>
+                      <?= $value ['anime_episode'] ?>
                       </td>
                       <td>
-                      <?php echo $animes['anime_fansub']; ?>
+                      <?= $value ['anime_fansub'] ?>
                       </td>
                       <td class="project-state">
-                          <span class="badge badge-info"><?php echo $animes['anime_status']; ?></span>
+                          <span class="badge badge-info"><?= $value ['anime_status'] ?></span>
                       </td>
                       <td class="project-actions text-right">
                           <a class="btn btn-primary btn-sm" href="#">
@@ -107,12 +106,8 @@
                           </a>
                       </td>
                   </tr>
-                <?php endforeach; ?>
-                <?php endif; ?>
+                <?php } ?>
               </tbody>
-
           </table>
-
-        </div>
-        <!-- /.card-body -->
-      </div>
+          
+          <?= $pager->links() ?>
