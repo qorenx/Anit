@@ -1,8 +1,8 @@
 <?php 
  namespace App\Controllers;
- use App\Controllers\BaseController;
+ use App\Controllers;
 
-class AdminAC extends BaseController
+class AnimeAC extends BaseController
 {
 	private $model;
 
@@ -18,13 +18,24 @@ class AdminAC extends BaseController
 		view('backend/admin/anime/anime_listing',$anime);
 
 
-
-		$data = [];
-		echo view('backend/admin/templates/header', $data);
+		echo view('backend/admin/templates/header');
 		echo view('backend/admin/anime/anime_listing');
 		echo view('backend/admin/templates/footer');
 		return;
 
+    }
+
+	public function index()
+    {
+		$pager = \Config\Services::pager();
+        $data = [
+			'title' => 'Anime Listing',
+            'anime' => $this->model->paginate(1),
+            'pager' => $this->model->pager,
+			'isi' => 'v_listing',
+		];
+
+        echo view('backend/admin/anime/anime__listing', $data);
     }
 
 }
