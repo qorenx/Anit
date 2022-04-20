@@ -1,41 +1,53 @@
-<table id="useful_links" class="table table-striped projects" role="grid" aria-describedby="example2_info">
-   <thead>
-      <tr>
-         <td>Id</td>
-         <td>Name</td>
-         <td>Phone</td>
-         <td>E-mail</td>
-         <td>Vacation days</td>   
-         <td>Position</td>  
-         <td>Active</td>
-         <td>Deleted</td>
-         <td>Options</td>
-      </tr>
-   </thead>
-   <?php
-      $n=1;
-      foreach ($user as $row)
-      {?>
-   <tr>
-      <td><?php echo $n;?>
-      <td><div class="user-block">
-              <span class="username" style="margin-top:5px;"><?php echo $row['surname']." ".$row['firstname'];?> </span></div></td>
-      <td><?php echo $row['user_phone'];?></td>
-      <td><?php echo $row['user_email'];?></td>
-      <td><?php echo $row['yearly_vacation_days'];?></td>
-      <td>
-          <?php  foreach ($company as $row)
-      {
-              echo $row['position_name'];
-      }?>
-      </td>
-      <td><?php echo $row['user_active'];?></td>
-      <td><?php echo $row['user_deleted'];?></td>
-      <td>
-         <a href="<?php echo site_url('/useful_links/editUseful_link/'.$row['link_id']);?>" class="btn btn-primary btn-sm" href="#"><i class="fas fa-folder"></i> View</a>&nbsp;
-         <a href="<?php echo site_url('/useful_links/editUseful_link/'.$row['link_id']);?>" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i> Edit</a>&nbsp;
-         <a href="<?php echo site_url('/useful_links/delete/'.$row['link_id']);?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</a>
-      </td>
-      <?php $n++;   }
-         ?>
-</table>
+
+<?php
+
+namespace App\Models;
+
+class Ani_Listing
+{
+    var $ıd;
+    var $animeuıd;
+    var $anime_name;
+    var $anime_type;
+    var $anime_genres;
+    var $anime_years;
+    var $anime_country;
+    var $anime_img;
+    var $anime_pv;
+    var $anime_episode;
+    var $anime_fansub;
+    var $anime_website;
+    var $anime_score;
+    var $anime_prequel;
+    var $anime_sequel;
+    var $anime_status;
+    var $anime_duration;
+    var $anime_op;
+    var $anime_ed;
+    var $anime_synopsis;
+    var $anime_time;
+
+    function __construct($ıd, $animeuıd, $anime_type, $anime_genres, $anime_years, $anime_country, $anime_img, $anime_pv, $anime_episode, $anime_fansub, $anime_website, $anime_score, $anime_prequel, $anime_sequel, $anime_status, $anime_duration, $anime_op, $anime_ed, $anime_synopsis, $anime_time)
+    {
+        $this->ıd = $ıd;
+        $this->animeuıd = $animeuıd;
+        $this->anime_type = $anime_type;
+        $this->anime_genres = $anime_genres;
+        $this->anime_years = $anime_years;
+        $this->anime_country = $anime_country;
+        $this->anime_img = $anime_img;
+        $this->anime_pv = $anime_pv;
+        $this->anime_episode = $anime_episode;
+        $this->anime_fansub = $anime_fansub;
+        $this->anime_website = $anime_website;
+        $this->anime_score = $anime_score;
+        $this->anime_prequel = $anime_prequel;
+        $this->anime_sequel = $anime_sequel;
+        $this->anime_status = $anime_status;
+        $this->anime_duration = $anime_duration;
+        $this->anime_op = $anime_op;
+        $this->anime_ed = $anime_ed;
+        $this->anime_synopsis = $anime_synopsis;
+        $this->anime_time = $anime_time;
+    }
+}

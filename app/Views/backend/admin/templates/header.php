@@ -26,7 +26,7 @@
   * sidebar-collapse
   * sidebar-mini
 -->
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini layout-navbar-fixed sidebar-collapse layout-fixed">
 <?php $uri = service('uri') ?>
 <?php $this->config = config('Auth');
 $redirect = $this->config->assignRedirect; ?>
@@ -254,7 +254,7 @@ $redirect = $this->config->assignRedirect; ?>
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Anime
+                Anime CP
                 <i class="fas fa-angle-left right"></i>
                 <span class="badge badge-info right">-</span>
               </p>

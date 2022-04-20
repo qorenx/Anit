@@ -34,6 +34,8 @@ class AdminCP extends BaseController
 		echo view('backend/admin/templates/footer');
 	}
 
+   
+
    // Anime Ekleme/Silme/Güncelleme/Listeleme kısmı başlayacak.  View/backend/admin/anime
    public function anime_add()
    {

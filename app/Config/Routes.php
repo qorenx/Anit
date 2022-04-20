@@ -70,8 +70,9 @@ $routes->group('admin', ['filter' => 'auth:Role,1'], function ($routes) {
 	$routes->post('anime_update/update', 'AdminCP::anime__update');   // admincp içindeki anime__update fuction çağırıyor.
 
 
-	$routes->match(['get', 'post'], 'anime_listing', 'AnimeListing::anime_listing');   // admincp controller ile view/admin/anime/anime_listing çağırıyor.
-	$routes->get('anime_listing', 'AnimeListing::anime__listing');   // admincp içindeki anime__update fuction çağırıyor.
+	$routes->match(['get', 'post'], 'anime_listing', 'AdminAC::anime_listing');   // admincp controller ile view/admin/anime/anime_listing çağırıyor.
+	$routes->get('anime_listing', 'AdminAC::anime__listing');   // admincp içindeki anime__update fuction çağırıyor.
+
 
 	$routes->match(['get', 'post'], 'anime_delete', 'AdminCP::anime_delete');   // admincp controller ile view/admin/anime/anime_delete çağırıyor.
 	});

@@ -15,59 +15,79 @@
           <table class="table table-striped projects">
               <thead>
                   <tr>
-                      <th style="width: 1%">
-                          #
+                      <th style="width: 10%">
+                          Cover
                       </th>
-                      <th style="width: 20%">
-                          Project Name
+                      <th style="width: 10%">
+                          UID-ID
                       </th>
-                      <th style="width: 30%">
-                          Team Members
+                      <th style="width: 25%">
+                          Anime 
                       </th>
-                      <th>
-                          Project Progress
+                      <th style="width: 5%">
+                          Type
                       </th>
-                      <th style="width: 8%" class="text-center">
+                      <th style="width: 5%">
+                          Years
+                      </th>
+                      <th style="width: 25%">
+                          Genres
+                      </th>
+                      <th style="width: 5%">
+                          Episode
+                      </th>
+                      <th style="width: 10%">
+                          Fansub
+                      </th>
+                      <th style="width: 5%" class="text-center">
                           Status
                       </th>
                       <th style="width: 20%">
+                      ACP
                       </th>
                   </tr>
               </thead>
               <tbody>
+                <?php if($anime): ?>
+                <?php foreach($anime as $animes): ?>
                   <tr>
-                      <td>
-                          #
-                      </td>
-                      <?php foreach($AniListing as $Ani_Listing) { ?>
+                        <td>
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                  <img style="border-radius: 10%; display: inline; width: 5.5rem;"src="<?php echo $animes['anime_img']; ?>">
+                              </li>
+                            </ul>
+                        </td>
                       <td>
                           <a>
-                          <?php echo $Ani_Listing->id; ?>
+                            <?php echo $animes['animeuıd']; ?>
                           </a>
                           <br>
                           <small>
-                              Created 01.01.2019
+                            <?php echo $animes['ıd']; ?>
                           </small>
+
                       </td>
-                      <?php } ?>
                       <td>
-                          <ul class="list-inline">
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="<?php echo base_url();?>/assets/admin/dist/img/avatar4.png">
-                              </li>
-                          </ul>
+                      <?php echo $animes['anime_name']; ?>
                       </td>
-                      <td class="project_progress">
-                          <div class="progress progress-sm">
-                              <div class="progress-bar bg-green" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%">
-                              </div>
-                          </div>
-                          <small>
-                              57% Complete
-                          </small>
+                      <td>
+                      <?php echo $animes['anime_type']; ?>
+                      </td>
+                      <td>
+                      <?php echo $animes['anime_years']; ?>
+                      </td>
+                      <td>
+                      <?php echo $animes['anime_genres']; ?>
+                      </td>
+                      <td>
+                      <?php echo $animes['anime_episode']; ?>
+                      </td>
+                      <td>
+                      <?php echo $animes['anime_fansub']; ?>
                       </td>
                       <td class="project-state">
-                          <span class="badge badge-success">Success</span>
+                          <span class="badge badge-info"><?php echo $animes['anime_status']; ?></span>
                       </td>
                       <td class="project-actions text-right">
                           <a class="btn btn-primary btn-sm" href="#">
@@ -87,7 +107,10 @@
                           </a>
                       </td>
                   </tr>
+                <?php endforeach; ?>
+                <?php endif; ?>
               </tbody>
+
           </table>
         </div>
         <!-- /.card-body -->
