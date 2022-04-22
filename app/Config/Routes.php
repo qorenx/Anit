@@ -68,6 +68,11 @@ $routes->group('admin', ['filter' => 'auth:Role,1'], function ($routes) {
 	$routes->post('anime_add/add', 'AnimeAC::anime__add');   // admincp içindeki anime__add fuction çağırıyor.
 	$routes->get('anime_update/(:num)', 'AnimeAC::anime_update/$1');  ///AnimeAC içindeki anime_update ve page yönetiyor.
 	$routes->post('anime_update', 'AnimeAC::anime__update'); /// AnimeAC içindeki anime__update komutunu çalıştırıyor. SQL günceller.
+
+	$routes->get('anime_genre/(:num)', 'AnimeAC::anime_genre/$1');  ///AnimeAC içindeki anime_update ve page yönetiyor.
+	$routes->post('anime_genre', 'AnimeAC::anime__genre'); /// AnimeAC içindeki anime__update komutunu çalıştırıyor. SQL günceller.
+
+
 	$routes->get('anime_delete/(:num)', 'AnimeAC::anime_delete/$1');
 	$routes->match(['get', 'post'], 'anime_listing', 'AnimeAC::anime_listing');   // AnimeAC içindeki adnime_listings çağırıyor. Burada listeme fuction ve echo ile birleştirme gösteriyor.
 	/// Anime Ekleme/Düzenleme/Silme kısmının bitişidir.

@@ -65,60 +65,6 @@
                         <input type="text" name="anime_score" class="form-control" placeholder="Anime Score">
                     </div>
                     <div class="form-group">
-                    <label for="anime_genres">The "Genre" section cannot be left blank. Press CTRL for multiple selection.</label>
-                      <select multiple class="form-control" name="anime_genres[]" id="anime_genres">
-                        <option>Action</option>
-                        <option>Adventure</option>
-                        <option>Comedy</option>
-                        <option>Demons</option>
-                        <option>Detective</option>
-                        <option>Drama</option>
-                        <option>Ecchi</option>
-                        <option>Fantasy</option>
-                        <option>Game</option>
-                        <option>Harem</option>
-                        <option>Hentai</option>
-                        <option>History</option>
-                        <option>Horror</option>
-                        <option>İsekai</option>
-                        <option>Josei</option>
-                        <option>Magic</option>
-                        <option>Martial Arts</option>
-                        <option>Mecha</option>
-                        <option>Military</option>
-                        <option>Music</option>
-                        <option>Mystery</option>
-                        <option>Mythology</option>
-                        <option>Parody</option>
-                        <option>Police</option>
-                        <option>Psychological</option>
-                        <option>Romance</option>
-                        <option>School</option>
-                        <option>Sci-Fi</option>
-                        <option>Seinen</option>
-                        <option>Shoujo</option>
-                        <option>Shounen</option>
-                        <option>Space</option>
-                        <option>Sports</option>
-                        <option>SuperNatural</option>  
-                        <option>Vampire</option>
-                        <option>Yaoi</option>
-                        <option>Yuri</option>
-                    </select>
-                    </div>
-                    <div class="form-group">
-                    <label for="anime_fansub">The "Fansub" section cannot be left blank. Press CTRL for multiple selection.</label>
-                      <select multiple class="form-control" name="anime_fansub[]" id="anime_fansub">
-                        <option>No-Fansub</option>
-                        <option>Fansub-1</option>
-                        <option>Fansub-2</option>
-                        <option>Fansub-3</option>
-                        <option>Fansub-4</option>
-                        <option>Fansub-5</option>
-                        <option>Fansub-6</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
                         <input type="text" name="anime_img" class="form-control" placeholder="Anime İmage">
                     </div>
                     <div class="form-group">

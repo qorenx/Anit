@@ -15,7 +15,6 @@ class AniACModel extends Model
         'anime_name',
         'anime_name_atf',
         'anime_type',
-        'anime_genres',
         'anime_years',
         'anime_country',
         'anime_img',
@@ -33,5 +32,15 @@ class AniACModel extends Model
         'anime_synopsis',
         'anime_time',
     ]; // Kullanılmasına izin verilen sütunlar
+
+    public function getAnimeList(){
+
+        $builder = $this->builder($this->table);
+        $query = $builder->get();
+        $builder = $builder->join('fansub', 'anime.anime_fansub = fansub.fansub_name');
+        $builder = $builder->join('genre', 'genre.gbid = anime.animeuıd');
+        $results = $query->getResultArray();
+        return $results;
+    }
 
 }

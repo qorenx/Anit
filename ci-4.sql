@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/lib/codemirror.css?v=5.1.3">
     <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/hint/show-hint.css?v=5.1.3">
     <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/lint/lint.css?v=5.1.3">
-    <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/theme.css?v=5.1.3&nocache=1432284512ltr&server=1">
+    <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/theme.css?v=5.1.3&nocache=736502851ltr&server=1">
     <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/printview.css?v=5.1.3" media="print" id="printcss">
     <title>localhost / 127.0.0.1 | phpMyAdmin 5.1.3</title>
     <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.min.js?v=5.1.3"></script>
@@ -56,7 +56,7 @@
 
 <script data-cfasync="false" type="text/javascript">
 // <![CDATA[
-CommonParams.setAll({common_query:"",opendb_url:"index.php?route=/database/structure",lang:"tr",server:"1",table:"",db:"",token:"5021463f705570722d6c224e5c382648",text_dir:"ltr",show_databases_navigation_as_tree:true,pma_text_default_tab:"Gözat",pma_text_left_default_tab:"Yapı",pma_text_left_default_tab2:false,LimitChars:"50",pftext:"P",confirm:true,LoginCookieValidity:"1440",session_gc_maxlifetime:"1440",logged_in:true,is_https:false,rootPath:"/phpmyadmin/",arg_separator:"&",PMA_VERSION:"5.1.3",auth_type:"config",user:"root"});
+CommonParams.setAll({common_query:"",opendb_url:"index.php?route=/database/structure",lang:"tr",server:"1",table:"",db:"",token:"2f2c7b453534306c686a73542854242e",text_dir:"ltr",show_databases_navigation_as_tree:true,pma_text_default_tab:"Gözat",pma_text_left_default_tab:"Yapı",pma_text_left_default_tab2:false,LimitChars:"50",pftext:"P",confirm:true,LoginCookieValidity:"1440",session_gc_maxlifetime:"1440",logged_in:true,is_https:false,rootPath:"/phpmyadmin/",arg_separator:"&",PMA_VERSION:"5.1.3",auth_type:"config",user:"root"});
 var firstDayOfCalendar = '0';
 var themeImagePath = '.\/themes\/pmahomme\/img\/';
 var mysqlDocTemplate = '.\/url.php\u003Furl\u003Dhttps\u00253A\u00252F\u00252Fdev.mysql.com\u00252Fdoc\u00252Frefman\u00252F8.0\u00252Fen\u00252F\u002525s.html';
@@ -229,7 +229,7 @@ $(function() {
   <noscript><style>html{display:block}</style></noscript>
 </head>
 <body>
-    <div id="pma_navigation" data-config-navigation-width="240">
+    <div id="pma_navigation" data-config-navigation-width="308">
     <div id="pma_navigation_resizer"></div>
     <div id="pma_navigation_collapser"></div>
     <div id="pma_navigation_content">
@@ -260,7 +260,7 @@ $(function() {
       </div>
       <div id="pma_navigation_tree" class="list_container synced highlight autoexpand">
 
-  <div class="pma_quick_warp"><div class="drop_list"><button title="Son tablolar" class="drop_button btn">Son</button><ul id="pma_recent_list"><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ci-4&table=users">`ci-4`.`users`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ci-4&table=anime">`ci-4`.`anime`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ci-4&table=fansub">`ci-4`.`fansub`</a></li></ul></div><div class="drop_list"><button title="Sık kullanılan tablolar" class="drop_button btn">Sık kullanılanlar</button><ul id="pma_favorite_list"><li class="warp_link">Sık kullanılan tablolar yok.</li></ul></div><div class="clearfloat"></div></div>
+  <div class="pma_quick_warp"><div class="drop_list"><button title="Son tablolar" class="drop_button btn">Son</button><ul id="pma_recent_list"><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ci-4&table=fansub">`ci-4`.`fansub`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ci-4&table=anime">`ci-4`.`anime`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ci-4&table=genre">`ci-4`.`genre`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ci-4&table=users">`ci-4`.`users`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ci-4&table=genres">`ci-4`.`genres`</a></li></ul></div><div class="drop_list"><button title="Sık kullanılan tablolar" class="drop_button btn">Sık kullanılanlar</button><ul id="pma_favorite_list"><li class="warp_link">Sık kullanılan tablolar yok.</li></ul></div><div class="clearfloat"></div></div>
 
 <div class="clearfloat"></div>
 
@@ -284,7 +284,7 @@ $(function() {
                   <div id="pma_navigation_settings"><div class="page_settings"><form method="post" action="index.php&#x3F;route&#x3D;&#x25;2Fexport&amp;server&#x3D;1" class="config-form disableAjax">
   <input type="hidden" name="tab_hash" value="">
       <input type="hidden" name="check_page_refresh" id="check_page_refresh" value="">
-    <input type="hidden" name="token" value="5021463f705570722d6c224e5c382648">
+    <input type="hidden" name="token" value="2f2c7b453534306c686a73542854242e">
   <input type="hidden" name="submit_save" value="Navi">
 <ul class="tabs responsivetable row">
       <li><a href="#Navi_panel">Gezinti paneli</a></li>
@@ -309,7 +309,7 @@ $(function() {
 </span><small>Süzgeç kutusunu görüntülemek için en az öğe (tablolar, görünümler, yordamlar ve olaylar) sayısını tanımlar.</small></th><td><input type="number" name="NavigationTreeDisplayItemFilterMinimum" id="NavigationTreeDisplayItemFilterMinimum" value="30"><a class="restore-default hide" href="#NavigationTreeDisplayItemFilterMinimum" title="Varsayılan değeri geri yükle"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload"></a></td></tr><tr><th><label for="NumRecentTables">Son kullanılan tablolar</label><span class="doc"><a href="./doc/html/config.html#cfg_NumRecentTables" target="documentation"><img src="themes/dot.gif" title="Belgeler" alt="Belgeler" class="icon ic_b_help"></a>
 </span><small>En fazla son kullanılan tablo sayısıdır; etkisizleştirmek için 0'a ayarlayın.</small></th><td><input type="number" name="NumRecentTables" id="NumRecentTables" value="10"><a class="restore-default hide" href="#NumRecentTables" title="Varsayılan değeri geri yükle"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload"></a></td></tr><tr><th><label for="NumFavoriteTables">Sık kullanılan tablolar</label><span class="doc"><a href="./doc/html/config.html#cfg_NumFavoriteTables" target="documentation"><img src="themes/dot.gif" title="Belgeler" alt="Belgeler" class="icon ic_b_help"></a>
 </span><small>En fazla sık kullanılan tablo sayısıdır; etkisizleştirmek için 0'a ayarlayın.</small></th><td><input type="number" name="NumFavoriteTables" id="NumFavoriteTables" value="10"><a class="restore-default hide" href="#NumFavoriteTables" title="Varsayılan değeri geri yükle"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload"></a></td></tr><tr><th><label for="NavigationWidth">Gezinti paneli genişliği</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationWidth" target="documentation"><img src="themes/dot.gif" title="Belgeler" alt="Belgeler" class="icon ic_b_help"></a>
-</span><small>Gezinti panelini daraltmak için 0'a ayarlayın.</small></th><td><input type="number" name="NavigationWidth" id="NavigationWidth" value="240"><a class="restore-default hide" href="#NavigationWidth" title="Varsayılan değeri geri yükle"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload"></a></td></tr></table>
+</span><small>Gezinti panelini daraltmak için 0'a ayarlayın.</small></th><td><input type="number" name="NavigationWidth" id="NavigationWidth" class="custom" value="308"><a class="restore-default hide" href="#NavigationWidth" title="Varsayılan değeri geri yükle"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload"></a></td></tr></table>
 </fieldset>
 <fieldset class="optbox" id="Navi_tree">
 <legend>Gezinti ağacı</legend>
@@ -425,7 +425,7 @@ $.extend(defaultValues, {
   
   <div id="prefs_autoload" class="alert alert-primary print_ignore hide" role="alert">
     <form action="index.php?route=/preferences/manage" method="post" class="disableAjax">
-        <input type="hidden" name="token" value="5021463f705570722d6c224e5c382648">
+        <input type="hidden" name="token" value="2f2c7b453534306c686a73542854242e">
         <input type="hidden" name="json" value="">
         <input type="hidden" name="submit_import" value="1">
         <input type="hidden" name="return_url" value="index.php?route=%2Fexport">
