@@ -69,8 +69,8 @@ $routes->group('admin', ['filter' => 'auth:Role,1'], function ($routes) {
 	$routes->get('anime_update/(:num)', 'AnimeAC::anime_update/$1');  ///AnimeAC içindeki anime_update ve page yönetiyor.
 	$routes->post('anime_update', 'AnimeAC::anime__update'); /// AnimeAC içindeki anime__update komutunu çalıştırıyor. SQL günceller.
 
-	$routes->get('anime_genre/(:num)', 'AnimeAC::anime_genre/$1');  ///AnimeAC içindeki anime_update ve page yönetiyor.
-	$routes->post('anime_genre', 'AnimeAC::anime__genre'); /// AnimeAC içindeki anime__update komutunu çalıştırıyor. SQL günceller.
+	$routes->get('anime_genre/(:num)', 'AnimeAC::anime_genre/$1');  ///Anime AC içindeki anime_genre creator yeridir.
+	$routes->post('anime_genre', 'AnimeAC::anime__genre'); /// AnimeAC içindeki anime__genre sql yazma yeridir.
 
 
 	$routes->get('anime_delete/(:num)', 'AnimeAC::anime_delete/$1');
@@ -80,7 +80,7 @@ $routes->group('admin', ['filter' => 'auth:Role,1'], function ($routes) {
 
 
 
-	/// "admin/fansub" kısmın oluşturan yer
+	/// "admin/fansub" kısmın oluşturan yer  /// Geçici olarak askıda.
 	$routes->group('fansub', ['filter' => 'auth:Role,1'], function ($routes) {
 	/// Fansub Page Kontrol Etmektedir.  Controllers olarak FansubCP kullanıyor. Model olarak FansubACModel kullanmaktadır.
 	$routes->match(['get', 'post'], 'index', 'FansubCP::fansub_main');

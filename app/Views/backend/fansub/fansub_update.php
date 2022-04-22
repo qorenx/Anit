@@ -12,7 +12,7 @@
               <!-- form start -->
               <form action="/admin/fansub/update" method="post">
                 <div class="card-body">
-                    <input type="text" style="visibility: hidden;" name="fansub_ıd" class="form-control" value="<?php echo $fansub_obj['fansub_ıd']; ?>">
+                    <input type="text" style="visibility: hidden;" name="fansub_ıd" class="form-control" value="<?php echo $fansub_obj['fid']; ?>">
                     <div class="form-group">
                         <input type="text" name="fansub_name" class="form-control" value="<?php echo $fansub_obj['fansub_name']; ?>">
                     </div>

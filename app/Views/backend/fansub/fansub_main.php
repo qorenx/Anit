@@ -34,7 +34,8 @@
                   <tr>
                       <td>
                           <a>
-                            <?= $value ['fansub_ıd'] ?>
+                            ID=><?= $value ['fid'] ?>
+                            AnimeID=><?= $value ['fud'] ?>
                           </a>
                           <br>
                       </td>
@@ -48,12 +49,12 @@
                       <?= $value ['fansub_lnk'] ?>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-info btn-sm" href="update/<?= $value ['fansub_ıd'] ?>">
+                          <a class="btn btn-info btn-sm" href="update/<?= $value ['fid'] ?>">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="delete/<?= $value ['fansub_ıd'] ?>">
+                          <a class="btn btn-danger btn-sm" href="delete/<?= $value ['fid'] ?>">
                               <i class="fas fa-trash">
                               </i>
                               Delete

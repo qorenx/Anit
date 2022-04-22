@@ -20,7 +20,6 @@ class AniACModel extends Model
         'anime_img',
         'anime_pv',
         'anime_episode',
-        'anime_fansub',
         'anime_website',
         'anime_score',
         'anime_prequel',
@@ -37,8 +36,8 @@ class AniACModel extends Model
 
         $builder = $this->builder($this->table);
         $query = $builder->get();
-        $builder = $builder->join('fansub', 'anime.anime_fansub = fansub.fansub_name');
         $builder = $builder->join('genre', 'genre.gbid = anime.animeuıd');
+        $builder->orderBy('anime_name', 'DESC');
         $results = $query->getResultArray();
         return $results;
     }

@@ -14,38 +14,12 @@ class AnimeAC extends BaseController
 
 	public function anime_listing() // Anime Listing Sayfasının Çağrılarının Yapıldığı Yer
 	{
-		//$this->model->getAnimeList();
-		// $data =  [
-		//	'title' => 'Anime Listing',
-          //  'anime' => $this->model->paginate(2),
-          //  'pager' => $this->model->pager,
-		 //];
+
 		 $data = [];
 		 $this->model->getAnimeList();
 		 $pager = \Config\Services::pager();
 		 $data['listdata'] = $this->model->paginate(3); 
 		 $data['pager'] = $this->model->pager;
-
-		 //$pager = \Config\Services::pager();
-
-		// $data = [
-		//	 'listdata' => $this->model->getAnimeList(),
-		//	 'pager' => $this->model->pager,
-		 //];
-		
-
-		// $pager = \Config\Services::pager();
-        // $data['listdata'] = $this->model->getAnimeList();
-		 //$data['anime'] = $this->model->paginate();
-		 //$data['pager'] = $this->model->pager;
-
-		//$pager = \Config\Services::pager();
-        //$data = [
-		//	'title' => 'Anime Listing',
-        //    'anime' => $this->model->paginate(2),
-        //    'pager' => $this->model->pager,
-		//	'isi' => 'v_listing',
-		//];
 
 		echo view('backend/admin/templates/header', $data);
 		echo view('backend/admin/anime/anime_listing');
@@ -252,19 +226,6 @@ class AnimeAC extends BaseController
 			 echo view('backend/admin/templates/footer');
 	
 		}
-	
-
-
-
-
-
-
-
-
-
-
-
-
 	
 	
 	

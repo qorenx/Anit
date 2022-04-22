@@ -6,11 +6,12 @@ use CodeIgniter\Model;
 class FansubACModel extends Model
 {
     protected $table = 'fansub'; // tablo adı
-    protected $primaryKey = 'fansub_ıd'; // daimi ıd
+    protected $primaryKey = 'fid'; // daimi ıd
 
 
     protected $useSoftDeletes = false; 
     protected $allowedFields = [
+        'fud',
         'fansub_name',
         'fansub_web',
         'fansub_lnk',

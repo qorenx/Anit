@@ -38,7 +38,7 @@
                           Episode
                       </th>
                       <th style="width: 10%">
-                          Fansub
+                          -
                       </th>
                       <th style="width: 5%" class="text-center">
                           Status
@@ -192,7 +192,7 @@
                       <?php echo $anidata['anime_episode'];?>
                       </td>
                       <td>
-                      <?php echo $anidata['anime_fansub'];?>
+                        -
                       </td>
                       <td class="project-state">
                           <span class="badge badge-info"><?php echo $anidata['anime_status'];?></span>

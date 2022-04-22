@@ -87,14 +87,14 @@ class FansubCP extends BaseController
         public function fansub__update()
         {
     
-             $fansub_ıd = $this->request->getVar('fansub_ıd');
+             $fid = $this->request->getVar('fansub_ıd');
              $data = array(
                 'fansub_name' =>$this->request->getVar('fansub_name'),
                 'fansub_web' =>$this->request->getVar('fansub_web'),
                 'fansub_lnk' =>$this->request->getVar('fansub_lnk')
              );
      
-             $this->model->update($fansub_ıd, $data);
+             $this->model->update($fid, $data);
              return $this->response->redirect(site_url('/admin/fansub/index'));
     
     
@@ -106,8 +106,8 @@ class FansubCP extends BaseController
 
 
        // Anime Listing'ten tuş basınca anime_delete fuction çalıştırıyor. 
-	   public function fansub_delete($fansub_ıd = null){
-        $data['fansub'] = $this->model->where('fansub_ıd', $fansub_ıd)->delete($fansub_ıd);
+	   public function fansub_delete($fid = null){
+        $data['fansub'] = $this->model->where('fid', $fid)->delete($fid);
         return $this->response->redirect(site_url('/admin/fansub/index'));
     
 	}   
