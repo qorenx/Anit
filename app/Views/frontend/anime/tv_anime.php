@@ -6,13 +6,12 @@
 </div>
 <div class="tab-content">
 <div class="block_area-content block_area-list film_list film_list-grid film_list-wfeature">
-<div class="film_list-wrap">
+<b class="film_list-wrap">
 <!-- -->
 
 
 
 <?php foreach($listdata as $anidata):?>
-
 <div class="flw-item">
 <div class="film-poster">
 <div class="tick ltr">
@@ -52,22 +51,21 @@ href="/tv_anime/<?php echo $anidata['animeuıd'];?>/<?php echo $anidata['anime_n
 <?php endforeach;?>
 
 
+<div class="clearfix"></div>
 
-
-
-</div>
+</b>
 </div>
 </div>
 </section>
 
         <!-- /.row -->
       </div>
-      <!-- /.container-fluid -->
     </div>
+  </div>
 <?= $pager->links() ?>
 
     <!-- /.content -->
-  </div>
+
   <!-- /.content-wrapper -->
 
   <!-- Control Sidebar -->

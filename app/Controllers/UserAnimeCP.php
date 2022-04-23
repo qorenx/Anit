@@ -30,11 +30,21 @@ class UserAnimeCP extends BaseController
     $data = [];
     $this->model->getAllAnimeList();
     $pager = \Config\Services::pager();
-    $data['listdata'] = $this->model->paginate(3); 
+    $data['listdata'] = $this->model->paginate(10); 
     $data['pager'] = $this->model->pager;
 
    echo view('frontend/templates/header', $data);
    echo view('frontend/anime/tv_anime');
+   echo view('frontend/templates/footer');
+   return;
+    }
+
+
+    public function anime_main() // Anime Listing Sayfasının Çağrılarının Yapıldığı Yer
+	{
+
+   echo view('frontend/templates/m_header');
+   echo view('frontend/anime/anime_main');
    echo view('frontend/templates/footer');
    return;
     }

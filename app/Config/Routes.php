@@ -66,6 +66,9 @@ $routes->match(['get', 'post'], 'tv_anime', 'UserAnimeCP::index');   // AnimeAC 
 
 
 
+$routes->match(['get', 'post'], 'tv_anime/(:num)/(:any)', 'UserAnimeCP::anime_main/$1/$2');   // AnimeAC içindeki adnime_listings çağırıyor. Burada listeme fuction ve echo ile birleştirme gösteriyor.
+
+
 
  /**
  * --------------------------------------------------------------------

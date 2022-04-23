@@ -1,15 +1,5 @@
- <!-- Main Footer -->
- <footer class="main-footer">
-    <strong>Copyright &copy; 2022-202x <a href="https://github.com/qorenx/Anit/">Anitium GitHub</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 0.1.0
-    </div>
-  </footer>
-</div>
-<!-- ./wrapper -->
-
-<!-- REQUIRED SCRIPTS -->
+<!-- Custom SCRIPTS -->
+<script src="<?php echo base_url();?>/assets/css/script.js"></script>
 
 <!-- jQuery -->
 <script src="<?php echo base_url();?>/assets/admin/plugins/jquery/jquery.min.js"></script>
