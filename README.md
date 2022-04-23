@@ -28,7 +28,11 @@ Future Features(I Plan to Do);<br>
 -Advertising management<br>
 -Myanimelist+Anilist support<br>
 
-Anime add;<br>
-![FireShot Capture 002 - Anitium - localhost](https://user-images.githubusercontent.com/101888025/164256617-d784b50f-dae1-4cc2-8496-70e4ba278e73.png)
-Anime list;<br>
-![FireShot Capture 004 - Anitium - localhost](https://user-images.githubusercontent.com/101888025/164256624-a3d3ee82-e968-4a01-914d-5e2a49f6a63b.png)
+
+I'm trying many things. It looks like the first beta will be released soon. I hope I can continue. By the way, I'm adding interface css from several sites. I hope they forgive.
+
+
+![FireShot Capture 005 - Anitium - localhost](https://user-images.githubusercontent.com/101888025/164845150-40633962-e725-4bff-af87-96cab4c01954.png)
+![FireShot Capture 006 - Anitium - localhost](https://user-images.githubusercontent.com/101888025/164845153-7e6678d8-3c2a-41d0-929e-234c2a74e54d.png)
+![FireShot Capture 007 - Anitium - localhost](https://user-images.githubusercontent.com/101888025/164845155-5db61a82-28aa-4e7e-a6b7-e009c6de2a7b.png)
+![FireShot Capture 008 - Anitium - localhost](https://user-images.githubusercontent.com/101888025/164845159-8a236969-a80c-4785-b08d-069d7ef69e02.png)
