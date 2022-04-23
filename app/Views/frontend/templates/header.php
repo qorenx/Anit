@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/admin/dist/css/adminlte.min.css">
+    <!-- Custom style -->
+  <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/style.css">
+
 </head>
 <!--
 `body` tag options:
@@ -23,7 +26,7 @@
   * sidebar-collapse
   * sidebar-mini
 -->
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini layout-navbar-fixed sidebar-collapse layout-fixed">
     <?php $uri = service('uri') ?>
     <?php $this->config = config('Auth');
     $redirect = $this->config->assignRedirect; ?>
@@ -228,7 +231,7 @@
           <?php if (session()->get('isLoggedIn')) : ?>
             <li class="nav-item <?= ($uri->getSegment(1) == 'dashboard' ? 'active' : null) ?>">
                 <a href="<?php echo $redirect[session()->get('role')] ?>" class="nav-link">
-                  <i class="far fa-home nav-icon"></i>
+                  <i class="fa fa-home nav-icon"></i>
                   <p>Profil</p>
                 </a>
               </li>
@@ -253,7 +256,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="<?php echo base_url();?>/tv_anime" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>All Anime</p>
                 </a>

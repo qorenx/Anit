@@ -179,7 +179,7 @@ $redirect = $this->config->assignRedirect; ?>
           <?php if (session()->get('isLoggedIn')) : ?>
             <li class="nav-item <?= ($uri->getSegment(1) == 'dashboard' ? 'active' : null) ?>">
                 <a href="<?php echo $redirect[session()->get('role')] ?>" class="nav-link">
-                  <i class="far fa-home nav-icon"></i>
+                  <i class="fa fa-home nav-icon"></i>
                   <p>Dashboard</p>
                 </a>
               </li>
@@ -195,7 +195,7 @@ $redirect = $this->config->assignRedirect; ?>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="<?php echo base_url();?>/tv_anime" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>All Anime</p>
                 </a>

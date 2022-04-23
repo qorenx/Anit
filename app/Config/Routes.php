@@ -49,6 +49,40 @@ $routes->get('test', 'test::index'); //test/test page kısmıdır.
 
 $routes->get('/', 'Home::index');
 
+/**
+ * --------------------------------------------------------------------
+ * Home Bitiş
+ * --------------------------------------------------------------------
+ */
+
+
+ /**
+ * --------------------------------------------------------------------
+ * Herkesin kullanacağı anime izleme sayfasının olduğu bölgenin routerleri
+ * --------------------------------------------------------------------
+ */
+
+$routes->match(['get', 'post'], 'tv_anime', 'UserAnimeCP::index');   // AnimeAC içindeki adnime_listings çağırıyor. Burada listeme fuction ve echo ile birleştirme gösteriyor.
+
+
+
+
+ /**
+ * --------------------------------------------------------------------
+ * Herkes kullandığı router bitişi
+ * --------------------------------------------------------------------
+ */
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * --------------------------------------------------------------------
@@ -97,7 +131,7 @@ $routes->group('admin', ['filter' => 'auth:Role,1'], function ($routes) {
 
 /**
  * --------------------------------------------------------------------
- * ADMIN ROUTES. MUST BE LOGGED IN AND HAVE ROLE OF '2'
+ * User Admin Role
  * --------------------------------------------------------------------
  */
 

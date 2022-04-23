@@ -123,23 +123,19 @@ class AnimeAC extends BaseController
 	
 			$this->model->insert($data);
 			$this->model2->insert($data2);
-			return $this->response->redirect(site_url('/admin/anime/anime_listing'));
 
-			//$hatalar = $this->model->errors();
+			$error = $this->model->errors();
 	
-			//if (!$hatalar) {
-			//	return $this->response->setJSON([
-			//		'kullanici' => $data,
-			//		'mesaj' => 'İşlem başarılı bir şekilde tamamlandı.',
-			//	]);
-			//} else {
-			//	return $this->response->setJSON([
-			//		'hatalar' => $hatalar,
-			//	]);
-			//}
+			if (!$error) {
+				return $this->response->redirect(site_url('/admin/anime/anime_listing')
+			);} 
+				else {
+				return $this->response->setJSON([
+					'Errors' => $error,
+				]);
+			}
+
 	   }
-	
-	
 	
 		   // Anime Listing'ten tuş basınca anime_delete fuction çalıştırıyor. 
 		public function anime_delete($ıd = null){

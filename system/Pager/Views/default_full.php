@@ -9,7 +9,7 @@ $pager->setSurroundCount(2);
 ?>
 
 <nav aria-label="<?= lang('Pager.pageNavigation') ?>">
-	<ul class="pagination justify-content-end">
+	<ul class="pagination pagination-lg justify-content-center">
 		<?php if ($pager->hasPrevious()) : ?>
 			<li class="page-item">
 				<a class="page-link" href="<?= $pager->getFirst() ?>" aria-label="<?= lang('Pager.first') ?>">
