@@ -4,7 +4,7 @@
 }
 
 .film_list .film_list-wrap .flw-item {
-  width: calc(16.66% - 14px);
+  width: calc(13.50% - 14px);
   margin: 0 7px 14px;
   float: left;
   background: #2a2c31;
@@ -26,10 +26,19 @@
 
 .film_list .film_list-wrap .flw-item .film-detail {
   color: #aaa;
-  font-size: 12px;
+  font-size: 13px;
   padding: 10px;
   border-radius: 0 0 10px 10px;
   min-height: 84px;
+}
+
+.dot {
+  width: 10px;
+  height: 1px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.3);
+  display: inline-block;
+  margin: 3px 6px;
 }
 
 .film_list .film_list-wrap {

@@ -18,7 +18,7 @@
                       <label>Is there? Action?</label>
                       <select class="form-control" name="genre_action">
                         <option></option>
-                        <option>Action</option>
+                        <option value="Action">Action</option>
                       </select>
                     </div>
                     <div class="form-group">

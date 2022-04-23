@@ -120,7 +120,7 @@ class AnimeAC extends BaseController
 				'gname' =>$this->request->getVar('anime_name'),
 				'gbid' =>$this->request->getVar('animeuıd'),
 			);
-	
+
 			$this->model->insert($data);
 			$this->model2->insert($data2);
 

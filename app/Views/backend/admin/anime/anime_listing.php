@@ -76,115 +76,115 @@
                       <?php echo $anidata['anime_years'];?>
                       </td>
                       <td>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_action'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_action'];?>">
                       <?php echo $anidata['genre_action'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_adventure'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_adventure'];?>">
                       <?php echo $anidata['genre_adventure'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_comedy'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_comedy'];?>">
                       <?php echo $anidata['genre_comedy'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_demons'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_demons'];?>">
                       <?php echo $anidata['genre_demons'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_detective'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_detective'];?>">
                       <?php echo $anidata['genre_detective'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_drama'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_drama'];?>">
                       <?php echo $anidata['genre_drama'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_ecchi'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_ecchi'];?>">
                       <?php echo $anidata['genre_ecchi'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_fantasy'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_fantasy'];?>">
                       <?php echo $anidata['genre_fantasy'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_game'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_game'];?>">
                       <?php echo $anidata['genre_game'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_harem'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_harem'];?>">
                       <?php echo $anidata['genre_harem'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_hentai'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_hentai'];?>">
                       <?php echo $anidata['genre_hentai'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_history'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_history'];?>">
                       <?php echo $anidata['genre_history'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_horror'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_horror'];?>">
                       <?php echo $anidata['genre_horror'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_isekai'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_isekai'];?>">
                       <?php echo $anidata['genre_isekai'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_josei'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_josei'];?>">
                       <?php echo $anidata['genre_josei'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_magic'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_magic'];?>">
                       <?php echo $anidata['genre_magic'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_martialart'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_martialart'];?>">
                       <?php echo $anidata['genre_martialart'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_mecha'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_mecha'];?>">
                       <?php echo $anidata['genre_mecha'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_military'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_military'];?>">
                       <?php echo $anidata['genre_military'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_music'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_music'];?>">
                       <?php echo $anidata['genre_music'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_mystery'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_mystery'];?>">
                       <?php echo $anidata['genre_mystery'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_mythology'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_mythology'];?>">
                       <?php echo $anidata['genre_mythology'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_parody'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_parody'];?>">
                       <?php echo $anidata['genre_parody'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_police'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_police'];?>">
                       <?php echo $anidata['genre_police'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_psychological'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_psychological'];?>">
                       <?php echo $anidata['genre_psychological'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_romance'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_romance'];?>">
                       <?php echo $anidata['genre_romance'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_school'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_school'];?>">
                       <?php echo $anidata['genre_school'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_scifi'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_scifi'];?>">
                       <?php echo $anidata['genre_scifi'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_seinen'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_seinen'];?>">
                       <?php echo $anidata['genre_seinen'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_shoujo'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_shoujo'];?>">
                       <?php echo $anidata['genre_shoujo'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_shounen'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_shounen'];?>">
                       <?php echo $anidata['genre_shounen'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_space'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_space'];?>">
                       <?php echo $anidata['genre_space'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_sports'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_sports'];?>">
                       <?php echo $anidata['genre_sports'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_supernatural'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_supernatural'];?>">
                       <?php echo $anidata['genre_supernatural'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_vampire'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_vampire'];?>">
                       <?php echo $anidata['genre_vampire'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_yaoi'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_yaoi'];?>">
                       <?php echo $anidata['genre_yaoi'];?>
                       </a>
-                      <a style="" href="<?php echo base_url();?>/anime/genres/<?php echo $anidata['genre_yuri'];?>">
+                      <a style="" href="<?php echo base_url();?>/tv_anime/genres/<?php echo $anidata['genre_yuri'];?>">
                       <?php echo $anidata['genre_yuri'];?>
                       </a>
                       </td>  

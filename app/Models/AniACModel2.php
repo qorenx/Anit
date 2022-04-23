@@ -52,4 +52,25 @@ class AniACModel2 extends Model
         'genre_yuri',
     ]; // Kullanılmasına izin verilen sütunlar
 
+    protected $useTimestamps = false;
+    protected $createdField = 'created_at';
+    protected $updatedField = 'updated_at';
+    protected $deletedField = 'deleted_at';
+
+    protected $validationRules = [
+        'gbid' => 'required|numeric|min_length[16]|max_length[18]|is_unique[genre.gbid]'
+    ];
+
+    protected $validationMessages = [
+        'gbid' => [
+            'required' => 'Required field.',
+            'numeric' => 'Just numbers.',
+            'min_length' =>  'Min 16 numbers.',
+            'max_length' => 'Max 18 numbers.',
+            'is_unique' => 'Need Unique numbers.',
+        ]
+    ];
+
+    protected $skipValidation = false;
+
 }

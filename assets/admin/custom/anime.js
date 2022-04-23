@@ -47,3 +47,4 @@ function copy(that) {
     document.execCommand('copy', false);
     inp.remove();
 }
+
