@@ -4,8 +4,8 @@ function IsNumeric(n) {
 
 $(function() {
     $("#getit").click(function() {
-        var numLow = 10000000000000000;
-        var numHigh = 99999999999999999;
+        var numLow = 10000000;
+        var numHigh = 99999999;
 
         var adjustedHigh = parseFloat(numHigh) - parseFloat(numLow) + 1;
 
@@ -47,4 +47,3 @@ function copy(that) {
     document.execCommand('copy', false);
     inp.remove();
 }
-

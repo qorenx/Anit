@@ -68,6 +68,9 @@
                         <input type="text" name="anime_img" class="form-control" placeholder="Anime İmage">
                     </div>
                     <div class="form-group">
+                        <input type="text" name="anime_wall" class="form-control" placeholder="Anime WallPaper">
+                    </div>
+                    <div class="form-group">
                         <input type="text" name="anime_pv" class="form-control" placeholder="Anime PV">
                     </div>
                     <div class="form-group">

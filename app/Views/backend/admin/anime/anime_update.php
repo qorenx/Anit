@@ -69,6 +69,10 @@
                         <input type="text" name="anime_img" class="form-control" value="<?php echo $anime_obj['anime_img']; ?>">
                     </div>
                     <div class="form-group">
+                        <label>Wallpaper</label>
+                        <input type="text" name="anime_wall" class="form-control" value="<?php echo $anime_obj['anime_wall']; ?>">
+                    </div>
+                    <div class="form-group">
                         <label>PV</label>
                         <input type="text" name="anime_pv" class="form-control" value="<?php echo $anime_obj['anime_pv']; ?>">
                     </div>

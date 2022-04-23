@@ -19,6 +19,7 @@ class UserAnimeModel extends Model
         'anime_years',
         'anime_country',
         'anime_img',
+        'anime_wall',
         'anime_pv',
         'anime_episode',
         'anime_website',

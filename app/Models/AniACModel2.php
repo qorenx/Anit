@@ -12,7 +12,6 @@ class AniACModel2 extends Model
     protected $useSoftDeletes = false; 
     protected $allowedFields = [
         'gbid',
-        'gname',
         'genre_action',
         'genre_adventure',
         'genre_comedy',
@@ -58,15 +57,15 @@ class AniACModel2 extends Model
     protected $deletedField = 'deleted_at';
 
     protected $validationRules = [
-        'gbid' => 'required|numeric|min_length[16]|max_length[18]|is_unique[genre.gbid]'
+        'gbid' => 'required|numeric|min_length[8]|max_length[8]|is_unique[genre.gbid]'
     ];
 
     protected $validationMessages = [
         'gbid' => [
             'required' => 'Required field.',
             'numeric' => 'Just numbers.',
-            'min_length' =>  'Min 16 numbers.',
-            'max_length' => 'Max 18 numbers.',
+            'min_length' =>  'Min 8 numbers.',
+            'max_length' => 'Max 8 numbers.',
             'is_unique' => 'Need Unique numbers.',
         ]
     ];

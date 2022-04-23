@@ -18,7 +18,7 @@ class AnimeAC extends BaseController
 		 $data = [];
 		 $this->model->getAnimeList();
 		 $pager = \Config\Services::pager();
-		 $data['listdata'] = $this->model->paginate(3); 
+		 $data['listdata'] = $this->model->paginate(5); 
 		 $data['pager'] = $this->model->pager;
 
 		echo view('backend/admin/templates/header', $data);
@@ -28,14 +28,13 @@ class AnimeAC extends BaseController
 
     }
 	//Bu Fuction ile  "anime_update/"AnimeID" bulup direk diğer fuction olan "anime__update" ile güncelliyor.
-	public function anime_update($ıd = null){ // routers içinde anime_add/add kısmına aittir.
+	public function anime_update($animeuıd = null){ // routers içinde anime_add/add kısmına aittir.
 		{
 	
-			$data['anime_obj'] = $this->model->where('ıd', $ıd)->first();
+			$data['anime_obj'] = $this->model->where('animeuıd', $animeuıd)->first();
 			 echo view('backend/admin/templates/header');
 			 echo view('backend/admin/anime/anime_update', $data);
 			 echo view('backend/admin/templates/footer');
-	
 	
 			}
 	
@@ -44,10 +43,10 @@ class AnimeAC extends BaseController
 		}
 	
 		// anime_update fuction gelen sayfadaki veriyi güncellerken son işlem hallediyor.
-		public function anime__update() // routers içinde anime_add/add kısmına aittir.
+		public function anime__update($animeuıd = null) // routers içinde anime_add/add kısmına aittir.
 		{
 	
-			 $ıd = $this->request->getVar('ıd');
+			 $animeuıd = $this->model->where('animeuıd', $animeuıd)->first();
 			 $data = array(
 				'anime_name' =>$this->request->getVar('anime_name'),
 				'anime_name_atf' =>$this->request->getVar('anime_name_atf'),
@@ -55,6 +54,7 @@ class AnimeAC extends BaseController
 				'anime_years' =>$this->request->getVar('anime_years'),
 				'anime_country' =>$this->request->getVar('anime_country'),
 				'anime_img' =>$this->request->getVar('anime_img'),
+				'anime_wall' =>$this->request->getVar('anime_wall'),
 				'anime_pv' =>$this->request->getVar('anime_pv'),
 				'anime_episode' =>$this->request->getVar('anime_episode'),
 				'anime_website' =>$this->request->getVar('anime_website'),
@@ -69,13 +69,8 @@ class AnimeAC extends BaseController
 		 
 			 );
 	 
-			 $this->model->update($ıd, $data);
+			 $this->model->update($animeuıd, $data);
 			 return $this->response->redirect(site_url('/admin/anime/anime_listing'));
-	
-	
-			 echo view('backend/admin/templates/header');
-			 echo view('backend/admin/anime/anime_update');
-			 echo view('backend/admin/templates/footer');
 	
 		}
 	
@@ -103,6 +98,7 @@ class AnimeAC extends BaseController
 				'anime_years' =>$this->request->getVar('anime_years'),
 				'anime_country' =>$this->request->getVar('anime_country'),
 				'anime_img' =>$this->request->getVar('anime_img'),
+				'anime_wall' =>$this->request->getVar('anime_wall'),
 				'anime_pv' =>$this->request->getVar('anime_pv'),
 				'anime_episode' =>$this->request->getVar('anime_episode'),
 				'anime_website' =>$this->request->getVar('anime_website'),
@@ -117,7 +113,6 @@ class AnimeAC extends BaseController
 		
 			);
 			$data2 = array(
-				'gname' =>$this->request->getVar('anime_name'),
 				'gbid' =>$this->request->getVar('animeuıd'),
 			);
 
@@ -138,8 +133,14 @@ class AnimeAC extends BaseController
 	   }
 	
 		   // Anime Listing'ten tuş basınca anime_delete fuction çalıştırıyor. 
-		public function anime_delete($ıd = null){
-			$this->model->where('ıd', $ıd)->delete($ıd);
+		public function anime_delete($animeuıd){
+			
+			if(empty($animeuıd))
+			{
+				return false;  //oops, no data for 'where' to use
+			}
+			$this->model->where('animeuıd', (int) $animeuıd)->delete();
+
 			return $this->response->redirect(site_url('/admin/anime/anime_listing'));
 		
 		}    
@@ -150,18 +151,16 @@ class AnimeAC extends BaseController
 
 
 	//Bu Fuction ile  "anime_update/"AnimeID" bulup direk diğer fuction olan "anime__update" ile güncelliyor.
-	public function anime_genre($gıd = null){ // routers içinde anime_add/add kısmına aittir.
+	public function anime_genre($animeuıd = null){ // routers içinde anime_add/add kısmına aittir.
 		{
 	
-			$data['anime_obj'] = $this->model2->where('gıd', $gıd)->first();
+			$data['anime_obj'] = $this->model2->where('gbid', $animeuıd)->first();
 			 echo view('backend/admin/templates/header');
 			 echo view('backend/admin/anime/anime_genre', $data);
 			 echo view('backend/admin/templates/footer');
 	
 	
 			}
-	
-	
 	
 		}
 	
