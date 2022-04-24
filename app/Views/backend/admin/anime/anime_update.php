@@ -13,7 +13,7 @@
               <form action="/admin/anime/anime_update" method="post">
                 <div class="card-body">
                 <div class="form-group">
-                <input type="text" style="visibility: hidden; height: 0;" id="gıd" name="gıd" class="form-control" value="<?php echo $anime_obj['ıd']; ?>">
+                <input type="text" style="visibility: hidden; height: 0;" id="ıd" name="ıd" class="form-control" value="<?php echo $anime_obj['ıd']; ?>">
                 <input type="text" style="visibility: hidden; height: 0;" id="animeuıd" name="animeuıd" class="form-control" value="<?php echo $anime_obj['animeuıd']; ?>">
                         <label>AnimeUID: </label>
                         <select class="form-control" name="animeuıd">
