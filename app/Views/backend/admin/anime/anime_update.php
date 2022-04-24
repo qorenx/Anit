@@ -6,14 +6,20 @@
             <!-- general form elements -->
             <div class="card">
               <div class="card-header">
-              Editing - > "<?php echo $anime_obj['anime_name']; ?>"
+              Editing
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form action="/admin/anime/anime_update" method="post">
                 <div class="card-body">
-                        <input type="text" style="visibility: hidden; height: 0;" id="ıd" name="ıd" class="form-control" value="<?php echo $anime_obj['ıd']; ?>">
-                        <input type="text" style="visibility: hidden; height: 0;" id="animeuıd" name="animeuıd" class="form-control" value="<?php echo $anime_obj['animeuıd']; ?>">
+                <div class="form-group">
+                <input type="text" style="visibility: hidden; height: 0;" id="gıd" name="gıd" class="form-control" value="<?php echo $anime_obj['ıd']; ?>">
+                <input type="text" style="visibility: hidden; height: 0;" id="animeuıd" name="animeuıd" class="form-control" value="<?php echo $anime_obj['animeuıd']; ?>">
+                        <label>AnimeUID: </label>
+                        <select class="form-control" name="animeuıd">
+                            <option value="<?php echo $anime_obj['animeuıd']; ?>"><?php echo $anime_obj['animeuıd']; ?></option>
+                        </select>  
+                  </div>
                     <div class="form-group">
                         <label>Name</label>
                         <input type="text" name="anime_name" class="form-control" value="<?php echo $anime_obj['anime_name']; ?>">
@@ -50,6 +56,13 @@
                         <option value="Finished">Finished</option>
                         <option value="Drop">Drop</option>
                         <option value="Wait">Wait</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                    <label for="anime_status">Anime Sub or Dub</label>
+                      <select class="form-control" name="anime_subdub" id="anime_subdub"  placeholder="Anime Sub or Dub">
+                        <option value="Sub">Sub</option>
+                        <option value="Dub">Dub</option>
                       </select>
                     </div>
                     <div class="form-group">

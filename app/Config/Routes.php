@@ -38,9 +38,15 @@ $routes->match(['get', 'post'], 'resetpassword/(:num)/(:any)', 'Auth::resetPassw
 $routes->match(['get', 'post'], 'updatepassword/(:num)', 'Auth::updatepassword/$1'); // UPDATE PASSWORD
 $routes->match(['get', 'post'], 'lockscreen', 'Auth::lockscreen'); // LOCK SCREEN
 $routes->get('logout', 'Auth::logout'); // LOGOUT
+
+
+
+
+
+
 $routes->get('test', 'test::index'); //test/test page kısmıdır.
 
-
+ 
 /**
  * --------------------------------------------------------------------
  * Home Routes
@@ -104,7 +110,8 @@ $routes->group('admin', ['filter' => 'auth:Role,1'], function ($routes) {
 	$routes->match(['get', 'post'], 'anime_add', 'AnimeAC::anime_add');   // admincp controller ile view/admin/anime/anime_add çağırıyor.
 	$routes->post('anime_add/add', 'AnimeAC::anime__add');   // admincp içindeki anime__add fuction çağırıyor.
 	$routes->get('anime_update/(:num)', 'AnimeAC::anime_update/$1');  ///AnimeAC içindeki anime_update ve page yönetiyor.
-	$routes->post('anime_update', 'AnimeAC::anime__update'); /// AnimeAC içindeki anime__update komutunu çalıştırıyor. SQL günceller.
+	$routes->post('anime_update', 'AnimeAC::anime__update/$1'); /// AnimeAC içindeki anime__update komutunu çalıştırıyor. SQL günceller.
+	//$routes->match(['get', 'post'], 'anime_update/(:num)', 'AnimeAC::anime_update/$1');   // AnimeAC içindeki adnime_listings çağırıyor. Burada listeme fuction ve echo ile birleştirme gösteriyor.
 
 	$routes->get('anime_genre/(:num)', 'AnimeAC::anime_genre/$1');  ///Anime AC içindeki anime_genre creator yeridir.
 	$routes->post('anime_genre', 'AnimeAC::anime__genre'); /// AnimeAC içindeki anime__genre sql yazma yeridir.

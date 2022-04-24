@@ -51,6 +51,7 @@ class AniACModel2 extends Model
         'genre_yuri',
     ]; // Kullanılmasına izin verilen sütunlar
 
+    
     protected $useTimestamps = false;
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';

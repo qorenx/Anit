@@ -43,7 +43,7 @@ class UserAnimeCP extends BaseController
     public function anime_main() // Anime Listing Sayfasının Çağrılarının Yapıldığı Yer
 	{
 
-   echo view('frontend/templates/m_header');
+   echo view('frontend/templates/header');
    echo view('frontend/anime/anime_main');
    echo view('frontend/templates/footer');
    return;

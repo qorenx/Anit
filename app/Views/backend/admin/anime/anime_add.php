@@ -45,6 +45,13 @@
                       </select>
                     </div>
                     <div class="form-group">
+                      <select class="form-control" name="anime_subdub" id="anime_subdub"  placeholder="Anime Sub or Dub">
+                        <option value="anime_subdub">Anime Sub or Dub</option>
+                        <option value="Sub">Sub</option>
+                        <option value="Dub">Dub</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
                         <input type="text" name="anime_years" class="form-control" placeholder="Anime Years">
                     </div>
                     <div class="form-group">

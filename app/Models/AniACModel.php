@@ -16,6 +16,7 @@ class AniACModel extends Model
         'anime_name',
         'anime_name_atf',
         'anime_type',
+        'anime_subdub',
         'anime_years',
         'anime_country',
         'anime_img',

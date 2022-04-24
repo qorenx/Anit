@@ -28,8 +28,8 @@ class AnimeAC extends BaseController
 
     }
 	//Bu Fuction ile  "anime_update/"AnimeID" bulup direk diğer fuction olan "anime__update" ile güncelliyor.
-	public function anime_update($animeuıd = null){ // routers içinde anime_add/add kısmına aittir.
-		{
+		public function anime_update($animeuıd = null){ // routers içinde anime_add/add kısmına aittir.
+		    {
 	
 			$data['anime_obj'] = $this->model->where('animeuıd', $animeuıd)->first();
 			 echo view('backend/admin/templates/header');
@@ -43,14 +43,15 @@ class AnimeAC extends BaseController
 		}
 	
 		// anime_update fuction gelen sayfadaki veriyi güncellerken son işlem hallediyor.
-		public function anime__update($animeuıd = null) // routers içinde anime_add/add kısmına aittir.
+		public function anime__update() // routers içinde anime_add/add kısmına aittir.
 		{
 	
-			 $animeuıd = $this->model->where('animeuıd', $animeuıd)->first();
-			 $data = array(
+			$ıd = $this->request->getVar('ıd');
+			$data = array(
 				'anime_name' =>$this->request->getVar('anime_name'),
 				'anime_name_atf' =>$this->request->getVar('anime_name_atf'),
 				'anime_type' =>$this->request->getVar('anime_type'),
+				'anime_subdub' =>$this->request->getVar('anime_subdub'),
 				'anime_years' =>$this->request->getVar('anime_years'),
 				'anime_country' =>$this->request->getVar('anime_country'),
 				'anime_img' =>$this->request->getVar('anime_img'),
@@ -69,7 +70,7 @@ class AnimeAC extends BaseController
 		 
 			 );
 	 
-			 $this->model->update($animeuıd, $data);
+			 $this->model->update($ıd, $data);
 			 return $this->response->redirect(site_url('/admin/anime/anime_listing'));
 	
 		}
@@ -95,6 +96,7 @@ class AnimeAC extends BaseController
 				'anime_name_atf' =>$this->request->getVar('anime_name_atf'),
 				'animeuıd' =>$this->request->getVar('animeuıd'),
 				'anime_type' =>$this->request->getVar('anime_type'),
+				'anime_subdub' =>$this->request->getVar('anime_subdub'),
 				'anime_years' =>$this->request->getVar('anime_years'),
 				'anime_country' =>$this->request->getVar('anime_country'),
 				'anime_img' =>$this->request->getVar('anime_img'),
