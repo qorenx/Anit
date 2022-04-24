@@ -5,14 +5,6 @@
 
         
 <body data-page="movie_info">
-<div id="sidebar_menu_bg"></div>
-<div id="sidebar_menu">
-<button class="btn btn-radius btn-sm btn-secondary toggle-sidebar"><i class="fas fa-angle-left mr-2"></i>Close menu</button>
-<div class="sb-setting">
-</div>
-<div class="clearfix"></div>
-</div>
-
 
 <div id="wrapper" data-page="movie_info">
 <div id="main-wrapper" class="layout-page layout-page-detail" date-page="movie_info" data-id="oy24r">

@@ -18,6 +18,7 @@ namespace App\Controllers;
 class UserAnimeCP extends BaseController
 {
 	private $model;
+    protected $helpers = ['url', 'form'];
 
 	public function __construct(){
         $this->model = new \App\Models\UserAnimeModel();
@@ -40,13 +41,23 @@ class UserAnimeCP extends BaseController
     }
 
 
-    public function anime_main() // Anime Listing Sayfasının Çağrılarının Yapıldığı Yer
+    public function anime_main($getanime = null) // Anime Listing Sayfasının Çağrılarının Yapıldığı Yer
 	{
 
-   echo view('frontend/templates/header');
-   echo view('frontend/anime/anime_main');
-   echo view('frontend/templates/footer');
-   return;
+
+        //echo view('frontend/templates/header');
+        //echo view('frontend/anime/anime_main');
+        //echo view('frontend/templates/footer');
+        //return;
+        $getanime = $this->model->getAnime('anime', $getanime);
+
+        $error = $this->model->errors();
+	
+        if (!$error) {
+            return $this->response->setJSON([
+                'Errors' => $getanime,
+            ]);}
+   
     }
 
 

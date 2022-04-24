@@ -6,7 +6,7 @@
             <!-- general form elements -->
             <div class="card">
               <div class="card-header">
-              <h4>AnimeUID-> "<?php echo $anime_obj['gbid']; ?>"</h4>
+              <h4>AnimeUID-> <?php echo $anime_obj['gbid']; ?></h4>
               </div>
               <!-- /.card-header -->
               <!-- form start -->

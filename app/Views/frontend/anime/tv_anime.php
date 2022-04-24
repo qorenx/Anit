@@ -42,12 +42,12 @@
 <?php echo $anidata['anime_episode'];?>
 </div></div>
 <img class="film-poster-img lazyloaded" src="<?php echo $anidata['anime_img'];?>">
-<a class="film-poster-ahref" href="/tv_anime/<?php echo $anidata['animeuıd'];?>/<?php echo $anidata['anime_name'];?>" title="<?php echo $anidata['anime_name_atf'];?>"><i class="fas fa-play"></i></a>
+<a class="film-poster-ahref" href="/tv_anime/<?php echo $anidata['animeuıd'];?>" title="<?php echo $anidata['anime_name_atf'];?>"><i class="fas fa-play"></i></a>
 </div>
 <div class="film-detail">
 <h3 class="film-name">
 <a class="dynamic-name" 
-href="/tv_anime/<?php echo $anidata['animeuıd'];?>/<?php echo $anidata['anime_name'];?>" title="" title="" data-jname=""><?php echo $anidata['anime_name'];?>
+href="/tv_anime/<?php echo $anidata['animeuıd'];?>" title="" title="" data-jname=""><?php echo $anidata['anime_name'];?>
 </a>
 </h3>
 <div class="fd-infor">
@@ -62,7 +62,7 @@ href="/tv_anime/<?php echo $anidata['animeuıd'];?>/<?php echo $anidata['anime_n
 <span class="fdi-item fdi-year">
 <?php echo $anidata['anime_years'];?>
 </span>
-</div>
+</div>  
 </div>
 <div class="clearfix"></div>
 </div>
