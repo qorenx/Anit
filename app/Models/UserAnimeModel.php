@@ -57,7 +57,7 @@ class UserAnimeModel extends Model
         return $results;
     }
 
-    public function getAnime($getanime)  /// Fuck you mysql.
+    public function getAnime($getanime) 
     {
         $builder = $this->builder($this->table);   
         $builder = $builder->where('animeuıd', $getanime);
