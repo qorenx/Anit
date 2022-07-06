@@ -38,6 +38,8 @@ trait ResponseTrait
      * Whether Content Security Policy is being enforced.
      *
      * @var bool
+     *
+     * @deprecated Use $this->CSP->enabled() instead.
      */
     protected $CSPEnabled = false;
 
@@ -433,7 +435,7 @@ trait ResponseTrait
     {
         // If we're enforcing a Content Security Policy,
         // we need to give it a chance to build out it's headers.
-        if ($this->CSPEnabled === true) {
+        if ($this->CSP->enabled()) {
             $this->CSP->finalize($this);
         } else {
             $this->body = str_replace(['{csp-style-nonce}', '{csp-script-nonce}'], '', $this->body ?? '');
@@ -465,7 +467,7 @@ trait ResponseTrait
         }
 
         // HTTP Status
-        header(sprintf('HTTP/%s %s %s', $this->getProtocolVersion(), $this->getStatusCode(), $this->getReason()), true, $this->getStatusCode());
+        header(sprintf('HTTP/%s %s %s', $this->getProtocolVersion(), $this->getStatusCode(), $this->getReasonPhrase()), true, $this->getStatusCode());
 
         // Send all of our headers
         foreach (array_keys($this->getHeaders()) as $name) {
@@ -541,7 +543,7 @@ trait ResponseTrait
      * @param string              $expire   Cookie expiration time in seconds
      * @param string              $domain   Cookie domain (e.g.: '.yourdomain.com')
      * @param string              $path     Cookie path (default: '/')
-     * @param string              $prefix   Cookie name prefix
+     * @param string              $prefix   Cookie name prefix ('': the default prefix)
      * @param bool                $secure   Whether to only transfer cookies via SSL
      * @param bool                $httponly Whether only make the cookie accessible via HTTP (no javascript)
      * @param string|null         $samesite
@@ -615,6 +617,9 @@ trait ResponseTrait
 
     /**
      * Returns the cookie
+     *
+     * @param string $prefix Cookie prefix.
+     *                       '': the default prefix
      *
      * @return Cookie|Cookie[]|null
      */

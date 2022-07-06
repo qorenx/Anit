@@ -45,6 +45,9 @@ abstract class CIUnitTestCase extends TestCase
     /**
      * Methods to run during setUp.
      *
+     * WARNING: Do not override unless you know exactly what you are doing.
+     *          This property may be deprecated in the future.
+     *
      * @var array of methods
      */
     protected $setUpMethods = [
@@ -57,16 +60,16 @@ abstract class CIUnitTestCase extends TestCase
     /**
      * Methods to run during tearDown.
      *
+     * WARNING: This property may be deprecated in the future.
+     *
      * @var array of methods
      */
     protected $tearDownMethods = [];
 
     /**
      * Store of identified traits.
-     *
-     * @var string[]|null
      */
-    private $traits;
+    private ?array $traits = null;
 
     //--------------------------------------------------------------------
     // Database Properties
@@ -118,7 +121,7 @@ abstract class CIUnitTestCase extends TestCase
 
     /**
      * The namespace(s) to help us find the migration classes.
-     * Empty is equivalent to running `spark migrate -all`.
+     * Empty is equivalent to running `spark migrate --all`.
      * Note that running "all" runs migrations in date order,
      * but specifying namespaces runs them in namespace order (then date)
      *
@@ -301,9 +304,9 @@ abstract class CIUnitTestCase extends TestCase
     /**
      * Resets shared instanced for all Services
      */
-    protected function resetServices()
+    protected function resetServices(bool $initAutoloader = true)
     {
-        Services::reset();
+        Services::reset($initAutoloader);
     }
 
     /**
