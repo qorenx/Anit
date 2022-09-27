@@ -1,3 +1,4 @@
 
-.env
 sync.ffs_lock
+env
+.env
