@@ -11,12 +11,12 @@ Start by creating a route that would handle the request from the login screen on
 ```php
 
 // Routes.php
-$route->post('auth/token', 'App\Controllers\Auth\LoginController::mobileLogin');
+$routes->post('auth/token', '\App\Controllers\Auth\LoginController::mobileLogin');
 
 // LoginController.php
 namespace App\Controllers\Auth;
 
-use CodeIgniter\Controllers\BaseController;
+use App\Controllers\BaseController;
 
 class LoginController extends BaseController
 {
