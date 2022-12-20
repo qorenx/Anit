@@ -14,6 +14,9 @@ use CodeIgniter\Shield\Exceptions\InvalidArgumentException;
 use CodeIgniter\Shield\Exceptions\ValidationException;
 use Faker\Generator;
 
+/**
+ * @phpstan-consistent-constructor
+ */
 class UserModel extends Model
 {
     use CheckQueryReturnTrait;
@@ -74,6 +77,10 @@ class UserModel extends Model
         $userIds = $data['singleton']
             ? array_column($data, 'id')
             : array_column($data['data'], 'id');
+
+        if ($userIds === []) {
+            return $data;
+        }
 
         /** @var UserIdentityModel $identityModel */
         $identityModel = model(UserIdentityModel::class);
@@ -170,16 +177,28 @@ class UserModel extends Model
         $email = $credentials['email'] ?? null;
         unset($credentials['email']);
 
-        // any of the credentials used should be case-insensitive
-        foreach ($credentials as $key => $value) {
-            $this->where('LOWER(' . $this->db->protectIdentifiers("users.{$key}") . ')', strtolower($value));
+        if ($email === null && $credentials === []) {
+            return null;
         }
 
-        if (! empty($email)) {
-            $data = $this->select('users.*, auth_identities.secret as email, auth_identities.secret2 as password_hash')
+        // any of the credentials used should be case-insensitive
+        foreach ($credentials as $key => $value) {
+            $this->where(
+                'LOWER(' . $this->db->protectIdentifiers("users.{$key}") . ')',
+                strtolower($value)
+            );
+        }
+
+        if ($email !== null) {
+            $data = $this->select(
+                'users.*, auth_identities.secret as email, auth_identities.secret2 as password_hash'
+            )
                 ->join('auth_identities', 'auth_identities.user_id = users.id')
                 ->where('auth_identities.type', Session::ID_TYPE_EMAIL_PASSWORD)
-                ->where('LOWER(' . $this->db->protectIdentifiers('auth_identities.secret') . ')', strtolower($email))
+                ->where(
+                    'LOWER(' . $this->db->protectIdentifiers('auth_identities.secret') . ')',
+                    strtolower($email)
+                )
                 ->asArray()
                 ->first();
 
@@ -253,6 +272,11 @@ class UserModel extends Model
             /** @throws DataException */
             $result = parent::update($id, $data);
         } catch (DataException $e) {
+            // When $data is an array.
+            if ($this->tempUser === null) {
+                throw $e;
+            }
+
             $messages = [
                 lang('Database.emptyDataset', ['update']),
             ];
@@ -335,7 +359,8 @@ class UserModel extends Model
         // Safe date string for database
         $last_active = $user->last_active->format('Y-m-d H:i:s');
 
-        $this->builder->set('last_active', $last_active)
+        $this->builder()
+            ->set('last_active', $last_active)
             ->where('id', $user->id)
             ->update();
     }

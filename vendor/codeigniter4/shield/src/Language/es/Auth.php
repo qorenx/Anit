@@ -18,7 +18,8 @@ return [
     'noUserEntity'          => 'Se debe dar una Entidad de Usuario para validar la contraseña.',
     'invalidEmail'          => 'No podemos verificar que el email coincida con un email registrado.',
     'unableSendEmailToUser' => 'Lo sentimaos, ha habido un problema al enviar el email. No podemos enviar un email a "{0}".',
-    'throttled'             => 'demasiadas peticiones hechas desde esta IP. Puedes intentarlo de nuevo en {0} segundos.',
+    'throttled'             => 'Demasiadas peticiones hechas desde esta IP. Puedes intentarlo de nuevo en {0} segundos.',
+    'notEnoughPrivilege'    => 'No tiene los permisos necesarios para realizar la operación deseada.',
 
     'email'           => 'Dirección Email',
     'username'        => 'Usuario',
@@ -64,6 +65,12 @@ return [
     'userDoesNotExist'          => 'No se ha cambiado la contraseña. No existe el usuario',
     'resetTokenExpired'         => 'Lo sentimos. Tu token de reseteo ha caducado.',
 
+    // Email Globals
+    'emailInfo'      => 'Algunos datos sobre la persona:',
+    'emailIpAddress' => 'Dirección IP:',
+    'emailDevice'    => 'Dispositivo:',
+    'emailDate'      => 'Fecha:',
+
     // 2FA
     'email2FATitle'       => 'Authenticación de Doble Factor',
     'confirmEmailAddress' => 'Confirma tu dirección de email.',
@@ -81,6 +88,7 @@ return [
     'emailActivateSubject'  => 'Tu código de activación',
     'emailActivateMailBody' => 'Por favor, usa el código de abajo para activar tu cuenta y empezar a usar el sitio.',
     'invalidActivateToken'  => 'El código no es correcto.',
+    'needActivate'          => '(To be translated) You must complete your registration by confirming the code sent to your email address.',
 
     // Grupos
     'unknownGroup' => '{0} no es un grupo válido.',

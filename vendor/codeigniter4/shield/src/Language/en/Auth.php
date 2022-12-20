@@ -19,6 +19,7 @@ return [
     'invalidEmail'          => 'Unable to verify the email address matches the email on record.',
     'unableSendEmailToUser' => 'Sorry, there was a problem sending the email. We could not send an email to "{0}".',
     'throttled'             => 'Too many requests made from this IP address. You may try again in {0} seconds.',
+    'notEnoughPrivilege'    => 'You do not have the necessary permission to perform the desired operation.',
 
     'email'           => 'Email Address',
     'username'        => 'Username',
@@ -64,6 +65,12 @@ return [
     'userDoesNotExist'          => 'Password was not changed. User does not exist',
     'resetTokenExpired'         => 'Sorry. Your reset token has expired.',
 
+    // Email Globals
+    'emailInfo'      => 'Some information about the person:',
+    'emailIpAddress' => 'IP Address:',
+    'emailDevice'    => 'Device:',
+    'emailDate'      => 'Date:',
+
     // 2FA
     'email2FATitle'       => 'Two Factor Authentication',
     'confirmEmailAddress' => 'Confirm your email address.',
@@ -81,6 +88,7 @@ return [
     'emailActivateSubject'  => 'Your activation code',
     'emailActivateMailBody' => 'Please use the code below to activate your account and start using the site.',
     'invalidActivateToken'  => 'The code was incorrect.',
+    'needActivate'          => 'You must complete your registration by confirming the code sent to your email address.',
 
     // Groups
     'unknownGroup' => '{0} is not a valid group.',

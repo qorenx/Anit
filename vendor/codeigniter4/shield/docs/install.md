@@ -17,7 +17,7 @@ These instructions assume that you have already [installed the CodeIgniter 4 app
 ## Requirements
 
 - [Composer](https://getcomposer.org)
-- Codeigniter **v4.2.3** or later
+- Codeigniter **v4.2.7** or later
 - A created database that you can access via the Spark CLI script
 
 ## Composer Installation
@@ -25,8 +25,8 @@ These instructions assume that you have already [installed the CodeIgniter 4 app
 Installation is done through [Composer](https://getcomposer.org). The example assumes you have it installed globally.
 If you have it installed as a phar, or otherwise you will need to adjust the way you call composer itself.
 
-```
-> composer require codeigniter4/shield
+```console
+composer require codeigniter4/shield
 ```
 
 ### Troubleshooting
@@ -35,29 +35,29 @@ If you have it installed as a phar, or otherwise you will need to adjust the way
 
 If you get the following error:
 
-```
-  Could not find a version of package codeigniter4/shield matching your minimum-stability (stable).
-  Require it with an explicit version constraint allowing its desired stability.
+```console
+Could not find a version of package codeigniter4/shield matching your minimum-stability (stable).
+Require it with an explicit version constraint allowing its desired stability.
 ```
 
 1. Add the following to change your [minimum-stability](https://getcomposer.org/doc/articles/versions.md#minimum-stability) in your project `composer.json`:
 
     ```json
-        "minimum-stability": "dev",
-        "prefer-stable": true,
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     ```
 
 2. Or specify an explicit version:
 
     ```console
-    > composer require codeigniter4/shield:dev-develop
+    composer require codeigniter4/shield:dev-develop
     ```
 
     The above specifies `develop` branch.
     See https://getcomposer.org/doc/articles/versions.md#branches
 
     ```console
-    > composer require codeigniter4/shield:^1.0.0-beta
+    composer require codeigniter4/shield:^1.0.0-beta
     ```
 
     The above specifies `v1.0.0-beta` or later and before `v2.0.0`.
@@ -70,7 +70,7 @@ If you get the following error:
 1. Run the following command. This command handles steps 1-5 of *Manual Setup* and runs the migrations.
 
     ```console
-    > php spark shield:setup
+    php spark shield:setup
     ```
 
 ### Manual Setup
@@ -120,7 +120,7 @@ your project.
 5. **Migration** Run the migrations.
 
     ```console
-    > php spark migrate --all
+    php spark migrate --all
     ```
 
     #### Note: migration error
@@ -135,14 +135,31 @@ your project.
     1. Use InnoDB, not MyISAM.
 
 ## Controller Filters
+The [Controller Filters](https://codeigniter.com/user_guide/incoming/filters.html) you can use to protect your routes the shield provides are:
 
-Shield provides 4 [Controller Filters](https://codeigniter.com/user_guide/incoming/filters.html) you can
-use to protect your routes, `session`, `tokens`, and `chained`. The first two cover the `Session` and
-`AccessTokens` authenticators, respectively. The `chained` filter will check both authenticators in sequence
-to see if the user is logged in through either of authenticators, allowing a single API endpoint to
-work for both an SPA using session auth, and a mobile app using access tokens. The fourth, `auth-rates`,
-provides a good basis for rate limiting of auth-related routes.
+```php
+public $aliases = [
+    // ...
+    'session'    => \CodeIgniter\Shield\Filters\SessionAuth::class,
+    'tokens'     => \CodeIgniter\Shield\Filters\TokenAuth::class,
+    'chain'      => \CodeIgniter\Shield\Filters\ChainAuth::class,
+    'auth-rates' => \CodeIgniter\Shield\Filters\AuthRates::class,
+    'group'      => \CodeIgniter\Shield\Filters\GroupFilter::class,
+    'permission' => \CodeIgniter\Shield\Filters\PermissionFilter::class,
+];
+```
+
+Filters | Description
+--- | ---
+session and tokens | The `Session` and `AccessTokens` authenticators, respectively.
+chained | The filter will check both authenticators in sequence to see if the user is logged in through either of authenticators, allowing a single API endpoint to work for both an SPA using session auth, and a mobile app using access tokens.
+auth-rates | Provides a good basis for rate limiting of auth-related routes.
+group | Checks if the user is in one of the groups passed in.
+permission | Checks if the user has the passed permissions.
+
 These can be used in any of the [normal filter config settings](https://codeigniter.com/user_guide/incoming/filters.html?highlight=filter#globals), or [within the routes file](https://codeigniter.com/user_guide/incoming/routing.html?highlight=routs#applying-filters).
+
+> **Note** These filters are already loaded for you by the registrar class located at `src/Config/Registrar.php`.
 
 ### Protect All Pages
 
@@ -152,21 +169,9 @@ If you want to limit all routes (e.g. `localhost:8080/admin`, `localhost:8080/pa
 public $globals = [
     'before' => [
         // ...
-        'session' => ['except' => ['login*', 'register*']],
+        'session' => ['except' => ['login*', 'register', 'auth/a/*']],
     ],
     // ...
-];
-```
-
-> **Note** These filters are already loaded for you by the registrar class located at `src/Config/Registrar.php`.
-
-```php
-public $aliases = [
-    // ...
-    'session'    => \CodeIgniter\Shield\Filters\SessionAuth::class,
-    'tokens'     => \CodeIgniter\Shield\Filters\TokenAuth::class,
-    'chain'      => \CodeIgniter\Shield\Filters\ChainAuth::class,
-    'auth-rates' => \CodeIgniter\Shield\Filters\AuthRates::class,
 ];
 ```
 

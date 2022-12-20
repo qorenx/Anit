@@ -19,6 +19,7 @@ return [
     'invalidEmail'          => 'Nie je možné overiť, či sa e-mailová adresa zhoduje so zaznamenaným e-mailom.',
     'unableSendEmailToUser' => 'Ľutujeme, pri odosielaní e-mailu sa vyskytol problém. Nepodarilo sa nám odoslať e-mail na adresu „{0}".',
     'throttled'             => 'Z tejto adresy IP bolo odoslaných príliš veľa žiadostí. Môžete to skúsiť znova o {0} sekúnd.',
+    'notEnoughPrivilege'    => 'Nemáte potrebné povolenie na vykonanie požadovanej operácie.',
 
     'email'           => 'Emailová adresa',
     'username'        => 'Používateľské meno',
@@ -64,6 +65,12 @@ return [
     'userDoesNotExist'          => 'Heslo nebolo zmenené. Používateľ neexistuje',
     'resetTokenExpired'         => 'Prepáčte. Platnosť vášho resetovacieho tokenu vypršala.',
 
+    // Email Globals
+    'emailInfo'      => 'Niektoré informácie o osobe:',
+    'emailIpAddress' => 'IP Adresa:',
+    'emailDevice'    => 'Zariadenie:',
+    'emailDate'      => 'Dátum:',
+
     // 2FA
     'email2FATitle'       => 'Dvojfaktorová autentifikácia',
     'confirmEmailAddress' => 'Potvrďte svoju e-mailovú adresu.',
@@ -81,6 +88,7 @@ return [
     'emailActivateSubject'  => 'Váš aktivačný kód',
     'emailActivateMailBody' => 'Pomocou nižšie uvedeného kódu aktivujte svoj účet a môžete začať používať stránku.',
     'invalidActivateToken'  => 'Kód bol nesprávny',
+    'needActivate'          => 'Registráciu musíte dokončiť potvrdením kódu zaslaného na vašu e-mailovú adresu.',
 
     // Groups
     'unknownGroup' => '{0} nie je platná skupina.',

@@ -19,6 +19,7 @@ return [
     'invalidEmail'          => 'メールアドレスが一致しません。', // 'Unable to verify the email address matches the email on record.',
     'unableSendEmailToUser' => '申し訳ありませんが、メールの送信に問題がありました。 "{0}"にメールを送信できませんでした。', // 'Sorry, there was a problem sending the email. We could not send an email to "{0}".',
     'throttled'             => 'このIPアドレスからのリクエストが多すぎます。 {0}秒後に再試行できます。', // Too many requests made from this IP address. You may try again in {0} seconds.
+    'notEnoughPrivilege'    => '目的の操作を実行するために必要な権限がありません。', // You do not have the necessary permission to perform the desired operation.
 
     'email'           => 'メールアドレス', // 'Email Address',
     'username'        => 'ユーザー名', // 'Username',
@@ -64,6 +65,12 @@ return [
     'userDoesNotExist'          => 'パスワードは変更されていません。ユーザーは存在しません', // 'Password was not changed. User does not exist',
     'resetTokenExpired'         => '申し訳ありません。リセットトークンの有効期限が切れました。', // 'Sorry. Your reset token has expired.',
 
+    // Email Globals
+    'emailInfo'      => '本人に関する情報:',
+    'emailIpAddress' => 'IPアドレス:',
+    'emailDevice'    => 'デバイス:',
+    'emailDate'      => '日時:',
+
     // 2FA
     'email2FATitle'       => '二要素認証', // 'Two Factor Authentication',
     'confirmEmailAddress' => 'メールアドレスを確認してください。', // 'Confirm your email address.',
@@ -81,6 +88,7 @@ return [
     'emailActivateSubject'  => 'アクティベーションコード', // 'Your activation code',
     'emailActivateMailBody' => '以下のコードを使用してアカウントを有効化し、サイトの利用を開始してください。', // 'Please use the code below to activate your account and start using the site.',
     'invalidActivateToken'  => 'コードが間違っています。', // 'The code was incorrect.',
+    'needActivate'          => 'メールアドレスに送信されたコードを確認し、登録を完了する必要があります。', // 'You must complete your registration by confirming the code sent to your email address.',
 
     // Groups
     'unknownGroup' => '{0} は有効なグループではありません。', // '{0} is not a valid group.',

@@ -19,6 +19,7 @@ return [
     'invalidEmail'          => 'Es konnte nicht überprüft werden, ob die E-Mail-Adresse mit der gespeicherten übereinstimmt.',
     'unableSendEmailToUser' => 'Leider gab es ein Problem beim Senden der E-Mail. Wir konnten keine E-Mail an "{0}" senden.',
     'throttled'             => 'Es wurden zu viele Anfragen von dieser IP-Adresse gestellt. Sie können es in {0} Sekunden erneut versuchen.',
+    'notEnoughPrivilege'    => 'Sie haben nicht die erforderliche Berechtigung, um den gewünschten Vorgang auszuführen.',
 
     'email'           => 'E-Mail-Adresse',
     'username'        => 'Benutzername',
@@ -64,6 +65,12 @@ return [
     'userDoesNotExist'          => 'Passwort wurde nicht geändert. Der Benutzer existiert nicht',
     'resetTokenExpired'         => 'Tut mir leid. Ihr Reset-Token ist abgelaufen.',
 
+    // Email Globals
+    'emailInfo'      => 'Einige Informationen über die Person:',
+    'emailIpAddress' => 'IP Adresse:',
+    'emailDevice'    => 'Gerät:',
+    'emailDate'      => 'Datum:',
+
     // 2FA
     'email2FATitle'       => 'Zwei-Faktor-Authentifizierung',
     'confirmEmailAddress' => 'Bestätigen Sie Ihre E-Mail-Adresse.',
@@ -81,6 +88,7 @@ return [
     'emailActivateSubject'  => 'Ihr Aktivierungscode',
     'emailActivateMailBody' => 'Bitte verwenden Sie den unten stehenden Code, um Ihr Konto zu aktivieren und die Website zu nutzen.',
     'invalidActivateToken'  => 'Der Code war falsch.',
+    'needActivate'          => '(To be translated) You must complete your registration by confirming the code sent to your email address.',
 
     // Groups
     'unknownGroup' => '{0} ist eine ungültige Gruppe.',

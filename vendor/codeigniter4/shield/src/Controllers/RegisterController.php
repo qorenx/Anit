@@ -76,12 +76,8 @@ class RegisterController extends BaseController
         }
 
         // Save the user
-        $allowedPostFields = array_merge(
-            setting('Auth.validFields'),
-            setting('Auth.personalFields'),
-            ['password']
-        );
-        $user = $this->getUserEntity();
+        $allowedPostFields = array_keys($rules);
+        $user              = $this->getUserEntity();
         $user->fill($this->request->getPost($allowedPostFields));
 
         // Workaround for email only registration/login
@@ -147,7 +143,8 @@ class RegisterController extends BaseController
     /**
      * Returns the rules that should be used for validation.
      *
-     * @return string[]
+     * @return array<string, array<string, array<string>|string>>
+     * @phpstan-return array<string, array<string, string|list<string>>>
      */
     protected function getValidationRules(): array
     {

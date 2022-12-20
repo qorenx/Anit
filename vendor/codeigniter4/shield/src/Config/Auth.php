@@ -9,6 +9,10 @@ use CodeIgniter\Shield\Authentication\Actions\ActionInterface;
 use CodeIgniter\Shield\Authentication\AuthenticatorInterface;
 use CodeIgniter\Shield\Authentication\Authenticators\AccessTokens;
 use CodeIgniter\Shield\Authentication\Authenticators\Session;
+use CodeIgniter\Shield\Authentication\Passwords\CompositionValidator;
+use CodeIgniter\Shield\Authentication\Passwords\DictionaryValidator;
+use CodeIgniter\Shield\Authentication\Passwords\NothingPersonalValidator;
+use CodeIgniter\Shield\Authentication\Passwords\PwnedValidator;
 use CodeIgniter\Shield\Authentication\Passwords\ValidatorInterface;
 use CodeIgniter\Shield\Models\UserModel;
 
@@ -57,8 +61,8 @@ class Auth extends BaseConfig
      * You must register actions in the order of the actions to be performed.
      *
      * Available actions with Shield:
-     * - register: 'CodeIgniter\Shield\Authentication\Actions\EmailActivator'
-     * - login:    'CodeIgniter\Shield\Authentication\Actions\Email2FA'
+     * - register: \CodeIgniter\Shield\Authentication\Actions\EmailActivator::class
+     * - login:    \CodeIgniter\Shield\Authentication\Actions\Email2FA::class
      *
      * @var array<string, class-string<ActionInterface>|null>
      */
@@ -209,10 +213,10 @@ class Auth extends BaseConfig
      * @var class-string<ValidatorInterface>[]
      */
     public array $passwordValidators = [
-        'CodeIgniter\Shield\Authentication\Passwords\CompositionValidator',
-        'CodeIgniter\Shield\Authentication\Passwords\NothingPersonalValidator',
-        'CodeIgniter\Shield\Authentication\Passwords\DictionaryValidator',
-        // 'CodeIgniter\Shield\Authentication\Passwords\PwnedValidator',
+        CompositionValidator::class,
+        NothingPersonalValidator::class,
+        DictionaryValidator::class,
+        // PwnedValidator::class,
     ];
 
     /**
@@ -223,7 +227,7 @@ class Auth extends BaseConfig
      */
     public array $validFields = [
         'email',
-        'username',
+        // 'username',
     ];
 
     /**
@@ -278,41 +282,34 @@ class Auth extends BaseConfig
 
     /**
      * --------------------------------------------------------------------
-     * Encryption Algorithm to use
+     * Hashing Algorithm to use
      * --------------------------------------------------------------------
      * Valid values are
      * - PASSWORD_DEFAULT (default)
      * - PASSWORD_BCRYPT
      * - PASSWORD_ARGON2I  - As of PHP 7.2 only if compiled with support for it
      * - PASSWORD_ARGON2ID - As of PHP 7.3 only if compiled with support for it
-     *
-     * If you choose to use any ARGON algorithm, then you might want to
-     * uncomment the "ARGON2i/D Algorithm" options to suit your needs
      */
     public string $hashAlgorithm = PASSWORD_DEFAULT;
 
     /**
      * --------------------------------------------------------------------
-     * ARGON2i/D Algorithm options
+     * ARGON2I/ARGON2ID Algorithm options
      * --------------------------------------------------------------------
-     * The ARGON2I method of encryption allows you to define the "memory_cost",
+     * The ARGON2I method of hashing allows you to define the "memory_cost",
      * the "time_cost" and the number of "threads", whenever a password hash is
      * created.
-     * This defaults to a value of 10 which is an acceptable number.
-     * However, depending on the security needs of your application
-     * and the power of your hardware, you might want to increase the
-     * cost. This makes the hashing process takes longer.
      */
-    public int $hashMemoryCost = 2048;  // PASSWORD_ARGON2_DEFAULT_MEMORY_COST;
+    public int $hashMemoryCost = 65536; // PASSWORD_ARGON2_DEFAULT_MEMORY_COST;
 
-    public int $hashTimeCost = 4;       // PASSWORD_ARGON2_DEFAULT_TIME_COST;
-    public int $hashThreads  = 4;        // PASSWORD_ARGON2_DEFAULT_THREADS;
+    public int $hashTimeCost = 4;   // PASSWORD_ARGON2_DEFAULT_TIME_COST;
+    public int $hashThreads  = 1;   // PASSWORD_ARGON2_DEFAULT_THREADS;
 
     /**
      * --------------------------------------------------------------------
-     * Password Hashing Cost
+     * BCRYPT Algorithm options
      * --------------------------------------------------------------------
-     * The BCRYPT method of encryption allows you to define the "cost"
+     * The BCRYPT method of hashing allows you to define the "cost"
      * or number of iterations made, whenever a password hash is created.
      * This defaults to a value of 10 which is an acceptable number.
      * However, depending on the security needs of your application
@@ -340,7 +337,7 @@ class Auth extends BaseConfig
      *
      * @var class-string<UserModel>
      */
-    public string $userProvider = 'CodeIgniter\Shield\Models\UserModel';
+    public string $userProvider = UserModel::class;
 
     /**
      * Returns the URL that a user should be redirected
