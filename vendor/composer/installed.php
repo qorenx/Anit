@@ -3,7 +3,7 @@
         'name' => 'codeigniter4/appstarter',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '85e0f1fd8e4083436ef0be0b35a8c60e0fa662fe',
+        'reference' => '930d84feeffbc7e15c3ebe90ad4c0112bbe8bb46',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'codeigniter4/appstarter' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '85e0f1fd8e4083436ef0be0b35a8c60e0fa662fe',
+            'reference' => '930d84feeffbc7e15c3ebe90ad4c0112bbe8bb46',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -46,7 +46,7 @@
         'codeigniter4/shield' => array(
             'pretty_version' => 'dev-develop',
             'version' => 'dev-develop',
-            'reference' => 'ca7335c717efcd4fadfc219cdb2c0a3bae758ae2',
+            'reference' => '3fede093f21cca09e7997fc46cf8c81e0b9a648d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../codeigniter4/shield',
             'aliases' => array(
