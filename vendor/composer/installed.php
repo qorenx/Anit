@@ -3,7 +3,7 @@
         'name' => 'codeigniter4/appstarter',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'e97e79961f14e8d8f420880f48cce3f3a70451df',
+        'reference' => '0028fbeead09f456d614c1ec43f172bad4184230',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'codeigniter4/appstarter' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'e97e79961f14e8d8f420880f48cce3f3a70451df',
+            'reference' => '0028fbeead09f456d614c1ec43f172bad4184230',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -26,9 +26,9 @@
             ),
         ),
         'codeigniter4/framework' => array(
-            'pretty_version' => 'v4.2.11',
-            'version' => '4.2.11.0',
-            'reference' => '543dd5e5d3cadee764962712de29458b5524dd24',
+            'pretty_version' => 'v4.3.0',
+            'version' => '4.3.0.0',
+            'reference' => 'f83c211996d1bbe5e76ce9af5e71f900bfba1c32',
             'type' => 'project',
             'install_path' => __DIR__ . '/../codeigniter4/framework',
             'aliases' => array(),
@@ -46,7 +46,7 @@
         'codeigniter4/shield' => array(
             'pretty_version' => 'dev-develop',
             'version' => 'dev-develop',
-            'reference' => '3fede093f21cca09e7997fc46cf8c81e0b9a648d',
+            'reference' => '084bb14456fc746e24f089e0932222c674d83d7d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../codeigniter4/shield',
             'aliases' => array(
@@ -71,15 +71,6 @@
             'install_path' => __DIR__ . '/../fakerphp/faker',
             'aliases' => array(),
             'dev_requirement' => true,
-        ),
-        'kint-php/kint' => array(
-            'pretty_version' => '4.2.3',
-            'version' => '4.2.3.0',
-            'reference' => '7601bfd95ccc50a1b903c2764b31d00919e8edd9',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../kint-php/kint',
-            'aliases' => array(),
-            'dev_requirement' => false,
         ),
         'laminas/laminas-escaper' => array(
             'pretty_version' => '2.12.0',
