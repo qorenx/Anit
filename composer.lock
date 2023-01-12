@@ -148,16 +148,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/shield.git",
-                "reference": "20a9fb0efbe9f15c333400aa825d2dc9c1b91797"
+                "reference": "dbb923fef10594b87bdf587b410c393dcba78eda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/shield/zipball/20a9fb0efbe9f15c333400aa825d2dc9c1b91797",
-                "reference": "20a9fb0efbe9f15c333400aa825d2dc9c1b91797",
+                "url": "https://api.github.com/repos/codeigniter4/shield/zipball/dbb923fef10594b87bdf587b410c393dcba78eda",
+                "reference": "dbb923fef10594b87bdf587b410c393dcba78eda",
                 "shasum": ""
             },
             "require": {
-                "codeigniter4/settings": "^2.0",
+                "codeigniter4/settings": "^2.1",
                 "php": "^7.4.3 || ^8.0"
             },
             "provide": {
@@ -166,6 +166,7 @@
             "require-dev": {
                 "codeigniter4/devkit": "^1.0",
                 "codeigniter4/framework": "^4.2.7",
+                "mikey179/vfsstream": "^1.6.7",
                 "mockery/mockery": "^1.0"
             },
             "suggest": {
@@ -211,7 +212,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/codeigniter4/shield"
             },
-            "time": "2023-01-11T04:52:31+00:00"
+            "time": "2023-01-12T12:40:27+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
