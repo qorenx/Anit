@@ -3,7 +3,7 @@
         'name' => 'codeigniter4/appstarter',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'a6d1624fc1fa597ab098c9d36ad075a23025ed1b',
+        'reference' => '87e37244f55f21f80c3e09b651be50b2d22698e8',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'codeigniter4/appstarter' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'a6d1624fc1fa597ab098c9d36ad075a23025ed1b',
+            'reference' => '87e37244f55f21f80c3e09b651be50b2d22698e8',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -46,7 +46,7 @@
         'codeigniter4/shield' => array(
             'pretty_version' => 'dev-develop',
             'version' => 'dev-develop',
-            'reference' => '2e582d9f805a2f94ec9c097a3c06ad20a8a45e03',
+            'reference' => '697f570277a4d2205852cacaae4837604b1c4b88',
             'type' => 'library',
             'install_path' => __DIR__ . '/../codeigniter4/shield',
             'aliases' => array(
@@ -100,9 +100,9 @@
             'dev_requirement' => true,
         ),
         'nikic/php-parser' => array(
-            'pretty_version' => 'v4.15.2',
-            'version' => '4.15.2.0',
-            'reference' => 'f59bbe44bf7d96f24f3e2b4ddc21cd52c1d2adbc',
+            'pretty_version' => 'v4.15.3',
+            'version' => '4.15.3.0',
+            'reference' => '570e980a201d8ed0236b0a62ddf2c9cbb2034039',
             'type' => 'library',
             'install_path' => __DIR__ . '/../nikic/php-parser',
             'aliases' => array(),
