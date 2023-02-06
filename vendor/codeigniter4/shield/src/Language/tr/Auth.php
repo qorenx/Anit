@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-namespace CodeIgniter\Shield\Language\tr;
-
 return [
     // Exceptions
     'unknownAuthenticator'  => '{0} geçerli bir kimlik doğrulayıcı değil.',
@@ -89,6 +87,7 @@ return [
     'emailActivateMailBody' => 'Hesabınızı etkinleştirmek ve siteyi kullanmaya başlamak için lütfen aşağıdaki kodu kullanın.',
     'invalidActivateToken'  => 'Kod yanlıştı.',
     'needActivate'          => 'E-posta adresinize gönderilen kodu onaylayarak kaydınızı tamamlamanız gerekmektedir.',
+    'activationBlocked'     => '(to be translated) You must activate your account before logging in.',
 
     // Groups
     'unknownGroup' => '{0} geçerli bir grup değil.',

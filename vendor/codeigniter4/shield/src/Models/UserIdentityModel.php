@@ -13,6 +13,7 @@ use CodeIgniter\Shield\Entities\AccessToken;
 use CodeIgniter\Shield\Entities\User;
 use CodeIgniter\Shield\Entities\UserIdentity;
 use CodeIgniter\Shield\Exceptions\LogicException;
+use CodeIgniter\Shield\Exceptions\ValidationException;
 use Faker\Generator;
 
 class UserIdentityModel extends Model
@@ -329,13 +330,66 @@ class UserIdentityModel extends Model
         $this->checkQueryReturn($return);
     }
 
+    /**
+     * Force password reset for multiple users.
+     *
+     * @param int[]|string[] $userIds
+     */
+    public function forceMultiplePasswordReset(array $userIds): void
+    {
+        $this->where(['type' => Session::ID_TYPE_EMAIL_PASSWORD, 'force_reset' => 0]);
+        $this->whereIn('user_id', $userIds);
+        $this->set('force_reset', 1);
+        $return = $this->update();
+
+        $this->checkQueryReturn($return);
+    }
+
+    /**
+     * Force global password reset.
+     * This is useful for enforcing a password reset
+     * for ALL users incase of a security breach.
+     */
+    public function forceGlobalPasswordReset(): void
+    {
+        $whereFilter = [
+            'type'        => Session::ID_TYPE_EMAIL_PASSWORD,
+            'force_reset' => 0,
+        ];
+        $this->where($whereFilter);
+        $this->set('force_reset', 1);
+        $return = $this->update();
+
+        $this->checkQueryReturn($return);
+    }
+
+    /**
+     * Override the Model's `update()` method.
+     * Throws an Exception when it fails.
+     *
+     * @param array|int|string|null $id
+     * @param array|object|null     $data
+     *
+     * @return true if the update is successful
+     *
+     * @throws ValidationException
+     */
+    public function update($id = null, $data = null): bool
+    {
+        $result = parent::update($id, $data);
+
+        $this->checkQueryReturn($result);
+
+        return true;
+    }
+
     public function fake(Generator &$faker): UserIdentity
     {
         return new UserIdentity([
             'user_id'      => fake(UserModel::class)->id,
             'type'         => Session::ID_TYPE_EMAIL_PASSWORD,
             'name'         => null,
-            'secret'       => 'info@example.com',
+            'secret'       => $faker->unique()->email(),
             'secret2'      => password_hash('secret', PASSWORD_DEFAULT),
             'expires'      => null,
             'extra'        => null,

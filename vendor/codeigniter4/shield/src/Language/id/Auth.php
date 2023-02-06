@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-namespace CodeIgniter\Shield\Language\id;
-
 return [
     // Exceptions
     'unknownAuthenticator'  => '{0} bukan otentikator yang sah.',
@@ -80,7 +78,7 @@ return [
     'email2FAMailBody'    => 'Kode otentikasi Anda adalah:',
     'invalid2FAToken'     => 'Kode tidak sesuai.',
     'need2FA'             => 'Anda harus menyelesaikan verifikasi otentikasi dua faktor.',
-    'needVerification'    => 'Check email Anda untuk menyelesaikan verifikasi akun.',
+    'needVerification'    => 'Periksa email Anda untuk menyelesaikan verifikasi akun.',
 
     // Activate
     'emailActivateTitle'    => 'Aktivasi Email',
@@ -88,11 +86,12 @@ return [
     'emailActivateSubject'  => 'Kode aktivasi Anda',
     'emailActivateMailBody' => 'Silahkan gunakan kode dibawah ini untuk mengaktivasi akun Anda.',
     'invalidActivateToken'  => 'Kode tidak sesuai.',
-    'needActivate'          => '(To be translated) You must complete your registration by confirming the code sent to your email address.',
+    'needActivate'          => 'Anda harus menyelesaikan registrasi Anda dengan mengonfirmasi kode yang dikirim ke alamat email Anda.',
+    'activationBlocked'     => '(to be translated) You must activate your account before logging in.',
 
     // Groups
     'unknownGroup' => '{0} bukan grup yang sah.',
-    'missingTitle' => 'Groups diharuskan mempunyai judul.',
+    'missingTitle' => 'Grup-grup diharuskan mempunyai judul.',
 
     // Permissions
     'unknownPermission' => '{0} bukan izin yang sah.',

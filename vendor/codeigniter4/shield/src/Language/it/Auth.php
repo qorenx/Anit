@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-namespace CodeIgniter\Shield\Language\it;
-
 return [
     // Exceptions
     'unknownAuthenticator'  => '{0} non è un autenticatore valido.',
@@ -89,6 +87,7 @@ return [
     'emailActivateMailBody' => 'Perfavore usa il codice qui sotto per attivare il tuo acccount ed iniziare ad usare il sito.',
     'invalidActivateToken'  => 'Il codice era sbagliato.',
     'needActivate'          => 'Devi completare la registrazione confermando il codice inviato al tuo indrizzo email.',
+    'activationBlocked'     => '(to be translated) You must activate your account before logging in.',
 
     // Groups
     'unknownGroup' => '{0} non è un gruppo valido.',

@@ -151,7 +151,7 @@ class UserModel extends Model
     public function fake(Generator &$faker): User
     {
         return new User([
-            'username' => $faker->userName,
+            'username' => $faker->unique()->userName(),
             'active'   => true,
         ]);
     }
@@ -261,6 +261,8 @@ class UserModel extends Model
      * @param array|int|string|null $id
      * @param array|User            $data
      *
+     * @return true if the update is successful
+     *
      * @throws ValidationException
      */
     public function update($id = null, $data = null): bool
@@ -300,6 +302,8 @@ class UserModel extends Model
      * If you pass User object, also updates Email Identity.
      *
      * @param array|User $data
+     *
+     * @return true if the save is successful
      *
      * @throws ValidationException
      */

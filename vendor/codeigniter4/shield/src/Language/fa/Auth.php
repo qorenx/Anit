@@ -2,17 +2,6 @@
 
 declare(strict_types=1);
 
-/**
- * This file is part of CodeIgniter 4 framework.
- *
- * (c) CodeIgniter Foundation <admin@codeigniter.com>
- *
- * For the full copyright and license information, please view
- * the LICENSE file that was distributed with this source code.
- */
-
-namespace CodeIgniter\Shield\Language\fa;
-
 return [
     // Exceptions
     'unknownAuthenticator'  => '{0} احراز هویت معتبری نمی باشد.',
@@ -98,6 +87,7 @@ return [
     'emailActivateMailBody' => 'لطفا برای فعالسازی حساب کاربری و استفاده از سایت از کد زیر استفاده کنید.',
     'invalidActivateToken'  => 'کد صحیح نمی باشد.',
     'needActivate'          => 'شما باید با ارائه کد ارسال شده به ایمیلتان، ثبت نام را تکمیل کنید.',
+    'activationBlocked'     => 'قبل از تلاش برای ورود، باید اکانت خود را فعال کنید.',
 
     // Groups
     'unknownGroup' => '{0} گروهی معتبر نیست.',
