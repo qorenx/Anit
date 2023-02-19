@@ -3,7 +3,7 @@
         'name' => 'codeigniter4/appstarter',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '6f578091afd3a257edf7682b88b82581623982aa',
+        'reference' => 'ce52b66efcf0f4a7ed5416ab3901fd2ed304f11c',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'codeigniter4/appstarter' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '6f578091afd3a257edf7682b88b82581623982aa',
+            'reference' => 'ce52b66efcf0f4a7ed5416ab3901fd2ed304f11c',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -26,9 +26,9 @@
             ),
         ),
         'codeigniter4/framework' => array(
-            'pretty_version' => 'v4.3.1',
-            'version' => '4.3.1.0',
-            'reference' => 'b1e5c64ce50757397ff77dd277e3273567df5b4b',
+            'pretty_version' => 'v4.3.2',
+            'version' => '4.3.2.0',
+            'reference' => 'e91e4fa20bb4440bf21513fe9b702db2269ca921',
             'type' => 'project',
             'install_path' => __DIR__ . '/../codeigniter4/framework',
             'aliases' => array(),
@@ -46,7 +46,7 @@
         'codeigniter4/shield' => array(
             'pretty_version' => 'dev-develop',
             'version' => 'dev-develop',
-            'reference' => '1d78a56bff4901f16bdb9b8fdc27efd2d92d2349',
+            'reference' => '2670c3cda57b2ddf9bae2c55cc90d5a60dcdb888',
             'type' => 'library',
             'install_path' => __DIR__ . '/../codeigniter4/shield',
             'aliases' => array(
