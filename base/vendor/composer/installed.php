@@ -3,7 +3,7 @@
         'name' => 'codeigniter4/appstarter',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '41810a5bdaef44779287672de4122b4a01ae6e47',
+        'reference' => '5533c6a441e7f8f0701e7ea8771853c1aa277571',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'codeigniter4/appstarter' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '41810a5bdaef44779287672de4122b4a01ae6e47',
+            'reference' => '5533c6a441e7f8f0701e7ea8771853c1aa277571',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
