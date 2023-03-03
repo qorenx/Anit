@@ -2,3 +2,6 @@
 sync.ffs_lock
 .env
 /writable/
+/base/sync.ffs_lock
+/base/.env
+/base/writable/

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.0
+- https://www.phpmyadmin.net
+-
+- Anamakine: 127.0.0.1:3306
+- Üretim Zamanı: 27 Eyl 2022, 21:01:16
+- Sunucu sürümü: 8.0.30
+- PHP Sürümü: 7.4.3
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="anitium_db" collation="utf8mb4_0900_ai_ci" charset="utf8mb4">
+            <pma:table name="auth_groups_users">
+                CREATE TABLE `auth_groups_users` (
+                  `id` int unsigned NOT NULL AUTO_INCREMENT,
+                  `user_id` int unsigned NOT NULL,
+                  `group` varchar(255) NOT NULL,
+                  `created_at` datetime NOT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `auth_groups_users_user_id_foreign` (`user_id`),
+                  CONSTRAINT `auth_groups_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+            </pma:table>
+            <pma:table name="auth_identities">
+                CREATE TABLE `auth_identities` (
+                  `id` int unsigned NOT NULL AUTO_INCREMENT,
+                  `user_id` int unsigned NOT NULL,
+                  `type` varchar(255) NOT NULL,
+                  `name` varchar(255) DEFAULT NULL,
+                  `secret` varchar(255) NOT NULL,
+                  `secret2` varchar(255) DEFAULT NULL,
+                  `expires` datetime DEFAULT NULL,
+                  `extra` text,
+                  `force_reset` tinyint(1) NOT NULL DEFAULT '0',
+                  `last_used_at` datetime DEFAULT NULL,
+                  `created_at` datetime DEFAULT NULL,
+                  `updated_at` datetime DEFAULT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `type_secret` (`type`,`secret`),
+                  KEY `user_id` (`user_id`),
+                  CONSTRAINT `auth_identities_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+            </pma:table>
+            <pma:table name="auth_logins">
+                CREATE TABLE `auth_logins` (
+                  `id` int unsigned NOT NULL AUTO_INCREMENT,
+                  `ip_address` varchar(255) NOT NULL,
+                  `user_agent` varchar(255) DEFAULT NULL,
+                  `id_type` varchar(255) NOT NULL,
+                  `identifier` varchar(255) NOT NULL,
+                  `user_id` int unsigned DEFAULT NULL,
+                  `date` datetime NOT NULL,
+                  `success` tinyint(1) NOT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `id_type_identifier` (`id_type`,`identifier`),
+                  KEY `user_id` (`user_id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+            </pma:table>
+            <pma:table name="auth_permissions_users">
+                CREATE TABLE `auth_permissions_users` (
+                  `id` int unsigned NOT NULL AUTO_INCREMENT,
+                  `user_id` int unsigned NOT NULL,
+                  `permission` varchar(255) NOT NULL,
+                  `created_at` datetime NOT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `auth_permissions_users_user_id_foreign` (`user_id`),
+                  CONSTRAINT `auth_permissions_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+            </pma:table>
+            <pma:table name="auth_remember_tokens">
+                CREATE TABLE `auth_remember_tokens` (
+                  `id` int unsigned NOT NULL AUTO_INCREMENT,
+                  `selector` varchar(255) NOT NULL,
+                  `hashedValidator` varchar(255) NOT NULL,
+                  `user_id` int unsigned NOT NULL,
+                  `expires` datetime NOT NULL,
+                  `created_at` datetime NOT NULL,
+                  `updated_at` datetime NOT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `selector` (`selector`),
+                  KEY `auth_remember_tokens_user_id_foreign` (`user_id`),
+                  CONSTRAINT `auth_remember_tokens_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+            </pma:table>
+            <pma:table name="auth_token_logins">
+                CREATE TABLE `auth_token_logins` (
+                  `id` int unsigned NOT NULL AUTO_INCREMENT,
+                  `ip_address` varchar(255) NOT NULL,
+                  `user_agent` varchar(255) DEFAULT NULL,
+                  `id_type` varchar(255) NOT NULL,
+                  `identifier` varchar(255) NOT NULL,
+                  `user_id` int unsigned DEFAULT NULL,
+                  `date` datetime NOT NULL,
+                  `success` tinyint(1) NOT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `id_type_identifier` (`id_type`,`identifier`),
+                  KEY `user_id` (`user_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+            </pma:table>
+            <pma:table name="migrations">
+                CREATE TABLE `migrations` (
+                  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+                  `version` varchar(255) NOT NULL,
+                  `class` varchar(255) NOT NULL,
+                  `group` varchar(255) NOT NULL,
+                  `namespace` varchar(255) NOT NULL,
+                  `time` int NOT NULL,
+                  `batch` int unsigned NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
+            </pma:table>
+            <pma:table name="settings">
+                CREATE TABLE `settings` (
+                  `id` int NOT NULL AUTO_INCREMENT,
+                  `class` varchar(255) NOT NULL,
+                  `key` varchar(255) NOT NULL,
+                  `value` text,
+                  `type` varchar(31) NOT NULL DEFAULT 'string',
+                  `context` varchar(255) DEFAULT NULL,
+                  `created_at` datetime NOT NULL,
+                  `updated_at` datetime NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+            </pma:table>
+            <pma:table name="users">
+                CREATE TABLE `users` (
+                  `id` int unsigned NOT NULL AUTO_INCREMENT,
+                  `username` varchar(30) DEFAULT NULL,
+                  `status` varchar(255) DEFAULT NULL,
+                  `status_message` varchar(255) DEFAULT NULL,
+                  `active` tinyint(1) NOT NULL DEFAULT '0',
+                  `last_active` datetime DEFAULT NULL,
+                  `created_at` datetime DEFAULT NULL,
+                  `updated_at` datetime DEFAULT NULL,
+                  `deleted_at` datetime DEFAULT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `username` (`username`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Veritabanı: 'anitium_db'
+    -->
+    <database name="anitium_db">
+        <!-- Tablo auth_groups_users -->
+        <!-- Tablo auth_identities -->
+        <!-- Tablo auth_logins -->
+        <table name="auth_logins">
+            <column name="id">1</column>
+            <column name="ip_address">127.0.0.1</column>
+            <column name="user_agent">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0</column>
+            <column name="id_type">email_password</column>
+            <column name="identifier">akaisora09@gmail.com</column>
+            <column name="user_id">NULL</column>
+            <column name="date">2022-09-27 13:25:56</column>
+            <column name="success">0</column>
+        </table>
+        <!-- Tablo auth_permissions_users -->
+        <!-- Tablo auth_remember_tokens -->
+        <!-- Tablo auth_token_logins -->
+        <!-- Tablo migrations -->
+        <table name="migrations">
+            <column name="id">1</column>
+            <column name="version">2020-12-28-223112</column>
+            <column name="class">CodeIgniter\Shield\Database\Migrations\CreateAuthTables</column>
+            <column name="group">default</column>
+            <column name="namespace">CodeIgniter\Shield</column>
+            <column name="time">1664303142</column>
+            <column name="batch">1</column>
+        </table>
+        <table name="migrations">
+            <column name="id">2</column>
+            <column name="version">2021-07-04-041948</column>
+            <column name="class">CodeIgniter\Settings\Database\Migrations\CreateSettingsTable</column>
+            <column name="group">default</column>
+            <column name="namespace">CodeIgniter\Settings</column>
+            <column name="time">1664303144</column>
+            <column name="batch">1</column>
+        </table>
+        <table name="migrations">
+            <column name="id">3</column>
+            <column name="version">2021-11-14-143905</column>
+            <column name="class">CodeIgniter\Settings\Database\Migrations\AddContextColumn</column>
+            <column name="group">default</column>
+            <column name="namespace">CodeIgniter\Settings</column>
+            <column name="time">1664303145</column>
+            <column name="batch">1</column>
+        </table>
+        <!-- Tablo settings -->
+        <!-- Tablo users -->
+    </database>
+</pma_xml_export>
