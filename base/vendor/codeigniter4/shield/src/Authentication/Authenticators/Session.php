@@ -147,6 +147,15 @@ class Session implements AuthenticatorInterface
         /** @var User $user */
         $user = $result->extraInfo();
 
+        if ($user->isBanned()) {
+            $this->user = null;
+
+            return new Result([
+                'success' => false,
+                'reason'  => $user->getBanMessage() ?? lang('Auth.bannedUser'),
+            ]);
+        }
+
         $this->user = $user;
 
         // Update the user's last used date on their password identity.
@@ -327,19 +336,30 @@ class Session implements AuthenticatorInterface
         /** @var Passwords $passwords */
         $passwords = service('passwords');
 
+        // This is only for supportOldDangerousPassword.
+        $needsRehash = false;
+
         // Now, try matching the passwords.
         if (! $passwords->verify($givenPassword, $user->password_hash)) {
-            return new Result([
-                'success' => false,
-                'reason'  => lang('Auth.invalidPassword'),
-            ]);
+            if (
+                ! setting('Auth.supportOldDangerousPassword')
+                || ! $passwords->verifyDanger($givenPassword, $user->password_hash) // @phpstan-ignore-line
+            ) {
+                return new Result([
+                    'success' => false,
+                    'reason'  => lang('Auth.invalidPassword'),
+                ]);
+            }
+
+            // Passed with old dangerous password.
+            $needsRehash = true;
         }
 
         // Check to see if the password needs to be rehashed.
         // This would be due to the hash algorithm or hash
         // cost changing since the last time that a user
         // logged in.
-        if ($passwords->needsRehash($user->password_hash)) {
+        if ($passwords->needsRehash($user->password_hash) || $needsRehash) {
             $user->password_hash = $passwords->hash($givenPassword);
             $this->provider->save($user);
         }
