@@ -149,12 +149,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/shield.git",
-                "reference": "9d1f6edb51e57dc9f235c00cca9869796400a0ad"
+                "reference": "a5096be16faad287f844e8432a1e18a0ccbfbe85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/shield/zipball/9d1f6edb51e57dc9f235c00cca9869796400a0ad",
-                "reference": "9d1f6edb51e57dc9f235c00cca9869796400a0ad",
+                "url": "https://api.github.com/repos/codeigniter4/shield/zipball/a5096be16faad287f844e8432a1e18a0ccbfbe85",
+                "reference": "a5096be16faad287f844e8432a1e18a0ccbfbe85",
                 "shasum": ""
             },
             "require": {
@@ -173,7 +173,7 @@
             "suggest": {
                 "ext-curl": "Required to use the password validation rule via PwnedValidator class."
             },
-            "time": "2023-03-25T11:54:12+00:00",
+            "time": "2023-04-07T04:04:31+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "dist",
